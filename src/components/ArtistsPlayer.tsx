@@ -1,44 +1,19 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { Users, Play, Pause } from "lucide-react";
+import { Users, Play } from "lucide-react";
 
 const artists = [
-  { name: "MÄLMO 040", role: "Co-producción", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-  { name: "Artista 2", role: "Grabación", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-  { name: "Banda 3", role: "Mezcla", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-  { name: "Artista 4", role: "Mastering", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-  { name: "Banda 5", role: "Producción", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-  { name: "Artista 6", role: "Grabación", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
-  { name: "Banda 7", role: "Mezcla", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
-  { name: "Artista 8", role: "Mastering", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+  { name: "MÄLMO 040", role: "Co-producción", spotifyUrl: "https://open.spotify.com/artist/4Xp5Yw0G1Jv1Z2J1Z2J1Z2" }, // Reemplaza con URLs reales
+  { name: "Artista 2", role: "Grabación", spotifyUrl: "https://open.spotify.com" },
+  { name: "Banda 3", role: "Mezcla", spotifyUrl: "https://open.spotify.com" },
+  { name: "Artista 4", role: "Mastering", spotifyUrl: "https://open.spotify.com" },
+  { name: "Banda 5", role: "Producción", spotifyUrl: "https://open.spotify.com" },
+  { name: "Artista 6", role: "Grabación", spotifyUrl: "https://open.spotify.com" },
+  { name: "Banda 7", role: "Mezcla", spotifyUrl: "https://open.spotify.com" },
+  { name: "Artista 8", role: "Mastering", spotifyUrl: "https://open.spotify.com" },
 ];
 
 export default function ArtistsPlayer() {
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const togglePlay = async (index: number, src: string) => {
-    if (playingIndex === index) {
-      // Pause if clicking the currently playing artist
-      audioRef.current?.pause();
-      setPlayingIndex(null);
-    } else {
-      // Play new artist
-      if (audioRef.current) {
-        try {
-          audioRef.current.src = src;
-          await audioRef.current.play();
-          setPlayingIndex(index);
-        } catch (error) {
-          console.error("Error playing audio:", error);
-          // Reset state if playback fails (e.g., browser blocks autoplay)
-          setPlayingIndex(null);
-        }
-      }
-    }
-  };
-
   return (
     <section id="artistas" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,44 +29,28 @@ export default function ArtistsPlayer() {
           <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-neutral-900 to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-neutral-900 to-transparent z-10 pointer-events-none" />
           
-          <div className={`flex w-max animate-marquee hover:[animation-play-state:paused] ${playingIndex !== null ? '[animation-play-state:paused]' : ''}`}>
-            {[...artists, ...artists].map((artist, index) => {
-              const originalIndex = index % artists.length;
-              const isPlaying = playingIndex === originalIndex;
-
-              return (
-                <div 
-                  key={index} 
-                  onClick={() => togglePlay(originalIndex, artist.audioSrc)}
-                  className="w-40 md:w-56 mx-4 flex flex-col items-center group cursor-pointer"
-                >
-                  <div className={`relative w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#0a0a0a] border ${isPlaying ? 'border-amber-500 shadow-[0_0_30px_rgba(245,158,11,0.3)]' : 'border-neutral-800'} mb-6 flex items-center justify-center overflow-hidden group-hover:border-amber-500 transition-all duration-300 shadow-lg`}>
-                    <Users className={`h-12 w-12 md:h-16 md:w-16 transition-transform duration-500 ${isPlaying ? 'text-amber-500 scale-110' : 'text-neutral-600 group-hover:scale-110'}`} />
-                    <div className={`absolute inset-0 bg-black/60 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px] ${isPlaying ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
-                      {isPlaying ? (
-                        <Pause className="h-10 w-10 md:h-14 md:w-14 text-amber-500 fill-current transform scale-100 transition-transform duration-300" />
-                      ) : (
-                        <Play className="h-10 w-10 md:h-14 md:w-14 text-amber-500 fill-current transform scale-75 group-hover:scale-100 transition-transform duration-300" />
-                      )}
-                    </div>
+          <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+            {[...artists, ...artists].map((artist, index) => (
+              <a 
+                key={index} 
+                href={artist.spotifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-40 md:w-56 mx-4 flex flex-col items-center group cursor-pointer"
+              >
+                <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#0a0a0a] border border-neutral-800 mb-6 flex items-center justify-center overflow-hidden group-hover:border-amber-500 transition-all duration-300 shadow-lg">
+                  <Users className="h-12 w-12 md:h-16 md:w-16 text-neutral-600 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                    <Play className="h-10 w-10 md:h-14 md:w-14 text-amber-500 fill-current transform scale-75 group-hover:scale-100 transition-transform duration-300" />
                   </div>
-                  <h3 className={`text-base md:text-lg font-bold transition-colors text-center ${isPlaying ? 'text-amber-500' : 'text-white group-hover:text-amber-500'}`}>
-                    {artist.name}
-                  </h3>
-                  <p className="text-xs md:text-sm text-neutral-500 mt-1">{artist.role}</p>
                 </div>
-              );
-            })}
+                <h3 className="text-base md:text-lg font-bold text-white group-hover:text-amber-500 transition-colors text-center">{artist.name}</h3>
+                <p className="text-xs md:text-sm text-neutral-500 mt-1">{artist.role}</p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
-      
-      {/* Hidden Audio Player */}
-      <audio 
-        ref={audioRef} 
-        onEnded={() => setPlayingIndex(null)} 
-        className="hidden"
-      />
     </section>
   );
 }
