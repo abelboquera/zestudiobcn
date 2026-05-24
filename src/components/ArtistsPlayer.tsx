@@ -18,7 +18,7 @@ export default function ArtistsPlayer() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const togglePlay = (index: number, src: string) => {
+  const togglePlay = async (index: number, src: string) => {
     if (playingIndex === index) {
       // Pause if clicking the currently playing artist
       audioRef.current?.pause();
@@ -26,9 +26,15 @@ export default function ArtistsPlayer() {
     } else {
       // Play new artist
       if (audioRef.current) {
-        audioRef.current.src = src;
-        audioRef.current.play();
-        setPlayingIndex(index);
+        try {
+          audioRef.current.src = src;
+          await audioRef.current.play();
+          setPlayingIndex(index);
+        } catch (error) {
+          console.error("Error playing audio:", error);
+          // Reset state if playback fails (e.g., browser blocks autoplay)
+          setPlayingIndex(null);
+        }
       }
     }
   };
