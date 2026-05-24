@@ -3,50 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const slides = [
-  {
-    id: "inicio",
-    image: "/images/hero-wide.png",
-    titlePrefix: "Z ESTUDIO ",
-    titleHighlight: "BCN",
-    subtitle: "Estudio de grabación, producción musical y escuela de combos en Barcelona.",
-    desc: "Grabación, mezcla, mastering, producción, clases de guitarra y combos para músicos que quieren desarrollar su sonido tocando de verdad.",
-    cta1: { text: "Quiero grabar", href: "#contacto" },
-    cta2: { text: "Apuntarme a un combo", href: "#escuela-combos" }
-  },
-  {
-    id: "estudio",
-    image: "/images/live-room.png",
-    titlePrefix: "EL ",
-    titleHighlight: "ESTUDIO",
-    subtitle: "Un espacio diseñado para la creatividad.",
-    desc: "Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital a tu disposición para capturar la mejor interpretación.",
-    cta1: { text: "Ver equipamiento", href: "#estudio" },
-    cta2: { text: "Reservar sesión", href: "#contacto" }
-  },
-  {
-    id: "combos",
-    image: "/images/drums.png",
-    titlePrefix: "ESCUELA DE ",
-    titleHighlight: "COMBOS",
-    subtitle: "La música cobra sentido cuando la compartes.",
-    desc: "Únete a una banda de tu nivel, prepara un repertorio guiado por profesionales y súbete al escenario.",
-    cta1: { text: "Ver niveles", href: "#escuela-combos" },
-    cta2: { text: "Apuntarme", href: "#contacto" }
-  },
-  {
-    id: "clases",
-    image: "/images/guitars.png",
-    titlePrefix: "CLASES ",
-    titleHighlight: "INDIVIDUALES",
-    subtitle: "Aprende a tu ritmo con David García.",
-    desc: "Formación personalizada en guitarra eléctrica y acústica, armonía moderna, arreglos y producción musical.",
-    cta1: { text: "Ver clases", href: "#clases" },
-    cta2: { text: "Contactar", href: "#contacto" }
-  }
-];
-
-export default function HeroSlider() {
+export default function HeroSlider({ slides }: { slides: any[] }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

@@ -1,25 +1,40 @@
-import Link from "next/link";
 import { 
-  ArrowRight, Mic, Sliders, Users, Guitar, PlayCircle, Music, 
-  Settings, Speaker, Headphones, Disc, Calendar, Star, Play, 
-  Mail, MapPin, Phone, MessageCircle, Instagram 
+  Mic, Sliders, Users, Guitar, Play, 
+  Settings, Speaker, Headphones, Disc, Calendar, Star, 
+  Mail, MapPin, MessageCircle, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import ArtistsPlayer from "@/components/ArtistsPlayer";
+import { Locale, dictionaries } from "@/i18n";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const validLang = (lang === "en" || lang === "ca") ? lang : "es";
+  const dict = dictionaries[validLang as Locale];
+
   const trabajos = [
-    { id: 1, title: "EP Debut", artist: "Banda Local", role: "Grabación y Mezcla", genre: "Indie Rock" },
-    { id: 2, title: "Single de Verano", artist: "Artista Pop", role: "Producción Completa", genre: "Pop" },
-    { id: 3, title: "Álbum Acústico", artist: "Cantautor", role: "Grabación, Mezcla y Mastering", genre: "Folk" },
-    { id: 4, title: "Tema Instrumental", artist: "Guitarrista", role: "Mezcla y Mastering", genre: "Jazz Fusion" },
-    { id: 5, title: "Demo", artist: "Banda Emergente", role: "Grabación en Directo", genre: "Punk Rock" },
-    { id: 6, title: "Banda Sonora", artist: "Cortometraje", role: "Composición y Producción", genre: "Cinematic" },
+    { id: 1, title: "EP Debut", artist: "Banda Local", role: dict.artistas.roles.mix, genre: "Indie Rock" },
+    { id: 2, title: "Single de Verano", artist: "Artista Pop", role: dict.artistas.roles.prod, genre: "Pop" },
+    { id: 3, title: "Álbum Acústico", artist: "Cantautor", role: dict.artistas.roles.rec, genre: "Folk" },
+    { id: 4, title: "Tema Instrumental", artist: "Guitarrista", role: dict.artistas.roles.master, genre: "Jazz Fusion" },
+    { id: 5, title: "Demo", artist: "Banda Emergente", role: dict.artistas.roles.rec, genre: "Punk Rock" },
+    { id: 6, title: "Banda Sonora", artist: "Cortometraje", role: dict.artistas.roles.prod, genre: "Cinematic" },
+  ];
+
+  const artistsData = [
+    { name: "MÄLMO 040", role: dict.artistas.roles.coprod, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+    { name: "Artista 2", role: dict.artistas.roles.rec, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+    { name: "Banda 3", role: dict.artistas.roles.mix, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+    { name: "Artista 4", role: dict.artistas.roles.master, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+    { name: "Banda 5", role: dict.artistas.roles.prod, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+    { name: "Artista 6", role: dict.artistas.roles.rec, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+    { name: "Banda 7", role: dict.artistas.roles.mix, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+    { name: "Artista 8", role: dict.artistas.roles.master, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
-      <HeroSlider />
+      <HeroSlider slides={dict.hero.slides} />
 
       {/* ESTUDIO SECTION */}
       <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
@@ -289,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* ARTISTAS SECTION */}
-      <ArtistsPlayer />
+      <ArtistsPlayer dict={dict.artistas} artists={artistsData} />
 
       {/* SOBRE NOSOTROS SECTION */}
       <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
@@ -432,11 +447,11 @@ export default function Home() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-2">Mensaje</label>
-                  <textarea id="message" rows={4} className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-2">{dict.contacto.messageLabel}</label>
+                  <textarea id="message" rows={4} className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none" placeholder={dict.contacto.messagePlaceholder}></textarea>
                 </div>
                 <button type="button" className="w-full bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold py-4 px-8 rounded-lg transition-colors">
-                  Enviar mensaje
+                  {dict.contacto.sendBtn}
                 </button>
               </form>
             </div>

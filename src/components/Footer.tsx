@@ -1,7 +1,7 @@
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import DynamicLogo from "./DynamicLogo";
 
-export default function Footer() {
+export default function Footer({ dict }: { dict: any }) {
   return (
     <footer className="bg-neutral-950 border-t border-neutral-900 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,7 +11,7 @@ export default function Footer() {
               <DynamicLogo />
             </a>
             <p className="text-neutral-400 text-sm mb-6">
-              Estudio de grabación, producción musical y escuela de combos en Barcelona dirigido por David García.
+              {dict.desc}
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-amber-500 transition-colors">
@@ -26,9 +26,9 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Servicios</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.services}</h3>
             <ul className="space-y-2">
-              <li><a href="#estudio" className="text-neutral-400 hover:text-amber-500 text-sm">Estudio de grabación</a></li>
+              <li><a href="#estudio" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.studio}</a></li>
               <li><a href="#produccion" className="text-neutral-400 hover:text-amber-500 text-sm">Producción y Mezcla</a></li>
               <li><a href="#escuela-combos" className="text-neutral-400 hover:text-amber-500 text-sm">Escuela de Combos</a></li>
               <li><a href="#clases" className="text-neutral-400 hover:text-amber-500 text-sm">Clases con David</a></li>
@@ -36,17 +36,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Estudio</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.studio}</h3>
             <ul className="space-y-2">
               <li><a href="#trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">Nuestros Trabajos</a></li>
               <li><a href="#artistas" className="text-neutral-400 hover:text-amber-500 text-sm">Artistas</a></li>
               <li><a href="#sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">Sobre nosotros</a></li>
-              <li><a href="#contacto" className="text-neutral-400 hover:text-amber-500 text-sm">Contacto</a></li>
+              <li><a href="#contacto" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.contact}</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Contacto</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.contact}</h3>
             <ul className="space-y-3">
               <li className="flex items-start text-neutral-400 text-sm">
                 <MapPin className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
@@ -66,11 +66,11 @@ export default function Footer() {
         
         <div className="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-500 text-sm">
-            &copy; {new Date().getFullYear()} Z Estudio BCN. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Z Estudio BCN. {dict.rights}
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="text-neutral-500 hover:text-white text-sm">Aviso Legal</a>
-            <a href="#" className="text-neutral-500 hover:text-white text-sm">Privacidad</a>
+            <a href="#" className="text-neutral-500 hover:text-white text-sm">{dict.legal}</a>
+            <a href="#" className="text-neutral-500 hover:text-white text-sm">{dict.privacy}</a>
           </div>
         </div>
       </div>

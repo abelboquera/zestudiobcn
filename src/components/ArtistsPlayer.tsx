@@ -3,18 +3,7 @@
 import { useState, useRef } from "react";
 import { Users, Play, Pause } from "lucide-react";
 
-const artists = [
-  { name: "MÄLMO 040", role: "Co-producción", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-  { name: "Artista 2", role: "Grabación", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-  { name: "Banda 3", role: "Mezcla", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-  { name: "Artista 4", role: "Mastering", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-  { name: "Banda 5", role: "Producción", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-  { name: "Artista 6", role: "Grabación", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
-  { name: "Banda 7", role: "Mezcla", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
-  { name: "Artista 8", role: "Mastering", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
-];
-
-export default function ArtistsPlayer() {
+export default function ArtistsPlayer({ dict, artists }: { dict: any, artists: any[] }) {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -52,9 +41,9 @@ export default function ArtistsPlayer() {
     <section id="artistas" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Artistas</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">{dict.title}</h2>
           <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-            Músicos y bandas que han grabado, producido o colaborado en Z Estudio BCN.
+            {dict.subtitle}
           </p>
         </div>
 
