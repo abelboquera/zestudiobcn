@@ -21,7 +21,7 @@ export default function Home() {
       <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-neutral-900">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a] z-10" />
-          <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
+          <div className="absolute inset-0 opacity-50 bg-[url('/images/hero-wide.png')] bg-cover bg-center" />
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
@@ -63,7 +63,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="rounded-2xl overflow-hidden h-80 relative group">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-[url('/images/control-room.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
                 <h3 className="text-2xl font-bold text-white">Control Room</h3>
@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden h-80 relative group">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621619856624-42fd193a0661?q=80&w=2058&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-[url('/images/live-room.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
                 <h3 className="text-2xl font-bold text-white">Live Room</h3>
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
               <Mic className="h-10 w-10 text-amber-500 mb-4" />
               <h4 className="text-lg font-bold text-white mb-2">Microfonía</h4>
@@ -100,6 +100,19 @@ export default function Home() {
               <Headphones className="h-10 w-10 text-amber-500 mb-4" />
               <h4 className="text-lg font-bold text-white mb-2">Backline</h4>
               <p className="text-sm text-neutral-400">Guitarras, bajos, amplificadores y sintetizadores a tu disposición.</p>
+            </div>
+          </div>
+
+          {/* Galería de detalles */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="rounded-xl overflow-hidden h-48 relative">
+              <div className="absolute inset-0 bg-[url('/images/amps.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-xl overflow-hidden h-48 relative">
+              <div className="absolute inset-0 bg-[url('/images/sign.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-xl overflow-hidden h-48 relative">
+              <div className="absolute inset-0 bg-[url('/images/hallway.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </div>
@@ -163,7 +176,7 @@ export default function Home() {
 
       {/* ESCUELA DE COMBOS SECTION */}
       <section id="escuela-combos" className="py-24 bg-[#0a0a0a] relative overflow-hidden scroll-mt-20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay" />
+        <div className="absolute right-0 top-0 w-1/2 h-full opacity-30 bg-[url('/images/drums.png')] bg-cover bg-center mix-blend-overlay" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-amber-500/20">
@@ -318,7 +331,7 @@ export default function Home() {
           {/* David García */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511331214401-1ee345a8a1c5?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('/images/guitars.png')] bg-cover bg-center" />
             </div>
             <div>
               <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
@@ -365,7 +378,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=2078&auto=format&fit=crop')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('/images/keys.png')] bg-cover bg-center" />
             </div>
           </div>
         </div>
