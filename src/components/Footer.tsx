@@ -41,7 +41,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Estudio</h3>
             <ul className="space-y-2">
               <li><Link href="/trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">Nuestros Trabajos</Link></li>
-              <li><Link href="/sobre-david" className="text-neutral-400 hover:text-amber-500 text-sm">Sobre David García</Link></li>
+              <li><Link href="/sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">Sobre nosotros</Link></li>
               <li><Link href="/contacto" className="text-neutral-400 hover:text-amber-500 text-sm">Contacto</Link></li>
             </ul>
           </div>
