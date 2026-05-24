@@ -4,6 +4,7 @@ import {
   Settings, Speaker, Headphones, Disc, Calendar, Star, Play, 
   Mail, MapPin, Phone, MessageCircle, Instagram 
 } from "lucide-react";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
   const trabajos = [
@@ -17,39 +18,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* HERO SECTION */}
-      <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-neutral-900">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a] z-10" />
-          <div className="absolute inset-0 opacity-50 bg-[url('/images/hero-wide.png')] bg-cover bg-center" />
-        </div>
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
-            Z ESTUDIO <span className="text-amber-500">BCN</span>
-          </h1>
-          <p className="mt-4 text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light mb-10">
-            Estudio de grabación, producción musical y escuela de combos en Barcelona.
-          </p>
-          <p className="text-lg text-neutral-300 max-w-2xl mx-auto mb-10">
-            Grabación, mezcla, mastering, producción, clases de guitarra y combos para músicos que quieren desarrollar su sonido tocando de verdad.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#contacto" 
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-neutral-950 bg-amber-500 hover:bg-amber-400 transition-colors"
-            >
-              Quiero grabar
-            </a>
-            <a 
-              href="#escuela-combos" 
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 transition-colors"
-            >
-              Apuntarme a un combo
-            </a>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* ESTUDIO SECTION */}
       <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
