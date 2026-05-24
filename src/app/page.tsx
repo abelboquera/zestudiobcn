@@ -1,19 +1,30 @@
 import Link from "next/link";
-import { ArrowRight, Mic, Sliders, Users, Guitar, PlayCircle, Music } from "lucide-react";
+import { 
+  ArrowRight, Mic, Sliders, Users, Guitar, PlayCircle, Music, 
+  Settings, Speaker, Headphones, Disc, Calendar, Star, Play, 
+  Mail, MapPin, Phone, MessageCircle, Instagram 
+} from "lucide-react";
 
 export default function Home() {
+  const trabajos = [
+    { id: 1, title: "EP Debut", artist: "Banda Local", role: "Grabación y Mezcla", genre: "Indie Rock" },
+    { id: 2, title: "Single de Verano", artist: "Artista Pop", role: "Producción Completa", genre: "Pop" },
+    { id: 3, title: "Álbum Acústico", artist: "Cantautor", role: "Grabación, Mezcla y Mastering", genre: "Folk" },
+    { id: 4, title: "Tema Instrumental", artist: "Guitarrista", role: "Mezcla y Mastering", genre: "Jazz Fusion" },
+    { id: 5, title: "Demo", artist: "Banda Emergente", role: "Grabación en Directo", genre: "Punk Rock" },
+    { id: 6, title: "Banda Sonora", artist: "Cortometraje", role: "Composición y Producción", genre: "Cinematic" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image Placeholder */}
+      {/* HERO SECTION */}
+      <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-neutral-900">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a] z-10" />
-          {/* This would be an actual image in production */}
           <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
             Z ESTUDIO <span className="text-amber-500">BCN</span>
           </h1>
@@ -24,190 +35,425 @@ export default function Home() {
             Grabación, mezcla, mastering, producción, clases de guitarra y combos para músicos que quieren desarrollar su sonido tocando de verdad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contacto" 
+            <a 
+              href="#contacto" 
               className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-neutral-950 bg-amber-500 hover:bg-amber-400 transition-colors"
             >
               Quiero grabar
-            </Link>
-            <Link 
-              href="/escuela-combos" 
+            </a>
+            <a 
+              href="#escuela-combos" 
               className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-white bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 transition-colors"
             >
               Apuntarme a un combo
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Servicios de estudio */}
-      <section className="py-24 bg-[#0a0a0a]">
+      {/* ESTUDIO SECTION */}
+      <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Servicios de Estudio</h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
-              Equipamiento profesional y acústica cuidada para llevar tus canciones al siguiente nivel.
+            <h2 className="text-4xl font-bold text-white mb-6">El Estudio</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              Un espacio diseñado para la creatividad. Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Grabación */}
-            <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-xl hover:border-amber-500/50 transition-colors group">
-              <Mic className="h-12 w-12 text-amber-500 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold text-white mb-3">Grabación</h3>
-              <p className="text-neutral-400 mb-6">
-                Captura la esencia de tu música en un entorno cómodo y profesional. Voces, guitarras, baterías y bandas completas.
-              </p>
-              <Link href="/estudio" className="text-amber-500 hover:text-amber-400 inline-flex items-center text-sm font-medium">
-                Ver estudio <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="rounded-2xl overflow-hidden h-80 relative group">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-bold text-white">Control Room</h3>
+                <p className="text-neutral-300">El corazón del estudio</p>
+              </div>
             </div>
-
-            {/* Producción */}
-            <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-xl hover:border-amber-500/50 transition-colors group">
-              <PlayCircle className="h-12 w-12 text-amber-500 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold text-white mb-3">Producción Musical</h3>
-              <p className="text-neutral-400 mb-6">
-                Acompañamiento artístico desde la idea inicial hasta el master final. Arreglos, instrumentación y dirección.
-              </p>
-              <Link href="/produccion" className="text-amber-500 hover:text-amber-400 inline-flex items-center text-sm font-medium">
-                Saber más <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+            <div className="rounded-2xl overflow-hidden h-80 relative group">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621619856624-42fd193a0661?q=80&w=2058&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-bold text-white">Live Room</h3>
+                <p className="text-neutral-300">Acústica viva y controlada</p>
+              </div>
             </div>
+          </div>
 
-            {/* Mezcla y Mastering */}
-            <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-xl hover:border-amber-500/50 transition-colors group">
-              <Sliders className="h-12 w-12 text-amber-500 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold text-white mb-3">Mezcla y Mastering</h3>
-              <p className="text-neutral-400 mb-6">
-                El toque final para que tu música suene potente, clara y lista para todas las plataformas digitales.
-              </p>
-              <Link href="/produccion" className="text-amber-500 hover:text-amber-400 inline-flex items-center text-sm font-medium">
-                Escuchar ejemplos <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+              <Mic className="h-10 w-10 text-amber-500 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Microfonía</h4>
+              <p className="text-sm text-neutral-400">Colección de micrófonos de condensador, cinta y dinámicos para cualquier fuente.</p>
+            </div>
+            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+              <Settings className="h-10 w-10 text-amber-500 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Outboard</h4>
+              <p className="text-sm text-neutral-400">Previos, compresores y EQs analógicos para darle color y calidez a tu sonido.</p>
+            </div>
+            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+              <Speaker className="h-10 w-10 text-amber-500 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Monitoreo</h4>
+              <p className="text-sm text-neutral-400">Escucha precisa y detallada para tomar las mejores decisiones en la mezcla.</p>
+            </div>
+            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+              <Headphones className="h-10 w-10 text-amber-500 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Backline</h4>
+              <p className="text-sm text-neutral-400">Guitarras, bajos, amplificadores y sintetizadores a tu disposición.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Escuela de Combos */}
-      <section className="py-24 bg-neutral-900 relative overflow-hidden">
+      {/* PRODUCCION SECTION */}
+      <section id="produccion" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Producción Musical</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
+              <Disc className="h-12 w-12 text-amber-500 mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Producción</h3>
+              <p className="text-neutral-400 mb-6">
+                Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
+              </p>
+              <ul className="space-y-2 text-sm text-neutral-300">
+                <li>• Pre-producción y maquetas</li>
+                <li>• Arreglos musicales</li>
+                <li>• Grabación de instrumentos</li>
+                <li>• Programación de baterías y beats</li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
+              <Sliders className="h-12 w-12 text-amber-500 mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Mezcla</h3>
+              <p className="text-neutral-400 mb-6">
+                Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido.
+              </p>
+              <ul className="space-y-2 text-sm text-neutral-300">
+                <li>• Edición y afinación</li>
+                <li>• EQ y compresión analógica/digital</li>
+                <li>• Efectos espaciales</li>
+                <li>• Automatización detallada</li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
+              <Headphones className="h-12 w-12 text-amber-500 mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Mastering</h3>
+              <p className="text-neutral-400 mb-6">
+                El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
+              </p>
+              <ul className="space-y-2 text-sm text-neutral-300">
+                <li>• EQ correctiva y tonal</li>
+                <li>• Compresión multibanda</li>
+                <li>• Limitación y maximización</li>
+                <li>• Formatos para streaming</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ESCUELA DE COMBOS SECTION */}
+      <section id="escuela-combos" className="py-24 bg-[#0a0a0a] relative overflow-hidden scroll-mt-20">
         <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 px-3 py-1 rounded-full text-sm font-medium mb-6">
-                <Users className="h-4 w-4" />
-                <span>Aprende tocando</span>
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Escuela de Combos Barcelona</h2>
-              <p className="text-lg text-neutral-300 mb-6">
-                La música se aprende de verdad cuando la compartes. Únete a nuestras clases grupales para músicos y experimenta la dinámica real de una banda.
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/50 mt-0.5">
-                    <span className="text-amber-500 text-xs">✓</span>
-                  </div>
-                  <span className="ml-3 text-neutral-300">Combos organizados por niveles y estilos</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/50 mt-0.5">
-                    <span className="text-amber-500 text-xs">✓</span>
-                  </div>
-                  <span className="ml-3 text-neutral-300">Repertorio y ensayo guiado semanalmente</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/50 mt-0.5">
-                    <span className="text-amber-500 text-xs">✓</span>
-                  </div>
-                  <span className="ml-3 text-neutral-300">Conciertos y muestras en directo</span>
-                </li>
-              </ul>
-              <Link 
-                href="/escuela-combos" 
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md text-neutral-950 bg-amber-500 hover:bg-amber-400 transition-colors"
-              >
-                Ver horarios y niveles
-              </Link>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-amber-500/20">
+              <Star className="h-4 w-4 fill-current" />
+              <span>Matrícula abierta</span>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524650359799-842906ca1ce1?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+            <h2 className="text-4xl font-bold text-white mb-6">Escuela de Combos</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
+              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
+                <Users className="h-8 w-8 text-amber-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">1. Formamos tu banda</h3>
+              <p className="text-neutral-400">Te asignamos a un grupo con músicos de tu mismo nivel e inquietudes musicales.</p>
+            </div>
+            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
+              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
+                <Music className="h-8 w-8 text-amber-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">2. Ensayo guiado</h3>
+              <p className="text-neutral-400">Ensayos semanales de 1.5h dirigidos por David García. Trabajamos repertorio y dinámica.</p>
+            </div>
+            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
+              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
+                <Calendar className="h-8 w-8 text-amber-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">3. Concierto en directo</h3>
+              <p className="text-neutral-400">El objetivo final: tocar en directo. Organizamos conciertos periódicos en salas de Barcelona.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Clases con David García */}
-      <section className="py-24 bg-[#0a0a0a]">
+      {/* CLASES SECTION */}
+      <section id="clases" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-row-reverse lg:flex-row">
-            <div className="order-2 lg:order-1 relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511331214401-1ee345a8a1c5?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-white">David García</h3>
-                  <p className="text-amber-500">Productor, Guitarrista y Profesor</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Clases Individuales</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              Aprende a tu ritmo con clases personalizadas de guitarra, armonía y producción musical.
+            </p>
+          </div>
+
+          <div className="space-y-8 max-w-5xl mx-auto">
+            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
+              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
+                <Guitar className="h-16 w-16 text-amber-500 mb-4" />
+                <h3 className="text-2xl font-bold text-white">Guitarra</h3>
+                <p className="text-amber-500 mt-2">Eléctrica y Acústica</p>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <p className="text-neutral-300 mb-6">Clases adaptadas a tus gustos musicales y objetivos. Desde los primeros acordes hasta técnicas avanzadas de improvisación.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Técnica y repertorio</div>
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Improvisación y escalas</div>
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Clases Individuales</h2>
-              <p className="text-lg text-neutral-300 mb-6">
-                Formación personalizada adaptada a tus objetivos musicales, ya sea que quieras dominar tu instrumento o aprender a producir tus propios temas.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div className="bg-neutral-900 p-5 rounded-lg border border-neutral-800">
-                  <Guitar className="h-8 w-8 text-amber-500 mb-3" />
-                  <h4 className="text-white font-bold mb-2">Guitarra</h4>
-                  <p className="text-sm text-neutral-400">Técnica, repertorio e improvisación en diversos estilos.</p>
-                </div>
-                <div className="bg-neutral-900 p-5 rounded-lg border border-neutral-800">
-                  <Music className="h-8 w-8 text-amber-500 mb-3" />
-                  <h4 className="text-white font-bold mb-2">Armonía y Arreglos</h4>
-                  <p className="text-sm text-neutral-400">Comprende la música moderna y aprende a arreglar canciones.</p>
-                </div>
-                <div className="bg-neutral-900 p-5 rounded-lg border border-neutral-800 sm:col-span-2">
-                  <Sliders className="h-8 w-8 text-amber-500 mb-3" />
-                  <h4 className="text-white font-bold mb-2">Producción Musical</h4>
-                  <p className="text-sm text-neutral-400">Aprende a usar el estudio como un instrumento más. Grabación, mezcla y uso de DAWs.</p>
+
+            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
+              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
+                <Music className="h-16 w-16 text-amber-500 mb-4" />
+                <h3 className="text-2xl font-bold text-white">Armonía</h3>
+                <p className="text-amber-500 mt-2">Moderna y Arreglos</p>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <p className="text-neutral-300 mb-6">Entiende cómo funciona la música que escuchas. Aprende a componer, rearmonizar y crear arreglos para tus propias canciones.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Formación de acordes</div>
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Composición de melodías</div>
                 </div>
               </div>
-              <Link 
-                href="/clases" 
-                className="inline-flex items-center text-amber-500 hover:text-amber-400 font-medium"
-              >
-                Información sobre clases con David <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+            </div>
+
+            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
+              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
+                <Sliders className="h-16 w-16 text-amber-500 mb-4" />
+                <h3 className="text-2xl font-bold text-white">Producción</h3>
+                <p className="text-amber-500 mt-2">Grabación y Mezcla</p>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <p className="text-neutral-300 mb-6">Aprende a usar tu ordenador como un estudio de grabación. Clases prácticas donde trabajaremos sobre tus propios proyectos.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Manejo de DAWs</div>
+                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Criterios de mezcla</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-20 bg-amber-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-950 mb-6">
-            ¿Listo para darle forma a tu proyecto musical?
-          </h2>
-          <p className="text-xl text-neutral-900/80 mb-10">
-            Escríbenos por WhatsApp o email y cuéntanos qué necesitas. Te asesoramos sin compromiso.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/34600000000" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md text-white bg-neutral-950 hover:bg-neutral-800 transition-colors shadow-lg"
-            >
-              Contactar por WhatsApp
-            </a>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md text-neutral-950 bg-transparent border-2 border-neutral-950 hover:bg-neutral-950 hover:text-white transition-colors"
-            >
-              Ver más formas de contacto
-            </Link>
+      {/* TRABAJOS SECTION */}
+      <section id="trabajos" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Nuestros Trabajos</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              Una selección de los últimos proyectos que han pasado por el estudio.
+            </p>
+          </div>
+
+          <div className="mb-16 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 text-center max-w-4xl mx-auto">
+            <Music className="h-12 w-12 text-amber-500 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Playlist del Estudio</h3>
+            <p className="text-neutral-400 mb-6">Escucha nuestra playlist en Spotify con todos los lanzamientos producidos en Z Estudio BCN.</p>
+            <div className="aspect-video bg-neutral-950 rounded-xl border border-neutral-800 flex items-center justify-center">
+              <p className="text-neutral-500">[ Aquí iría el embed de Spotify ]</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {trabajos.map((trabajo) => (
+              <div key={trabajo.id} className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden group hover:border-amber-500/50 transition-colors">
+                <div className="aspect-square bg-neutral-950 relative flex items-center justify-center">
+                  <Music className="h-16 w-16 text-neutral-800" />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <button className="bg-amber-500 text-neutral-950 rounded-full p-4 transform translate-y-4 group-hover:translate-y-0 transition-all">
+                      <Play className="h-6 w-6 fill-current" />
+                    </button>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="text-xs text-amber-500 font-medium mb-2">{trabajo.genre}</div>
+                  <h4 className="text-lg font-bold text-white">{trabajo.title}</h4>
+                  <p className="text-neutral-400 text-sm mb-4">{trabajo.artist}</p>
+                  <div className="inline-block bg-neutral-950 border border-neutral-800 rounded px-3 py-1 text-xs text-neutral-300">
+                    {trabajo.role}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOBRE NOSOTROS SECTION */}
+      <section id="sobre-nosotros" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Sobre Nosotros</h2>
+            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+              El equipo creativo y técnico detrás de Z Estudio BCN.
+            </p>
+          </div>
+
+          {/* David García */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511331214401-1ee345a8a1c5?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
+              <p className="text-xl text-amber-500 mb-6">Director, Productor y Profesor</p>
+              <div className="space-y-4 text-neutral-300 mb-8">
+                <p>Con más de 15 años de experiencia, David es el motor de Z Estudio BCN. Su visión integral le permite abordar proyectos como músico, técnico y productor.</p>
+                <p>Su filosofía se basa en capturar la esencia de cada artista, utilizando la tecnología como herramienta al servicio de la canción.</p>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Guitar className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Guitarrista</p>
+                </div>
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Sliders className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Productor</p>
+                </div>
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Mic className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Profesor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Joan Isern */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-row-reverse lg:flex-row">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-4xl font-bold text-white mb-2">Joan Isern</h3>
+              <p className="text-xl text-amber-500 mb-6">Co-productor y Colaborador (MÄLMO 040)</p>
+              <div className="space-y-4 text-neutral-300 mb-8">
+                <p>Joan aporta su visión fresca y experiencia directa en la escena pop e indie actual gracias a su trabajo en MÄLMO 040.</p>
+                <p>Se involucra en los proyectos aportando ideas de arreglos, estructuras y sonidos que conectan con el público de hoy. La sinergia entre la experiencia técnica de David y la intuición creativa de Joan crea el entorno perfecto.</p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Compositor</p>
+                </div>
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Headphones className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Co-productor</p>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=2078&auto=format&fit=crop')] bg-cover bg-center" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACTO SECTION */}
+      <section id="contacto" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Contacto</h2>
+            <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+              ¿Tienes un proyecto en mente? Escríbenos y le daremos forma.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
+                <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
+                  <MessageCircle className="h-6 w-6 text-amber-500" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-sm text-neutral-400">WhatsApp</p>
+                  <p className="text-lg font-medium text-white">+34 600 000 000</p>
+                </div>
+              </a>
+              <a href="mailto:hola@zestudiobcn.com" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
+                <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
+                  <Mail className="h-6 w-6 text-amber-500" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-sm text-neutral-400">Email</p>
+                  <p className="text-lg font-medium text-white">hola@zestudiobcn.com</p>
+                </div>
+              </a>
+              <div className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl">
+                <div className="bg-amber-500/10 p-3 rounded-lg">
+                  <MapPin className="h-6 w-6 text-amber-500" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-sm text-neutral-400">Ubicación</p>
+                  <p className="text-lg font-medium text-white">Barcelona, España</p>
+                  <p className="text-sm text-neutral-500">Visitas solo con cita previa</p>
+                </div>
+              </div>
+              <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
+                <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
+                  <Instagram className="h-6 w-6 text-amber-500" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-sm text-neutral-400">Instagram</p>
+                  <p className="text-lg font-medium text-white">@zestudiobcn</p>
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-white mb-6">Envíanos un mensaje</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-neutral-400 mb-2">Nombre</label>
+                    <input type="text" id="name" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="Tu nombre" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-neutral-400 mb-2">Email</label>
+                    <input type="email" id="email" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="tu@email.com" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-400 mb-2">¿En qué estás interesado?</label>
+                  <select id="subject" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all appearance-none">
+                    <option value="estudio">Grabación en estudio</option>
+                    <option value="produccion">Producción / Mezcla / Mastering</option>
+                    <option value="combos">Escuela de Combos</option>
+                    <option value="clases">Clases particulares</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-2">Mensaje</label>
+                  <textarea id="message" rows={4} className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                </div>
+                <button type="button" className="w-full bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold py-4 px-8 rounded-lg transition-colors">
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
