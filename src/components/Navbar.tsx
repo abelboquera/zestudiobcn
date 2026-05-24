@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Music } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import DynamicLogo from "./DynamicLogo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2">
-              <Music className="h-8 w-8 text-amber-500" />
-              <span className="font-bold text-xl tracking-tight text-white">
-                Z ESTUDIO <span className="text-amber-500">BCN</span>
-              </span>
+            <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+              <DynamicLogo />
             </Link>
           </div>
           <div className="hidden md:block">

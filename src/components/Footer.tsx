@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import DynamicLogo from "./DynamicLogo";
 
 export default function Footer() {
   return (
@@ -7,10 +8,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="font-bold text-xl tracking-tight text-white">
-                Z ESTUDIO <span className="text-amber-500">BCN</span>
-              </span>
+            <Link href="/" className="inline-block mb-6">
+              <DynamicLogo />
             </Link>
             <p className="text-neutral-400 text-sm mb-6">
               Estudio de grabación, producción musical y escuela de combos en Barcelona dirigido por David García.
