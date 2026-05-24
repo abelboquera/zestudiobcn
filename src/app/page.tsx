@@ -322,7 +322,11 @@ export default function Home() {
                 { name: "Banda 7", role: "Mezcla" },
                 { name: "Artista 8", role: "Mastering" },
               ].map((artist, index) => (
-                <div key={index} className="w-40 md:w-56 mx-4 flex flex-col items-center group cursor-pointer">
+                <a 
+                  key={index} 
+                  href="#trabajos"
+                  className="w-40 md:w-56 mx-4 flex flex-col items-center group cursor-pointer"
+                >
                   <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#0a0a0a] border border-neutral-800 mb-6 flex items-center justify-center overflow-hidden group-hover:border-amber-500 transition-all duration-300 shadow-lg">
                     <Users className="h-12 w-12 md:h-16 md:w-16 text-neutral-600 group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
@@ -331,7 +335,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-base md:text-lg font-bold text-white group-hover:text-amber-500 transition-colors text-center">{artist.name}</h3>
                   <p className="text-xs md:text-sm text-neutral-500 mt-1">{artist.role}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
