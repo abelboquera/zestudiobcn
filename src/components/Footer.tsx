@@ -39,6 +39,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Estudio</h3>
             <ul className="space-y-2">
               <li><a href="#trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">Nuestros Trabajos</a></li>
+              <li><a href="#artistas" className="text-neutral-400 hover:text-amber-500 text-sm">Artistas</a></li>
               <li><a href="#sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">Sobre nosotros</a></li>
               <li><a href="#contacto" className="text-neutral-400 hover:text-amber-500 text-sm">Contacto</a></li>
             </ul>

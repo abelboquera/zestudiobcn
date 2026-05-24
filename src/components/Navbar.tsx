@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: "Combos", href: "#escuela-combos" },
     { name: "Clases", href: "#clases" },
     { name: "Trabajos", href: "#trabajos" },
+    { name: "Artistas", href: "#artistas" },
     { name: "Nosotros", href: "#sobre-nosotros" },
     { name: "Contacto", href: "#contacto" },
   ];

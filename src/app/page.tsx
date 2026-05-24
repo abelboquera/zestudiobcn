@@ -318,8 +318,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ARTISTAS SECTION */}
+      <section id="artistas" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Artistas</h2>
+            <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+              Músicos y bandas que han grabado, producido o colaborado en Z Estudio BCN.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {[
+              "MÄLMO 040", 
+              "Nombre del Artista 2", 
+              "Nombre de la Banda 3", 
+              "Artista 4", 
+              "Banda 5", 
+              "Artista 6", 
+              "Banda 7", 
+              "Artista 8"
+            ].map((artist, index) => (
+              <div key={index} className="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-6 text-center group hover:border-amber-500/50 transition-colors flex flex-col items-center justify-center aspect-square">
+                <div className="w-20 h-20 rounded-full bg-neutral-900 border border-neutral-800 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden relative">
+                  {/* Placeholder for artist image */}
+                  <Users className="h-8 w-8 text-neutral-600 group-hover:text-amber-500 transition-colors" />
+                </div>
+                <h3 className="text-sm md:text-base font-bold text-white">{artist}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SOBRE NOSOTROS SECTION */}
-      <section id="sobre-nosotros" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
+      <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Sobre Nosotros</h2>
@@ -385,7 +418,7 @@ export default function Home() {
       </section>
 
       {/* CONTACTO SECTION */}
-      <section id="contacto" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
+      <section id="contacto" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Contacto</h2>

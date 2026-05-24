@@ -49,6 +49,7 @@ export default function DynamicLogo({ className = "" }: { className?: string }) 
       sectionName = "GUITARS";
       break;
     case "trabajos":
+    case "artistas":
     case "sobre-nosotros":
     case "contacto":
     case "inicio":
