@@ -319,7 +319,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {/* David García */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-[url('/images/guitars.png')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('/images/david-garcia.jpg')] bg-cover bg-center" />
             </div>
             <div>
               <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
