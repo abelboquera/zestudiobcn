@@ -297,25 +297,43 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {[
-              "MÄLMO 040", 
-              "Nombre del Artista 2", 
-              "Nombre de la Banda 3", 
-              "Artista 4", 
-              "Banda 5", 
-              "Artista 6", 
-              "Banda 7", 
-              "Artista 8"
-            ].map((artist, index) => (
-              <div key={index} className="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-6 text-center group hover:border-amber-500/50 transition-colors flex flex-col items-center justify-center aspect-square">
-                <div className="w-20 h-20 rounded-full bg-neutral-900 border border-neutral-800 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden relative">
-                  {/* Placeholder for artist image */}
-                  <Users className="h-8 w-8 text-neutral-600 group-hover:text-amber-500 transition-colors" />
+          <div className="relative w-full overflow-hidden py-10 -mx-4 px-4 sm:mx-0 sm:px-0">
+            {/* Gradient masks for smooth edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-neutral-900 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-neutral-900 to-transparent z-10 pointer-events-none" />
+            
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+              {[
+                { name: "MÄLMO 040", role: "Co-producción" },
+                { name: "Artista 2", role: "Grabación" },
+                { name: "Banda 3", role: "Mezcla" },
+                { name: "Artista 4", role: "Mastering" },
+                { name: "Banda 5", role: "Producción" },
+                { name: "Artista 6", role: "Grabación" },
+                { name: "Banda 7", role: "Mezcla" },
+                { name: "Artista 8", role: "Mastering" },
+                // Duplicated for infinite scroll
+                { name: "MÄLMO 040", role: "Co-producción" },
+                { name: "Artista 2", role: "Grabación" },
+                { name: "Banda 3", role: "Mezcla" },
+                { name: "Artista 4", role: "Mastering" },
+                { name: "Banda 5", role: "Producción" },
+                { name: "Artista 6", role: "Grabación" },
+                { name: "Banda 7", role: "Mezcla" },
+                { name: "Artista 8", role: "Mastering" },
+              ].map((artist, index) => (
+                <div key={index} className="w-40 md:w-56 mx-4 flex flex-col items-center group cursor-pointer">
+                  <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#0a0a0a] border border-neutral-800 mb-6 flex items-center justify-center overflow-hidden group-hover:border-amber-500 transition-all duration-300 shadow-lg">
+                    <Users className="h-12 w-12 md:h-16 md:w-16 text-neutral-600 group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                      <Play className="h-10 w-10 md:h-14 md:w-14 text-amber-500 fill-current transform scale-75 group-hover:scale-100 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  <h3 className="text-base md:text-lg font-bold text-white group-hover:text-amber-500 transition-colors text-center">{artist.name}</h3>
+                  <p className="text-xs md:text-sm text-neutral-500 mt-1">{artist.role}</p>
                 </div>
-                <h3 className="text-sm md:text-base font-bold text-white">{artist}</h3>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
