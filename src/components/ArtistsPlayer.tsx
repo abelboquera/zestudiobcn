@@ -27,12 +27,21 @@ export default function ArtistsPlayer() {
       // Play new artist
       if (audioRef.current) {
         try {
+          // Force load the audio before playing
           audioRef.current.src = src;
-          await audioRef.current.play();
-          setPlayingIndex(index);
+          audioRef.current.load();
+          
+          const playPromise = audioRef.current.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              setPlayingIndex(index);
+            }).catch(error => {
+              console.error("Error playing audio:", error);
+              setPlayingIndex(null);
+            });
+          }
         } catch (error) {
-          console.error("Error playing audio:", error);
-          // Reset state if playback fails (e.g., browser blocks autoplay)
+          console.error("Error setting up audio:", error);
           setPlayingIndex(null);
         }
       }
