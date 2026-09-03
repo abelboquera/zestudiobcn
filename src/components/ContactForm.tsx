@@ -8,48 +8,52 @@ type Dict = {
   sendBtn: string;
 };
 
+const CONTACT_EMAIL = "davidggmusic@gmail.com";
+
+const SUBJECTS = [
+  { value: "produccion", label: "Producción" },
+  { value: "grabacion", label: "Grabación / Mezcla / Mastering" },
+  { value: "combos", label: "Escuela de Combos" },
+  { value: "clases", label: "Clases particulares" },
+  { value: "otro", label: "Otro" },
+];
+
 const inputClass =
   "w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all";
 
 export default function ContactForm({ dict }: { dict: Dict }) {
-  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
+  const [sent, setSent] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
+    const data = new FormData(e.currentTarget);
 
-    setStatus("sending");
-    try {
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      form.reset();
-      setStatus("ok");
-    } catch {
-      setStatus("error");
-    }
+    const name = String(data.get("name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const subjectValue = String(data.get("subject") ?? "");
+    const message = String(data.get("message") ?? "");
+
+    const subjectLabel =
+      SUBJECTS.find((s) => s.value === subjectValue)?.label ?? subjectValue;
+
+    const subject = `[Web] ${subjectLabel} — ${name}`;
+    const body = [
+      `Nombre: ${name}`,
+      `Email: ${email}`,
+      `Interesado en: ${subjectLabel}`,
+      "",
+      message,
+    ].join("\n");
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    setSent(true);
   }
 
   return (
-    <form
-      name="contacto"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-      className="space-y-6"
-    >
-      <input type="hidden" name="form-name" value="contacto" />
-      <p className="hidden">
-        <label>
-          No rellenar: <input name="bot-field" />
-        </label>
-      </p>
-
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-neutral-400 mb-2">
@@ -69,11 +73,11 @@ export default function ContactForm({ dict }: { dict: Dict }) {
           ¿En qué estás interesado?
         </label>
         <select id="subject" name="subject" className={`${inputClass} appearance-none`}>
-          <option value="produccion">Producción</option>
-          <option value="grabacion">Grabación / Mezcla / Mastering</option>
-          <option value="combos">Escuela de Combos</option>
-          <option value="clases">Clases particulares</option>
-          <option value="otro">Otro</option>
+          {SUBJECTS.map((s) => (
+            <option key={s.value} value={s.value}>
+              {s.label}
+            </option>
+          ))}
         </select>
       </div>
       <div>
@@ -91,20 +95,15 @@ export default function ContactForm({ dict }: { dict: Dict }) {
       </div>
       <button
         type="submit"
-        disabled={status === "sending"}
-        className="w-full bg-amber-500 hover:bg-amber-400 disabled:opacity-60 text-neutral-950 font-bold py-4 px-8 rounded-lg transition-colors"
+        className="w-full bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold py-4 px-8 rounded-lg transition-colors"
       >
-        {status === "sending" ? "Enviando…" : dict.sendBtn}
+        {dict.sendBtn}
       </button>
 
-      {status === "ok" && (
+      {sent && (
         <p className="text-sm text-amber-500" role="status">
-          ¡Mensaje enviado! Te responderemos lo antes posible.
-        </p>
-      )}
-      {status === "error" && (
-        <p className="text-sm text-red-400" role="alert">
-          No se ha podido enviar. Inténtalo de nuevo o escríbenos a davidggmusic@gmail.com.
+          Se abrirá tu aplicación de correo con el mensaje listo. Solo tienes que
+          pulsar enviar. Si no se abre, escríbenos a {CONTACT_EMAIL}.
         </p>
       )}
     </form>
