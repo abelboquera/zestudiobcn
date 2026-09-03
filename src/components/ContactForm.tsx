@@ -36,7 +36,7 @@ export default function ContactForm({ dict }: { dict: Dict }) {
     const subjectLabel =
       SUBJECTS.find((s) => s.value === subjectValue)?.label ?? subjectValue;
 
-    const subject = `Z Estudio / Contacto / ${name}`;
+    const subject = `Z Estudio / Contacto / ${name} / ${subjectLabel}`;
     const body = [
       `Nombre: ${name}`,
       `Email: ${email}`,
