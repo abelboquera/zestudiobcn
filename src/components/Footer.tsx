@@ -54,7 +54,7 @@ export default function Footer({ dict }: { dict: any }) {
               </li>
               <li className="flex items-center text-neutral-400 text-sm">
                 <Phone className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
-                <span>+34 600 000 000</span>
+                <span>+34 687 281 762</span>
               </li>
               <li className="flex items-center text-neutral-400 text-sm">
                 <Mail className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
