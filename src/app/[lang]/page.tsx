@@ -394,13 +394,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <p className="text-lg font-medium text-white">+34 687 281 762</p>
                 </div>
               </a>
-              <a href="mailto:hola@zestudiobcn.com" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
+              <a href="mailto:davidggmusic@gmail.com" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
                 <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
                   <Mail className="h-6 w-6 text-amber-500" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm text-neutral-400">Email</p>
-                  <p className="text-lg font-medium text-white">hola@zestudiobcn.com</p>
+                  <p className="text-lg font-medium text-white">davidggmusic@gmail.com</p>
                 </div>
               </a>
               <div className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl">

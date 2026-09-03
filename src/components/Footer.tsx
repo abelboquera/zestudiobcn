@@ -18,7 +18,7 @@ export default function Footer({ dict }: { dict: any }) {
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="mailto:hola@zestudiobcn.com" className="text-neutral-400 hover:text-amber-500 transition-colors">
+              <a href="mailto:davidggmusic@gmail.com" className="text-neutral-400 hover:text-amber-500 transition-colors">
                 <span className="sr-only">Email</span>
                 <Mail className="h-5 w-5" />
               </a>
@@ -58,7 +58,7 @@ export default function Footer({ dict }: { dict: any }) {
               </li>
               <li className="flex items-center text-neutral-400 text-sm">
                 <Mail className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
-                <span>hola@zestudiobcn.com</span>
+                <span>davidggmusic@gmail.com</span>
               </li>
             </ul>
           </div>

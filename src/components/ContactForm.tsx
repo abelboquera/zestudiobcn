@@ -104,7 +104,7 @@ export default function ContactForm({ dict }: { dict: Dict }) {
       )}
       {status === "error" && (
         <p className="text-sm text-red-400" role="alert">
-          No se ha podido enviar. Inténtalo de nuevo o escríbenos a hola@zestudiobcn.com.
+          No se ha podido enviar. Inténtalo de nuevo o escríbenos a davidggmusic@gmail.com.
         </p>
       )}
     </form>
