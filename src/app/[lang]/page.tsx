@@ -439,8 +439,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-neutral-400 mb-2">¿En qué estás interesado?</label>
                   <select id="subject" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all appearance-none">
-                    <option value="estudio">Grabación en estudio</option>
-                    <option value="produccion">Producción / Mezcla / Mastering</option>
+                    <option value="produccion">Producción</option>
+                    <option value="grabacion">Grabación / Mezcla / Mastering</option>
                     <option value="combos">Escuela de Combos</option>
                     <option value="clases">Clases particulares</option>
                     <option value="otro">Otro</option>
