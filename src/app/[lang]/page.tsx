@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import ArtistsPlayer from "@/components/ArtistsPlayer";
+import ContactForm from "@/components/ContactForm";
 import { Locale, dictionaries } from "@/i18n";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
@@ -425,35 +426,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-white mb-6">Envíanos un mensaje</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-400 mb-2">Nombre</label>
-                    <input type="text" id="name" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="Tu nombre" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-400 mb-2">Email</label>
-                    <input type="email" id="email" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="tu@email.com" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-400 mb-2">¿En qué estás interesado?</label>
-                  <select id="subject" className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all appearance-none">
-                    <option value="produccion">Producción</option>
-                    <option value="grabacion">Grabación / Mezcla / Mastering</option>
-                    <option value="combos">Escuela de Combos</option>
-                    <option value="clases">Clases particulares</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-2">{dict.contacto.messageLabel}</label>
-                  <textarea id="message" rows={4} className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none" placeholder={dict.contacto.messagePlaceholder}></textarea>
-                </div>
-                <button type="button" className="w-full bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold py-4 px-8 rounded-lg transition-colors">
-                  {dict.contacto.sendBtn}
-                </button>
-              </form>
+              <ContactForm dict={dict.contacto} />
             </div>
           </div>
         </div>
