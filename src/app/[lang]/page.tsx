@@ -6,6 +6,8 @@ import {
 import HeroSlider from "@/components/HeroSlider";
 import ArtistsPlayer from "@/components/ArtistsPlayer";
 import ContactForm from "@/components/ContactForm";
+import ReleasesSlider from "@/components/ReleasesSlider";
+import { releases } from "@/data/releases";
 import { Locale, dictionaries } from "@/i18n";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
@@ -303,6 +305,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
         </div>
       </section>
+
+      {/* RELEASES SECTION (no aparece en el menu de navegacion) */}
+      <ReleasesSlider releases={releases} />
 
       {/* ARTISTAS SECTION */}
       <ArtistsPlayer dict={dict.artistas} artists={artistsData} />
