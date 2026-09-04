@@ -31,7 +31,8 @@ export default function ReleasesSlider({ releases }: { releases: Release[] }) {
   const prev = () => goTo(current === 0 ? releases.length - 1 : current - 1);
 
   const release = releases[current];
-  const embedHeight = release.type === "album" ? 380 : 152;
+  const embedHeight =
+    release.type === "playlist" ? 480 : release.type === "album" ? 380 : 152;
 
   return (
     <section
@@ -46,7 +47,7 @@ export default function ReleasesSlider({ releases }: { releases: Release[] }) {
           </div>
           <h2 className="text-4xl font-bold text-white mb-6">Producido en el estudio</h2>
           <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-            Una seleccion de lanzamientos que han salido de Z Estudio BCN. Dale al play.
+            Una selección de lanzamientos que han salido de Z Estudio BCN. Dale al play.
           </p>
         </div>
 
@@ -59,7 +60,7 @@ export default function ReleasesSlider({ releases }: { releases: Release[] }) {
             <div className="flex items-start justify-between gap-4 mb-6">
               <div>
                 <h3 className="text-2xl font-bold text-white">{release.title}</h3>
-                <p className="text-amber-500">{release.artist}</p>
+                {release.artist && <p className="text-amber-500">{release.artist}</p>}
               </div>
               {release.role && (
                 <span className="flex-shrink-0 bg-neutral-950 border border-neutral-800 rounded px-3 py-1 text-xs text-neutral-300">
@@ -77,7 +78,7 @@ export default function ReleasesSlider({ releases }: { releases: Release[] }) {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
               className="rounded-xl"
-              title={`${release.title} - ${release.artist}`}
+              title={release.artist ? `${release.title} - ${release.artist}` : release.title}
             />
           </div>
 
