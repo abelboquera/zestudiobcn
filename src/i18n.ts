@@ -46,7 +46,7 @@ export const dictionaries = {
       backlineDesc: "Guitarras, bajos, amplificadores y sintetizadores a tu disposición."
     },
     produccion: {
-      title: "Producción Musical",
+      title: "Servicios",
       subtitle: "Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.",
       prodTitle: "Producción musical",
       prodDesc: "Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.",
@@ -145,7 +145,7 @@ export const dictionaries = {
       backlineDesc: "Guitars, basses, amplifiers and synthesizers at your disposal."
     },
     produccion: {
-      title: "Music Production",
+      title: "Services",
       subtitle: "From the first note to the final master. We help you find your sound and take your songs to the next level.",
       prodTitle: "Music production",
       prodDesc: "We work together on the structure, arrangements and instrumentation of your songs. We advise you on the artistic direction.",
@@ -244,7 +244,7 @@ export const dictionaries = {
       backlineDesc: "Guitarres, baixos, amplificadors i sintetitzadors a la teva disposició."
     },
     produccion: {
-      title: "Producció Musical",
+      title: "Serveis",
       subtitle: "Des de la primera nota fins al màster final. T'ajudem a trobar el teu so i a portar les teves cançons al següent nivell.",
       prodTitle: "Producció musical",
       prodDesc: "Treballem junts en l'estructura, arranjaments i instrumentació de les teves cançons. T'assessorem en la direcció artística.",

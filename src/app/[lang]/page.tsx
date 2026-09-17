@@ -50,7 +50,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {/* Produccion musical (antes seccion propia) */}
           <div id="produccion" className="mb-24 scroll-mt-28">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Producción Musical</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Servicios</h2>
               <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
                 Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.
               </p>
