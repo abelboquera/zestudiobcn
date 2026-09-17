@@ -237,12 +237,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
-                  <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Compositor</p>
-                </div>
-                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Sliders className="h-6 w-6 text-amber-500 mx-auto mb-2" />
                   <p className="text-sm font-bold text-white">Productor</p>
+                </div>
+                <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
+                  <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Compositor</p>
                 </div>
               </div>
             </div>
