@@ -58,19 +58,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
-                <Music className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Composición</h3>
-                <p className="text-neutral-400">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+                <Music className="h-10 w-10 text-amber-500 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Composición</h3>
+                <p className="text-neutral-400 text-sm">
                   Construimos tu música desde cero, tanto para fines comerciales como artísticos.
                 </p>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
-                <Disc className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Producción musical</h3>
-                <p className="text-neutral-400 mb-6">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+                <Disc className="h-10 w-10 text-amber-500 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Producción musical</h3>
+                <p className="text-neutral-400 text-sm mb-4">
                   Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
                 </p>
                 <ul className="space-y-2 text-sm text-neutral-300">
@@ -80,10 +80,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
-                <Mic className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Grabación</h3>
-                <p className="text-neutral-400 mb-6">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+                <Mic className="h-10 w-10 text-amber-500 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Grabación</h3>
+                <p className="text-neutral-400 text-sm mb-4">
                   Grabación de todo tipo de instrumentos y voces al máximo nivel.
                 </p>
                 <ul className="space-y-2 text-sm text-neutral-300">
@@ -93,10 +93,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
-                <Sliders className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Mezcla</h3>
-                <p className="text-neutral-400 mb-6">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+                <Sliders className="h-10 w-10 text-amber-500 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Mezcla</h3>
+                <p className="text-neutral-400 text-sm mb-4">
                   Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido analógico y digital.
                 </p>
                 <ul className="space-y-2 text-sm text-neutral-300">
@@ -106,10 +106,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
-                <Headphones className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Mastering</h3>
-                <p className="text-neutral-400">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+                <Headphones className="h-10 w-10 text-amber-500 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Mastering</h3>
+                <p className="text-neutral-400 text-sm">
                   El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
                 </p>
               </div>
