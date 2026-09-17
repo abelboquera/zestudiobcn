@@ -236,9 +236,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-row-reverse lg:flex-row">
             <div className="order-2 lg:order-1">
               <h3 className="text-4xl font-bold text-white mb-2">Joan Isern</h3>
-              <p className="text-xl text-amber-500 mb-6">Productor</p>
+              <p className="text-xl text-amber-500 mb-6">Productor y Compositor</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Joan aporta una mirada actual y fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
+                <p>Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
@@ -247,7 +247,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Headphones className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Co-productor</p>
+                  <p className="text-sm font-bold text-white">Productor</p>
                 </div>
               </div>
             </div>

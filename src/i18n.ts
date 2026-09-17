@@ -88,9 +88,9 @@ export const dictionaries = {
       davidDesc2: "Su filosofía se basa en capturar la esencia de cada artista, utilizando la tecnología como herramienta al servicio de la canción.",
       davidRoles: ["Guitarrista", "Productor", "Profesor"],
       joanTitle: "Joan Isern",
-      joanSub: "Productor",
-      joanDesc1: "Joan aporta una mirada actual y fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.",
-      joanRoles: ["Compositor", "Co-productor"]
+      joanSub: "Productor y Compositor",
+      joanDesc1: "Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.",
+      joanRoles: ["Compositor", "Productor"]
     },
     contacto: {
       title: "Contacto",
@@ -208,9 +208,9 @@ export const dictionaries = {
       davidDesc2: "His philosophy is based on capturing the essence of each artist, using technology as a tool at the service of the song.",
       davidRoles: ["Guitarist", "Producer", "Teacher"],
       joanTitle: "Joan Isern",
-      joanSub: "Producer",
-      joanDesc1: "Joan brings a fresh, contemporary perspective and direct experience in today's pop and indie scene, with productions for artists such as Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante and Pla Moguda, as well as Joan's own band, MÄLMO 040.",
-      joanRoles: ["Composer", "Co-producer"]
+      joanSub: "Producer and Composer",
+      joanDesc1: "Joan brings a fresh perspective and direct experience in today's pop and indie scene, with productions for artists such as Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante and Pla Moguda, as well as Joan's own band, MÄLMO 040.",
+      joanRoles: ["Composer", "Producer"]
     },
     contacto: {
       title: "Contact",
@@ -328,9 +328,9 @@ export const dictionaries = {
       davidDesc2: "La seva filosofia es basa a capturar l'essència de cada artista, utilitzant la tecnologia com a eina al servei de la cançó.",
       davidRoles: ["Guitarrista", "Productor", "Professor"],
       joanTitle: "Joan Isern",
-      joanSub: "Productor",
-      joanDesc1: "El Joan aporta una mirada actual i fresca amb experiència directa en l'escena pop i indie actual, amb produccions per a artistes com Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante i Pla Moguda, a més de la seva pròpia banda, MÄLMO 040.",
-      joanRoles: ["Compositor", "Co-productor"]
+      joanSub: "Productor i Compositor",
+      joanDesc1: "El Joan aporta una mirada fresca amb experiència directa en l'escena pop i indie actual, amb produccions per a artistes com Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante i Pla Moguda, a més de la seva pròpia banda, MÄLMO 040.",
+      joanRoles: ["Compositor", "Productor"]
     },
     contacto: {
       title: "Contacte",
