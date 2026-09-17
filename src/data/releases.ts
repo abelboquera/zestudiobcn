@@ -21,8 +21,8 @@ export type Release = {
 /**
  * Releases producidos en Z Estudio BCN.
  *
- * Si aqui solo hay una entrada, se muestra sin flechas ni rotacion.
- * Si hay varias, la seccion las va rotando automaticamente.
+ * Se muestran todas en paralelo: una columna por entrada en escritorio
+ * y una debajo de otra en movil.
  *
  * Si la lista esta vacia, la seccion no aparece en la web.
  */
@@ -31,5 +31,10 @@ export const releases: Release[] = [
     type: "playlist",
     id: "7onaaMSWiZN2xDP5GlqO4P",
     title: "Grabaciones Z Estudio",
+  },
+  {
+    type: "playlist",
+    id: "3OxeMRhCftYabOQplRQM4a",
+    title: "Mastering Z ESTUDIO BCN",
   },
 ];
