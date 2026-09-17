@@ -12,18 +12,18 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudio de grabación y producción musical en Barcelona.",
-          desc: "Grabación, mezcla, mastering y producción para músicos que quieren desarrollar su sonido.",
+          subtitle: "Estudio de producción musical en Barcelona.",
+          desc: "Composición, producción, grabación, mezcla y mastering.",
           cta1: { text: "Quiero grabar", href: "#contacto" },
           cta2: { text: "Escuchar releases", href: "#releases" }
         },
         {
           id: "estudio",
           image: "/images/live-room.png",
-          titlePrefix: "EL ",
-          titleHighlight: "ESTUDIO",
-          subtitle: "Un espacio diseñado para la creatividad.",
-          desc: "Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital a tu disposición para capturar la mejor interpretación.",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Acústica cuidada y ambiente relajado.",
+          desc: "El mejor equipo analógico y digital a tu disposición.",
           cta1: { text: "Ver equipamiento", href: "#estudio" },
           cta2: { text: "Reservar sesión", href: "#contacto" }
         }
@@ -116,18 +116,18 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Recording and music production studio in Barcelona.",
-          desc: "Recording, mixing, mastering and production for musicians who want to develop their sound.",
+          subtitle: "Music production studio in Barcelona.",
+          desc: "Songwriting, production, recording, mixing and mastering.",
           cta1: { text: "I want to record", href: "#contacto" },
           cta2: { text: "Listen to releases", href: "#releases" }
         },
         {
           id: "estudio",
           image: "/images/live-room.png",
-          titlePrefix: "THE ",
-          titleHighlight: "STUDIO",
-          subtitle: "A space designed for creativity.",
-          desc: "Careful acoustics, relaxed atmosphere and the best analog and digital equipment at your disposal to capture the best performance.",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Careful acoustics and a relaxed atmosphere.",
+          desc: "The best analog and digital equipment at your disposal.",
           cta1: { text: "View equipment", href: "#estudio" },
           cta2: { text: "Book session", href: "#contacto" }
         }
@@ -220,18 +220,18 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudi de gravació i producció musical a Barcelona.",
-          desc: "Gravació, mescla, mastering i producció per a músics que volen desenvolupar el seu so.",
+          subtitle: "Estudi de producció musical a Barcelona.",
+          desc: "Composició, producció, gravació, mescla i mastering.",
           cta1: { text: "Vull gravar", href: "#contacto" },
           cta2: { text: "Escoltar releases", href: "#releases" }
         },
         {
           id: "estudio",
           image: "/images/live-room.png",
-          titlePrefix: "L'",
-          titleHighlight: "ESTUDI",
-          subtitle: "Un espai dissenyat per a la creativitat.",
-          desc: "Acústica cuidada, ambient relaxat i el millor equip analògic i digital a la teva disposició per capturar la millor interpretació.",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Acústica cuidada i ambient relaxat.",
+          desc: "El millor equip analògic i digital a la teva disposició.",
           cta1: { text: "Veure equipament", href: "#estudio" },
           cta2: { text: "Reservar sessió", href: "#contacto" }
         }

@@ -36,6 +36,12 @@ export default function HeroSlider({ slides }: { slides: any[] }) {
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16 w-full">
+        {/* El titulo no cambia entre diapositivas */}
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
+          {slides[0].titlePrefix}
+          <span className="text-amber-500">{slides[0].titleHighlight}</span>
+        </h1>
+
         {slides.map((slide, index) => (
           <div
             key={`content-${slide.id}`}
@@ -45,10 +51,6 @@ export default function HeroSlider({ slides }: { slides: any[] }) {
                 : "opacity-0 translate-y-8 absolute inset-x-0 top-0 pointer-events-none"
             }`}
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
-              {slide.titlePrefix}
-              <span className="text-amber-500">{slide.titleHighlight}</span>
-            </h1>
             <p className="mt-4 text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light mb-6">
               {slide.subtitle}
             </p>
