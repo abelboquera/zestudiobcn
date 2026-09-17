@@ -252,7 +252,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </div>
             </div>
             <div className="order-1 lg:order-2 relative h-[500px] rounded-2xl overflow-hidden border border-neutral-800">
-              <div className="absolute inset-0 bg-[url('/images/keys.png')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('/images/joan-isern.jpg')] bg-cover bg-top" />
             </div>
           </div>
         </div>
