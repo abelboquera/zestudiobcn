@@ -20,6 +20,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!_next|images|logos|audio|favicon.ico).*)',
+    // Excluye rutas internas y cualquier archivo con extension (favicon, icon.png, og-image.jpg...)
+    '/((?!_next|images|logos|audio|.*\\..*).*)',
   ],
 };

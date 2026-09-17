@@ -7,10 +7,29 @@ import { Locale, dictionaries } from "@/i18n";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const TITLE = "Z Estudio BCN | Estudio de Producción Musical en Barcelona";
+const DESCRIPTION = "Estudio de grabación profesional en Barcelona. Producción musical, mezcla y mastering, dirigido por David García.";
+
 export const metadata: Metadata = {
-  title: "Z Estudio BCN | Grabación y Producción Musical en Barcelona",
-  description: "Estudio de grabación profesional en Barcelona. Producción musical, mezcla y mastering, dirigido por David García.",
+  metadataBase: new URL("https://zestudiobcn.com"),
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: "estudio de grabación Barcelona, producción musical Barcelona, mezcla y mastering Barcelona, grabar canción Barcelona",
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://zestudiobcn.com",
+    siteName: "Z Estudio BCN",
+    locale: "es_ES",
+    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Logo de Z Estudio BCN" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export async function generateStaticParams() {
