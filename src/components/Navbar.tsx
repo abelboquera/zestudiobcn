@@ -10,8 +10,8 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: dict.estudio, href: "#estudio" },
     { name: dict.trabajos, href: "#trabajos" },
+    { name: dict.estudio, href: "#estudio" },
     { name: dict.nosotros, href: "#sobre-nosotros" },
     { name: dict.contacto, href: "#contacto" },
   ];

@@ -30,8 +30,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <div className="flex flex-col min-h-screen">
       <HeroSlider slides={dict.hero.slides} />
 
+      {/* TRABAJOS SECTION */}
+      <section id="trabajos" className="py-24 bg-[#0a0a0a] scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white">Nuestros Trabajos</h2>
+          </div>
+
+          <TrabajosGrid trabajos={trabajos} />
+        </div>
+      </section>
+
       {/* ESTUDIO SECTION */}
-      <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
+      <section id="estudio" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Produccion musical (antes seccion propia) */}
           <div id="produccion" className="mb-24 scroll-mt-28">
@@ -111,17 +122,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* TRABAJOS SECTION */}
-      <section id="trabajos" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white">Nuestros Trabajos</h2>
-          </div>
-
-          <TrabajosGrid trabajos={trabajos} />
         </div>
       </section>
 
