@@ -210,10 +210,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             </div>
             <div>
               <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
-              <p className="text-xl text-amber-500 mb-6">Director, Productor y Profesor</p>
+              <p className="text-xl text-amber-500 mb-6">Productor, Compositor y CEO de Z Estudio BCN</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Con más de 15 años de experiencia, David es el motor de Z Estudio BCN. Su visión integral le permite abordar proyectos como músico, técnico y productor.</p>
-                <p>Su filosofía se basa en capturar la esencia de cada artista, utilizando la tecnología como herramienta al servicio de la canción.</p>
+                <p>Con más de 15 años de experiencia, ha producido artistas como Noan, Maren, Hey Kid, Paula Koops y Lauren Nine, ha compuesto música para League of Legends, Vèrtex (TV3), West Side Story (El musical) y en grabación, mezcla y masterización ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.</p>
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
@@ -225,8 +224,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <p className="text-sm font-bold text-white">Productor</p>
                 </div>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
-                  <Mic className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Profesor</p>
+                  <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-white">Compositor</p>
                 </div>
               </div>
             </div>
