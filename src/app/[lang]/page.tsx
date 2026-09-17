@@ -52,15 +52,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
                 <Disc className="h-12 w-12 text-amber-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Producción</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Producción musical</h3>
                 <p className="text-neutral-400 mb-6">
                   Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
                 </p>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  <li>• Pre-producción y maquetas</li>
+                  <li>• Pre-producción y composición</li>
                   <li>• Arreglos musicales</li>
-                  <li>• Grabación de instrumentos</li>
-                  <li>• Programación de baterías y beats</li>
+                  <li>• Grabación de máxima calidad</li>
                 </ul>
               </div>
 
@@ -68,13 +67,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <Sliders className="h-12 w-12 text-amber-500 mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Mezcla</h3>
                 <p className="text-neutral-400 mb-6">
-                  Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido.
+                  Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido analógico y digital.
                 </p>
                 <ul className="space-y-2 text-sm text-neutral-300">
                   <li>• Edición y afinación</li>
                   <li>• EQ y compresión analógica/digital</li>
-                  <li>• Efectos espaciales</li>
-                  <li>• Automatización detallada</li>
+                  <li>• FX analógicos</li>
                 </ul>
               </div>
 
