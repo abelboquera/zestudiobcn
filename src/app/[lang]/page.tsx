@@ -38,11 +38,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
 
           <TrabajosGrid trabajos={trabajos} />
+
+          {/* Releases: playlist de Spotify del estudio (ancla #releases) */}
+          <div className="mt-20">
+            <ReleasesSlider releases={releases} />
+          </div>
         </div>
       </section>
-
-      {/* RELEASES SECTION (no aparece en el menu de navegacion) */}
-      <ReleasesSlider releases={releases} />
 
       {/* ESTUDIO SECTION */}
       <section id="estudio" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
