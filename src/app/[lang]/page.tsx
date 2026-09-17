@@ -41,6 +41,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
+      {/* RELEASES SECTION (no aparece en el menu de navegacion) */}
+      <ReleasesSlider releases={releases} />
+
       {/* ESTUDIO SECTION */}
       <section id="estudio" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,9 +127,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
         </div>
       </section>
-
-      {/* RELEASES SECTION (no aparece en el menu de navegacion) */}
-      <ReleasesSlider releases={releases} />
 
       {/* SOBRE NOSOTROS SECTION */}
       <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
