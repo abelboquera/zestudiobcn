@@ -40,10 +40,6 @@ export default function DynamicLogo({ className = "" }: { className?: string }) 
       logoSrc = "/logos/produccion.png";
       sectionName = "PRODUCTION";
       break;
-    case "escuela-combos":
-      logoSrc = "/logos/combos.png";
-      sectionName = "ECB";
-      break;
     case "trabajos":
     case "artistas":
     case "sobre-nosotros":

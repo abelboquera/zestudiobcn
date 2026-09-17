@@ -13,7 +13,6 @@ const CONTACT_EMAIL = "davidggmusic@gmail.com";
 const SUBJECTS = [
   { value: "produccion", label: "Producción" },
   { value: "grabacion", label: "Grabación / Mezcla / Mastering" },
-  { value: "combos", label: "ECB - Escuela de Combo Barcelona" },
   { value: "otro", label: "Otro" },
 ];
 

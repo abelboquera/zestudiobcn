@@ -1,6 +1,6 @@
 import { 
-  Mic, Sliders, Users, Guitar, Play, 
-  Speaker, Headphones, Disc, Calendar, Star,
+  Mic, Sliders, Guitar, Play,
+  Speaker, Headphones, Disc,
   Mail, MapPin, MessageCircle, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
@@ -138,48 +138,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <li>• Limitación y maximización</li>
                 <li>• Formatos para streaming</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ECB (ESCUELA DE COMBO BARCELONA) SECTION */}
-      <section id="escuela-combos" className="py-24 bg-[#0a0a0a] relative overflow-hidden scroll-mt-20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-30 bg-[url('/images/drums.png')] bg-cover bg-center mix-blend-overlay" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-amber-500/20">
-              <Star className="h-4 w-4 fill-current" />
-              <span>Matrícula abierta</span>
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-2">ECB</h2>
-            <p className="text-sm font-bold uppercase tracking-widest text-amber-500 mb-6">Escuela de Combo Barcelona</p>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
-              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
-                <Users className="h-8 w-8 text-amber-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">1. Formamos tu banda</h3>
-              <p className="text-neutral-400">Te asignamos a un grupo con músicos de tu mismo nivel e inquietudes musicales.</p>
-            </div>
-            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
-              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
-                <Music className="h-8 w-8 text-amber-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">2. Ensayo guiado</h3>
-              <p className="text-neutral-400">Ensayos semanales de 1.5h dirigidos por David García. Trabajamos repertorio y dinámica.</p>
-            </div>
-            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
-              <div className="bg-neutral-950 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-neutral-800">
-                <Calendar className="h-8 w-8 text-amber-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">3. Concierto en directo</h3>
-              <p className="text-neutral-400">El objetivo final: tocar en directo. Organizamos conciertos periódicos en salas de Barcelona.</p>
             </div>
           </div>
         </div>

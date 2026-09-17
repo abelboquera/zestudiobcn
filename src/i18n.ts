@@ -3,7 +3,6 @@ export const dictionaries = {
     nav: {
       estudio: "Estudio",
       produccion: "Producción",
-      combos: "ECB",
       trabajos: "Trabajos",
       artistas: "Artistas",
       nosotros: "Nosotros",
@@ -16,10 +15,10 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudio de grabación, producción musical y ECB, Escuela de Combo Barcelona.",
-          desc: "Grabación, mezcla, mastering, producción y combos para músicos que quieren desarrollar su sonido tocando de verdad.",
+          subtitle: "Estudio de grabación y producción musical en Barcelona.",
+          desc: "Grabación, mezcla, mastering y producción para músicos que quieren desarrollar su sonido.",
           cta1: { text: "Quiero grabar", href: "#contacto" },
-          cta2: { text: "Apuntarme a un combo", href: "#escuela-combos" }
+          cta2: { text: "Escuchar releases", href: "#releases" }
         },
         {
           id: "estudio",
@@ -30,16 +29,6 @@ export const dictionaries = {
           desc: "Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital a tu disposición para capturar la mejor interpretación.",
           cta1: { text: "Ver equipamiento", href: "#estudio" },
           cta2: { text: "Reservar sesión", href: "#contacto" }
-        },
-        {
-          id: "combos",
-          image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio guiado por profesionales y súbete al escenario.",
-          cta1: { text: "Ver niveles", href: "#escuela-combos" },
-          cta2: { text: "Apuntarme", href: "#contacto" }
         }
       ]
     },
@@ -71,17 +60,6 @@ export const dictionaries = {
       masterTitle: "Mastering",
       masterDesc: "El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.",
       masterList: ["EQ correctiva y tonal", "Compresión multibanda", "Limitación y maximización", "Formatos para streaming"]
-    },
-    combos: {
-      tag: "Matrícula abierta",
-      title: "ECB",
-      subtitle: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.",
-      step1Title: "1. Formamos tu banda",
-      step1Desc: "Te asignamos a un grupo con músicos de tu mismo nivel e inquietudes musicales.",
-      step2Title: "2. Ensayo guiado",
-      step2Desc: "Ensayos semanales de 1.5h dirigidos por David García. Trabajamos repertorio y dinámica.",
-      step3Title: "3. Concierto en directo",
-      step3Desc: "El objetivo final: tocar en directo. Organizamos conciertos periódicos en salas de Barcelona."
     },
     trabajos: {
       title: "Nuestros Trabajos",
@@ -127,13 +105,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "¿En qué estás interesado?",
-      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "ECB - Escuela de Combo Barcelona", "Otro"],
+      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "Otro"],
       messageLabel: "Mensaje",
       messagePlaceholder: "Cuéntanos sobre tu proyecto...",
       sendBtn: "Enviar mensaje"
     },
     footer: {
-      desc: "Estudio de grabación, producción musical y ECB (Escuela de Combo Barcelona), dirigido por David García.",
+      desc: "Estudio de grabación y producción musical en Barcelona, dirigido por David García.",
       services: "Servicios",
       studio: "Estudio",
       contact: "Contacto",
@@ -146,7 +124,6 @@ export const dictionaries = {
     nav: {
       estudio: "Studio",
       produccion: "Production",
-      combos: "ECB",
       trabajos: "Work",
       artistas: "Artists",
       nosotros: "About Us",
@@ -159,10 +136,10 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Recording studio, music production and ECB, Escuela de Combo Barcelona.",
-          desc: "Recording, mixing, mastering, production and combos for musicians who want to develop their sound by playing for real.",
+          subtitle: "Recording and music production studio in Barcelona.",
+          desc: "Recording, mixing, mastering and production for musicians who want to develop their sound.",
           cta1: { text: "I want to record", href: "#contacto" },
-          cta2: { text: "Join a combo", href: "#escuela-combos" }
+          cta2: { text: "Listen to releases", href: "#releases" }
         },
         {
           id: "estudio",
@@ -173,16 +150,6 @@ export const dictionaries = {
           desc: "Careful acoustics, relaxed atmosphere and the best analog and digital equipment at your disposal to capture the best performance.",
           cta1: { text: "View equipment", href: "#estudio" },
           cta2: { text: "Book session", href: "#contacto" }
-        },
-        {
-          id: "combos",
-          image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "Music makes sense when you share it. Join a band of your level, prepare a repertoire guided by professionals and get on stage.",
-          cta1: { text: "View levels", href: "#escuela-combos" },
-          cta2: { text: "Sign up", href: "#contacto" }
         }
       ]
     },
@@ -214,17 +181,6 @@ export const dictionaries = {
       masterTitle: "Mastering",
       masterDesc: "The final step before publishing. We optimize the volume and overall tone so your music sounds perfect.",
       masterList: ["Corrective and tonal EQ", "Multiband compression", "Limiting and maximization", "Formats for streaming"]
-    },
-    combos: {
-      tag: "Open enrollment",
-      title: "ECB",
-      subtitle: "Music makes sense when you share it. Join a band of your level, prepare a repertoire and get on stage.",
-      step1Title: "1. We form your band",
-      step1Desc: "We assign you to a group with musicians of your same level and musical interests.",
-      step2Title: "2. Guided rehearsal",
-      step2Desc: "Weekly 1.5h rehearsals directed by David García. We work on repertoire and dynamics.",
-      step3Title: "3. Live concert",
-      step3Desc: "The final goal: playing live. We organize periodic concerts in venues around Barcelona."
     },
     trabajos: {
       title: "Our Work",
@@ -270,13 +226,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "you@email.com",
       subjectLabel: "What are you interested in?",
-      subjects: ["Studio recording", "Production / Mixing / Mastering", "ECB - Escuela de Combo Barcelona", "Other"],
+      subjects: ["Studio recording", "Production / Mixing / Mastering", "Other"],
       messageLabel: "Message",
       messagePlaceholder: "Tell us about your project...",
       sendBtn: "Send message"
     },
     footer: {
-      desc: "Recording studio, music production and ECB (Escuela de Combo Barcelona), directed by David García.",
+      desc: "Recording and music production studio in Barcelona, directed by David García.",
       services: "Services",
       studio: "Studio",
       contact: "Contact",
@@ -289,7 +245,6 @@ export const dictionaries = {
     nav: {
       estudio: "Estudi",
       produccion: "Producció",
-      combos: "ECB",
       trabajos: "Treballs",
       artistas: "Artistes",
       nosotros: "Nosaltres",
@@ -302,10 +257,10 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudi de gravació, producció musical i ECB, Escuela de Combo Barcelona.",
-          desc: "Gravació, mescla, mastering, producció i combos per a músics que volen desenvolupar el seu so tocant de veritat.",
+          subtitle: "Estudi de gravació i producció musical a Barcelona.",
+          desc: "Gravació, mescla, mastering i producció per a músics que volen desenvolupar el seu so.",
           cta1: { text: "Vull gravar", href: "#contacto" },
-          cta2: { text: "Apuntar-me a un combo", href: "#escuela-combos" }
+          cta2: { text: "Escoltar releases", href: "#releases" }
         },
         {
           id: "estudio",
@@ -316,16 +271,6 @@ export const dictionaries = {
           desc: "Acústica cuidada, ambient relaxat i el millor equip analògic i digital a la teva disposició per capturar la millor interpretació.",
           cta1: { text: "Veure equipament", href: "#estudio" },
           cta2: { text: "Reservar sessió", href: "#contacto" }
-        },
-        {
-          id: "combos",
-          image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori guiat per professionals i puja a l'escenari.",
-          cta1: { text: "Veure nivells", href: "#escuela-combos" },
-          cta2: { text: "Apuntar-me", href: "#contacto" }
         }
       ]
     },
@@ -357,17 +302,6 @@ export const dictionaries = {
       masterTitle: "Mastering",
       masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta.",
       masterList: ["EQ correctiva i tonal", "Compressió multibanda", "Limitació i maximització", "Formats per a streaming"]
-    },
-    combos: {
-      tag: "Matrícula oberta",
-      title: "ECB",
-      subtitle: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori i puja a l'escenari.",
-      step1Title: "1. Formem la teva banda",
-      step1Desc: "T'assignem a un grup amb músics del teu mateix nivell i inquietuds musicals.",
-      step2Title: "2. Assaig guiat",
-      step2Desc: "Assajos setmanals d'1.5h dirigits per David García. Treballem repertori i dinàmica.",
-      step3Title: "3. Concert en directe",
-      step3Desc: "L'objectiu final: tocar en directe. Organitzem concerts periòdics en sales de Barcelona."
     },
     trabajos: {
       title: "Els Nostres Treballs",
@@ -413,13 +347,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "En què estàs interessat?",
-      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "ECB - Escuela de Combo Barcelona", "Altre"],
+      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "Altre"],
       messageLabel: "Missatge",
       messagePlaceholder: "Explica'ns sobre el teu projecte...",
       sendBtn: "Enviar missatge"
     },
     footer: {
-      desc: "Estudi de gravació, producció musical i ECB (Escuela de Combo Barcelona), dirigit per David García.",
+      desc: "Estudi de gravació i producció musical a Barcelona, dirigit per David García.",
       services: "Serveis",
       studio: "Estudi",
       contact: "Contacte",
