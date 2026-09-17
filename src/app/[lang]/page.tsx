@@ -132,10 +132,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Sobre Nosotros</h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              El equipo creativo y técnico detrás de Z Estudio BCN.
-            </p>
+            <h2 className="text-4xl font-bold text-white">Sobre Nosotros</h2>
           </div>
 
           {/* David García */}

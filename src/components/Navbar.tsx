@@ -11,7 +11,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
 
   const navLinks = [
     { name: dict.trabajos, href: "#trabajos" },
-    { name: dict.estudio, href: "#estudio" },
+    { name: <><span className="text-amber-500">Z</span>Estudio</>, href: "#estudio" },
     { name: dict.nosotros, href: "#sobre-nosotros" },
     { name: dict.contacto, href: "#contacto" },
   ];
@@ -29,7 +29,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   className="text-neutral-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
@@ -69,7 +69,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 className="text-neutral-300 hover:text-amber-500 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
