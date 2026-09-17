@@ -79,15 +79,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
                 <Headphones className="h-12 w-12 text-amber-500 mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Mastering</h3>
-                <p className="text-neutral-400 mb-6">
+                <p className="text-neutral-400">
                   El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
                 </p>
-                <ul className="space-y-2 text-sm text-neutral-300">
-                  <li>• EQ correctiva y tonal</li>
-                  <li>• Compresión multibanda</li>
-                  <li>• Limitación y maximización</li>
-                  <li>• Formatos para streaming</li>
-                </ul>
               </div>
             </div>
           </div>

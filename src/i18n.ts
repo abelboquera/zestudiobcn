@@ -56,8 +56,7 @@ export const dictionaries = {
       mixDesc: "Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido analógico y digital.",
       mixList: ["Edición y afinación", "EQ y compresión analógica/digital", "FX analógicos"],
       masterTitle: "Mastering",
-      masterDesc: "El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.",
-      masterList: ["EQ correctiva y tonal", "Compresión multibanda", "Limitación y maximización", "Formatos para streaming"]
+      masterDesc: "El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta."
     },
     trabajos: {
       title: "Nuestros Trabajos",
@@ -173,8 +172,7 @@ export const dictionaries = {
       mixDesc: "We balance all the elements of your song so it sounds powerful, clear and deep using hybrid analog and digital equipment.",
       mixList: ["Editing and tuning", "Analog/digital EQ and compression", "Analog FX"],
       masterTitle: "Mastering",
-      masterDesc: "The final step before publishing. We optimize the volume and overall tone so your music sounds perfect.",
-      masterList: ["Corrective and tonal EQ", "Multiband compression", "Limiting and maximization", "Formats for streaming"]
+      masterDesc: "The final step before publishing. We optimize the volume and overall tone so your music sounds perfect."
     },
     trabajos: {
       title: "Our Work",
@@ -290,8 +288,7 @@ export const dictionaries = {
       mixDesc: "Equilibrem tots els elements de la teva cançó perquè soni potent, clara i amb profunditat utilitzant equip híbrid analògic i digital.",
       mixList: ["Edició i afinació", "EQ i compressió analògica/digital", "FX analògics"],
       masterTitle: "Mastering",
-      masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta.",
-      masterList: ["EQ correctiva i tonal", "Compressió multibanda", "Limitació i maximització", "Formats per a streaming"]
+      masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta."
     },
     trabajos: {
       title: "Els Nostres Treballs",
