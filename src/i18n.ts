@@ -3,7 +3,8 @@ export const dictionaries = {
     nav: {
       estudio: "Estudio",
       produccion: "Producción",
-      combos: "ECB",
+      combos: "Combos",
+      clases: "Clases",
       trabajos: "Trabajos",
       artistas: "Artistas",
       nosotros: "Nosotros",
@@ -16,7 +17,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudio de grabación, producción musical y ECB, Escuela de Combo Barcelona.",
+          subtitle: "Estudio de grabación, producción musical y escuela de combos en Barcelona.",
           desc: "Grabación, mezcla, mastering, producción, clases de guitarra y combos para músicos que quieren desarrollar su sonido tocando de verdad.",
           cta1: { text: "Quiero grabar", href: "#contacto" },
           cta2: { text: "Apuntarme a un combo", href: "#escuela-combos" }
@@ -34,12 +35,22 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio guiado por profesionales y súbete al escenario.",
+          titlePrefix: "ESCUELA DE ",
+          titleHighlight: "COMBOS",
+          subtitle: "La música cobra sentido cuando la compartes.",
+          desc: "Únete a una banda de tu nivel, prepara un repertorio guiat por profesionales y súbete al escenario.",
           cta1: { text: "Ver niveles", href: "#escuela-combos" },
           cta2: { text: "Apuntarme", href: "#contacto" }
+        },
+        {
+          id: "clases",
+          image: "/images/guitars.png",
+          titlePrefix: "CLASES ",
+          titleHighlight: "INDIVIDUALES",
+          subtitle: "Aprende a tu ritmo con David García.",
+          desc: "Formación personalizada en guitarra eléctrica y acústica, armonía moderna, arreglos y producción musical.",
+          cta1: { text: "Ver clases", href: "#clases" },
+          cta2: { text: "Contactar", href: "#contacto" }
         }
       ]
     },
@@ -74,7 +85,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Matrícula abierta",
-      title: "ECB",
+      title: "Escuela de Combos",
       subtitle: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.",
       step1Title: "1. Formamos tu banda",
       step1Desc: "Te asignamos a un grupo con músicos de tu mismo nivel e inquietudes musicales.",
@@ -82,6 +93,22 @@ export const dictionaries = {
       step2Desc: "Ensayos semanales de 1.5h dirigidos por David García. Trabajamos repertorio y dinámica.",
       step3Title: "3. Concierto en directo",
       step3Desc: "El objetivo final: tocar en directo. Organizamos conciertos periódicos en salas de Barcelona."
+    },
+    clases: {
+      title: "Clases Individuales",
+      subtitle: "Aprende a tu ritmo con clases personalizadas de guitarra, armonía y producción musical.",
+      guitarTitle: "Guitarra",
+      guitarSub: "Eléctrica y Acústica",
+      guitarDesc: "Clases adaptadas a tus gustos musicales y objetivos. Desde los primeros acordes hasta técnicas avanzadas de improvisación.",
+      guitarList: ["Técnica y repertorio", "Improvisación y escalas"],
+      harmonyTitle: "Armonía",
+      harmonySub: "Moderna y Arreglos",
+      harmonyDesc: "Entiende cómo funciona la música que escuchas. Aprende a componer, rearmonizar y crear arreglos para tus propias canciones.",
+      harmonyList: ["Formación de acordes", "Composición de melodías"],
+      prodTitle: "Producción",
+      prodSub: "Grabación y Mezcla",
+      prodDesc: "Aprende a usar tu ordenador como un estudio de grabación. Clases prácticas donde trabajaremos sobre tus propios proyectos.",
+      prodList: ["Manejo de DAWs", "Criterios de mezcla"]
     },
     trabajos: {
       title: "Nuestros Trabajos",
@@ -127,13 +154,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "¿En qué estás interesado?",
-      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "ECB - Escuela de Combo Barcelona", "Clases particulares", "Otro"],
+      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "Escuela de Combos", "Clases particulares", "Otro"],
       messageLabel: "Mensaje",
       messagePlaceholder: "Cuéntanos sobre tu proyecto...",
       sendBtn: "Enviar mensaje"
     },
     footer: {
-      desc: "Estudio de grabación, producción musical y ECB (Escuela de Combo Barcelona), dirigido por David García.",
+      desc: "Estudio de grabación, producción musical y escuela de combos en Barcelona dirigido por David García.",
       services: "Servicios",
       studio: "Estudio",
       contact: "Contacto",
@@ -146,7 +173,8 @@ export const dictionaries = {
     nav: {
       estudio: "Studio",
       produccion: "Production",
-      combos: "ECB",
+      combos: "Combos",
+      clases: "Classes",
       trabajos: "Work",
       artistas: "Artists",
       nosotros: "About Us",
@@ -159,7 +187,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Recording studio, music production and ECB, Escuela de Combo Barcelona.",
+          subtitle: "Recording studio, music production and combos school in Barcelona.",
           desc: "Recording, mixing, mastering, production, guitar classes and combos for musicians who want to develop their sound by playing for real.",
           cta1: { text: "I want to record", href: "#contacto" },
           cta2: { text: "Join a combo", href: "#escuela-combos" }
@@ -177,12 +205,22 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "Music makes sense when you share it. Join a band of your level, prepare a repertoire guided by professionals and get on stage.",
+          titlePrefix: "COMBOS ",
+          titleHighlight: "SCHOOL",
+          subtitle: "Music makes sense when you share it.",
+          desc: "Join a band of your level, prepare a repertoire guided by professionals and get on stage.",
           cta1: { text: "View levels", href: "#escuela-combos" },
           cta2: { text: "Sign up", href: "#contacto" }
+        },
+        {
+          id: "clases",
+          image: "/images/guitars.png",
+          titlePrefix: "PRIVATE ",
+          titleHighlight: "CLASSES",
+          subtitle: "Learn at your own pace with David García.",
+          desc: "Personalized training in electric and acoustic guitar, modern harmony, arrangements and music production.",
+          cta1: { text: "View classes", href: "#clases" },
+          cta2: { text: "Contact", href: "#contacto" }
         }
       ]
     },
@@ -217,7 +255,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Open enrollment",
-      title: "ECB",
+      title: "Combos School",
       subtitle: "Music makes sense when you share it. Join a band of your level, prepare a repertoire and get on stage.",
       step1Title: "1. We form your band",
       step1Desc: "We assign you to a group with musicians of your same level and musical interests.",
@@ -225,6 +263,22 @@ export const dictionaries = {
       step2Desc: "Weekly 1.5h rehearsals directed by David García. We work on repertoire and dynamics.",
       step3Title: "3. Live concert",
       step3Desc: "The final goal: playing live. We organize periodic concerts in venues around Barcelona."
+    },
+    clases: {
+      title: "Private Classes",
+      subtitle: "Learn at your own pace with personalized classes in guitar, harmony and music production.",
+      guitarTitle: "Guitar",
+      guitarSub: "Electric and Acoustic",
+      guitarDesc: "Classes adapted to your musical tastes and goals. From the first chords to advanced improvisation techniques.",
+      guitarList: ["Technique and repertoire", "Improvisation and scales"],
+      harmonyTitle: "Harmony",
+      harmonySub: "Modern and Arrangements",
+      harmonyDesc: "Understand how the music you listen to works. Learn to compose, reharmonize and create arrangements for your own songs.",
+      harmonyList: ["Chord formation", "Melody composition"],
+      prodTitle: "Production",
+      prodSub: "Recording and Mixing",
+      prodDesc: "Learn to use your computer as a recording studio. Practical classes where we will work on your own projects.",
+      prodList: ["DAW management", "Mixing criteria"]
     },
     trabajos: {
       title: "Our Work",
@@ -270,13 +324,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "you@email.com",
       subjectLabel: "What are you interested in?",
-      subjects: ["Studio recording", "Production / Mixing / Mastering", "ECB - Escuela de Combo Barcelona", "Private classes", "Other"],
+      subjects: ["Studio recording", "Production / Mixing / Mastering", "Combos School", "Private classes", "Other"],
       messageLabel: "Message",
       messagePlaceholder: "Tell us about your project...",
       sendBtn: "Send message"
     },
     footer: {
-      desc: "Recording studio, music production and ECB (Escuela de Combo Barcelona), directed by David García.",
+      desc: "Recording studio, music production and combos school in Barcelona directed by David García.",
       services: "Services",
       studio: "Studio",
       contact: "Contact",
@@ -289,7 +343,8 @@ export const dictionaries = {
     nav: {
       estudio: "Estudi",
       produccion: "Producció",
-      combos: "ECB",
+      combos: "Combos",
+      clases: "Classes",
       trabajos: "Treballs",
       artistas: "Artistes",
       nosotros: "Nosaltres",
@@ -302,7 +357,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudi de gravació, producció musical i ECB, Escuela de Combo Barcelona.",
+          subtitle: "Estudi de gravació, producció musical i escola de combos a Barcelona.",
           desc: "Gravació, mescla, mastering, producció, classes de guitarra i combos per a músics que volen desenvolupar el seu so tocant de veritat.",
           cta1: { text: "Vull gravar", href: "#contacto" },
           cta2: { text: "Apuntar-me a un combo", href: "#escuela-combos" }
@@ -320,12 +375,22 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "",
-          titleHighlight: "ECB",
-          subtitle: "Escuela de Combo Barcelona.",
-          desc: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori guiat per professionals i puja a l'escenari.",
+          titlePrefix: "ESCOLA DE ",
+          titleHighlight: "COMBOS",
+          subtitle: "La música cobra sentit quan la comparteixes.",
+          desc: "Uneix-te a una banda del teu nivell, prepara un repertori guiat per professionals i puja a l'escenari.",
           cta1: { text: "Veure nivells", href: "#escuela-combos" },
           cta2: { text: "Apuntar-me", href: "#contacto" }
+        },
+        {
+          id: "clases",
+          image: "/images/guitars.png",
+          titlePrefix: "CLASSES ",
+          titleHighlight: "INDIVIDUALS",
+          subtitle: "Aprèn al teu ritme amb David García.",
+          desc: "Formació personalitzada en guitarra elèctrica i acústica, harmonia moderna, arranjaments i producció musical.",
+          cta1: { text: "Veure classes", href: "#clases" },
+          cta2: { text: "Contactar", href: "#contacto" }
         }
       ]
     },
@@ -360,7 +425,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Matrícula oberta",
-      title: "ECB",
+      title: "Escola de Combos",
       subtitle: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori i puja a l'escenari.",
       step1Title: "1. Formem la teva banda",
       step1Desc: "T'assignem a un grup amb músics del teu mateix nivell i inquietuds musicals.",
@@ -368,6 +433,22 @@ export const dictionaries = {
       step2Desc: "Assajos setmanals d'1.5h dirigits per David García. Treballem repertori i dinàmica.",
       step3Title: "3. Concert en directe",
       step3Desc: "L'objectiu final: tocar en directe. Organitzem concerts periòdics en sales de Barcelona."
+    },
+    clases: {
+      title: "Classes Individuals",
+      subtitle: "Aprèn al teu ritme amb classes personalitzades de guitarra, harmonia i producció musical.",
+      guitarTitle: "Guitarra",
+      guitarSub: "Elèctrica i Acústica",
+      guitarDesc: "Classes adaptades als teus gustos musicals i objectius. Des dels primers acords fins a tècniques avançades d'improvisació.",
+      guitarList: ["Tècnica i repertori", "Improvisació i escales"],
+      harmonyTitle: "Harmonia",
+      harmonySub: "Moderna i Arranjaments",
+      harmonyDesc: "Entén com funciona la música que escoltes. Aprèn a compondre, reharmonitzar i crear arranjaments per a les teves pròpies cançons.",
+      harmonyList: ["Formació d'acords", "Composició de melodies"],
+      prodTitle: "Producció",
+      prodSub: "Gravació i Mescla",
+      prodDesc: "Aprèn a utilitzar el teu ordinador com un estudi de gravació. Classes pràctiques on treballarem sobre els teus propis projectes.",
+      prodList: ["Maneig de DAWs", "Criteris de mescla"]
     },
     trabajos: {
       title: "Els Nostres Treballs",
@@ -413,13 +494,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "En què estàs interessat?",
-      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "ECB - Escuela de Combo Barcelona", "Classes particulars", "Altre"],
+      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "Escola de Combos", "Classes particulars", "Altre"],
       messageLabel: "Missatge",
       messagePlaceholder: "Explica'ns sobre el teu projecte...",
       sendBtn: "Enviar missatge"
     },
     footer: {
-      desc: "Estudi de gravació, producció musical i ECB (Escuela de Combo Barcelona), dirigit per David García.",
+      desc: "Estudi de gravació, producció musical i escola de combos a Barcelona dirigit per David García.",
       services: "Serveis",
       studio: "Estudi",
       contact: "Contacte",
