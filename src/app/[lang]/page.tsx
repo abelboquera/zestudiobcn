@@ -165,7 +165,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <h3 className="text-4xl font-bold text-white mb-2">Joan Isern</h3>
               <p className="text-xl text-amber-500 mb-6">Productor y Compositor</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
+                <p>Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como DePol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">

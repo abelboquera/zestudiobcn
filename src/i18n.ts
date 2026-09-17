@@ -68,7 +68,7 @@ export const dictionaries = {
       davidRoles: ["Productor", "Compositor"],
       joanTitle: "Joan Isern",
       joanSub: "Productor y Compositor",
-      joanDesc1: "Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.",
+      joanDesc1: "Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como DePol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.",
       joanRoles: ["Productor", "Compositor"]
     },
     contacto: {
@@ -167,7 +167,7 @@ export const dictionaries = {
       davidRoles: ["Producer", "Composer"],
       joanTitle: "Joan Isern",
       joanSub: "Producer and Composer",
-      joanDesc1: "Joan brings a fresh perspective and direct experience in today's pop and indie scene, with productions for artists such as Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante and Pla Moguda, as well as Joan's own band, MÄLMO 040.",
+      joanDesc1: "Joan brings a fresh perspective and direct experience in today's pop and indie scene, with productions for artists such as DePol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante and Pla Moguda, as well as Joan's own band, MÄLMO 040.",
       joanRoles: ["Producer", "Composer"]
     },
     contacto: {
@@ -266,7 +266,7 @@ export const dictionaries = {
       davidRoles: ["Productor", "Compositor"],
       joanTitle: "Joan Isern",
       joanSub: "Productor i Compositor",
-      joanDesc1: "El Joan aporta una mirada fresca amb experiència directa en l'escena pop i indie actual, amb produccions per a artistes com Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante i Pla Moguda, a més de la seva pròpia banda, MÄLMO 040.",
+      joanDesc1: "El Joan aporta una mirada fresca amb experiència directa en l'escena pop i indie actual, amb produccions per a artistes com DePol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante i Pla Moguda, a més de la seva pròpia banda, MÄLMO 040.",
       joanRoles: ["Productor", "Compositor"]
     },
     contacto: {
