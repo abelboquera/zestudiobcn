@@ -84,7 +84,7 @@ export const dictionaries = {
       subtitle: "El equipo creativo y técnico detrás de Z Estudio BCN.",
       davidTitle: "David García",
       davidSub: "Productor, Compositor y CEO de Z Estudio BCN",
-      davidDesc1: "Con más de 15 años de experiencia, ha producido artistas como Noan, Maren, Hey Kid, Paula Koops y Lauren Nine, ha compuesto música para League of Legends, Vèrtex (TV3), West Side Story (El musical) y en grabación, mezcla y masterización ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.",
+      davidDesc1: "Con más de 15 años de experiencia, ha producido a artistas como Noan, Maren, Hey Kid, Paula Koops y Lauren Nine, ha compuesto música para League of Legends, Vèrtex (TV3), West Side Story (El musical) y en grabación, mezcla y masterización ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.",
       davidRoles: ["Guitarrista", "Productor", "Compositor"],
       joanTitle: "Joan Isern",
       joanSub: "Productor y Compositor",
