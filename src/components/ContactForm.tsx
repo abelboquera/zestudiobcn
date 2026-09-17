@@ -13,6 +13,7 @@ const CONTACT_EMAIL = "davidggmusic@gmail.com";
 const SUBJECTS = [
   { value: "produccion", label: "Producción" },
   { value: "grabacion", label: "Grabación / Mezcla / Mastering" },
+  { value: "combos", label: "Escuela de combo" },
   { value: "otro", label: "Otro" },
 ];
 
