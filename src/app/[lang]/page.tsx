@@ -1,6 +1,6 @@
 import { 
   Mic, Sliders, Users, Guitar, Play, 
-  Settings, Speaker, Headphones, Disc, Calendar, Star, 
+  Speaker, Headphones, Disc, Calendar, Star,
   Mail, MapPin, MessageCircle, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
@@ -8,7 +8,17 @@ import ArtistsPlayer from "@/components/ArtistsPlayer";
 import ContactForm from "@/components/ContactForm";
 import ReleasesSlider from "@/components/ReleasesSlider";
 import { releases } from "@/data/releases";
+import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
+
+const gearIcons: Record<GearCategory["icon"], typeof Mic> = {
+  guitar: Guitar,
+  keys: Music,
+  amp: Speaker,
+  mic: Mic,
+  monitor: Headphones,
+  preamp: Sliders,
+};
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -43,65 +53,36 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">El Estudio</h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              Un espacio diseñado para la creatividad. Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital.
-            </p>
+            <h2 className="text-4xl font-bold text-white">Equipamiento</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="rounded-2xl overflow-hidden h-80 relative group">
-              <div className="absolute inset-0 bg-[url('/images/control-room.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-bold text-white">Control Room</h3>
-                <p className="text-neutral-300">El corazón del estudio</p>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden h-80 relative group">
-              <div className="absolute inset-0 bg-[url('/images/live-room.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-bold text-white">Live Room</h3>
-                <p className="text-neutral-300">Acústica viva y controlada</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
-              <Mic className="h-10 w-10 text-amber-500 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Microfonía</h4>
-              <p className="text-sm text-neutral-400">Colección de micrófonos de condensador, cinta y dinámicos para cualquier fuente.</p>
-            </div>
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
-              <Settings className="h-10 w-10 text-amber-500 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Outboard</h4>
-              <p className="text-sm text-neutral-400">Previos, compresores y EQs analógicos para darle color y calidez a tu sonido.</p>
-            </div>
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
-              <Speaker className="h-10 w-10 text-amber-500 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Monitoreo</h4>
-              <p className="text-sm text-neutral-400">Escucha precisa y detallada para tomar las mejores decisiones en la mezcla.</p>
-            </div>
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
-              <Headphones className="h-10 w-10 text-amber-500 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Backline</h4>
-              <p className="text-sm text-neutral-400">Guitarras, bajos, amplificadores y sintetizadores a tu disposición.</p>
-            </div>
-          </div>
-
-          {/* Galería de detalles */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="rounded-xl overflow-hidden h-48 relative">
-              <div className="absolute inset-0 bg-[url('/images/amps.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div className="rounded-xl overflow-hidden h-48 relative">
-              <div className="absolute inset-0 bg-[url('/images/sign.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div className="rounded-xl overflow-hidden h-48 relative">
-              <div className="absolute inset-0 bg-[url('/images/hallway.png')] bg-cover bg-center hover:scale-105 transition-transform duration-500" />
-            </div>
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+            {gear.map((category) => {
+              const Icon = gearIcons[category.icon];
+              return (
+                <div key={category.title} className="break-inside-avoid mb-6 bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+                  <div className="flex items-center gap-3 pb-3 mb-1 border-b border-amber-500/60">
+                    <Icon className="h-5 w-5 text-amber-500 shrink-0" />
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-white">{category.title}</h3>
+                  </div>
+                  <ul>
+                    {category.items.map((item, i) => (
+                      <li key={i} className="flex items-baseline gap-2 py-2 border-b border-neutral-800 last:border-b-0 text-sm">
+                        <span>
+                          <span className="font-medium text-neutral-100">{item.name}</span>
+                          {item.detail && <span className="ml-2 text-xs text-neutral-500">{item.detail}</span>}
+                        </span>
+                        {item.tag && (
+                          <span className="ml-auto shrink-0 font-mono text-[11px] text-amber-500 border border-amber-500/30 bg-amber-500/10 rounded px-1.5 py-0.5">
+                            {item.tag}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -162,7 +143,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
-      {/* ESCUELA DE COMBOS SECTION */}
+      {/* ECB (ESCUELA DE COMBO BARCELONA) SECTION */}
       <section id="escuela-combos" className="py-24 bg-[#0a0a0a] relative overflow-hidden scroll-mt-20">
         <div className="absolute right-0 top-0 w-1/2 h-full opacity-30 bg-[url('/images/drums.png')] bg-cover bg-center mix-blend-overlay" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -171,7 +152,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <Star className="h-4 w-4 fill-current" />
               <span>Matrícula abierta</span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-6">Escuela de Combos</h2>
+            <h2 className="text-4xl font-bold text-white mb-2">ECB</h2>
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-500 mb-6">Escuela de Combo Barcelona</p>
             <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
               La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.
             </p>

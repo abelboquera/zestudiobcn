@@ -8,9 +8,9 @@ import { Locale, dictionaries } from "@/i18n";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Z Estudio BCN | Grabación, Producción y Escuela de Combos en Barcelona",
-  description: "Estudio de grabación profesional en Barcelona. Producción musical, mezcla, mastering y escuela de combos dirigida por David García.",
-  keywords: "estudio de grabación Barcelona, producción musical Barcelona, mezcla y mastering Barcelona, escuela de combos Barcelona, combos musicales Barcelona, grabar canción Barcelona",
+  title: "Z Estudio BCN | Grabación, Producción y ECB - Escuela de Combo Barcelona",
+  description: "Estudio de grabación profesional en Barcelona. Producción musical, mezcla, mastering y ECB (Escuela de Combo Barcelona), dirigida por David García.",
+  keywords: "estudio de grabación Barcelona, producción musical Barcelona, mezcla y mastering Barcelona, ECB, Escuela de Combo Barcelona, escuela de combos Barcelona, combos musicales Barcelona, grabar canción Barcelona",
 };
 
 export async function generateStaticParams() {

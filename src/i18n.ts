@@ -3,7 +3,7 @@ export const dictionaries = {
     nav: {
       estudio: "Estudio",
       produccion: "Producción",
-      combos: "Combos",
+      combos: "ECB",
       trabajos: "Trabajos",
       artistas: "Artistas",
       nosotros: "Nosotros",
@@ -16,7 +16,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudio de grabación, producción musical y escuela de combos en Barcelona.",
+          subtitle: "Estudio de grabación, producción musical y ECB, Escuela de Combo Barcelona.",
           desc: "Grabación, mezcla, mastering, producción y combos para músicos que quieren desarrollar su sonido tocando de verdad.",
           cta1: { text: "Quiero grabar", href: "#contacto" },
           cta2: { text: "Apuntarme a un combo", href: "#escuela-combos" }
@@ -34,10 +34,10 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "ESCUELA DE ",
-          titleHighlight: "COMBOS",
-          subtitle: "La música cobra sentido cuando la compartes.",
-          desc: "Únete a una banda de tu nivel, prepara un repertorio guiat por profesionales y súbete al escenario.",
+          titlePrefix: "",
+          titleHighlight: "ECB",
+          subtitle: "Escuela de Combo Barcelona.",
+          desc: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio guiado por profesionales y súbete al escenario.",
           cta1: { text: "Ver niveles", href: "#escuela-combos" },
           cta2: { text: "Apuntarme", href: "#contacto" }
         }
@@ -74,7 +74,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Matrícula abierta",
-      title: "Escuela de Combos",
+      title: "ECB",
       subtitle: "La música cobra sentido cuando la compartes. Únete a una banda de tu nivel, prepara un repertorio y súbete al escenario.",
       step1Title: "1. Formamos tu banda",
       step1Desc: "Te asignamos a un grupo con músicos de tu mismo nivel e inquietudes musicales.",
@@ -127,13 +127,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "¿En qué estás interesado?",
-      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "Escuela de Combos", "Otro"],
+      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "ECB - Escuela de Combo Barcelona", "Otro"],
       messageLabel: "Mensaje",
       messagePlaceholder: "Cuéntanos sobre tu proyecto...",
       sendBtn: "Enviar mensaje"
     },
     footer: {
-      desc: "Estudio de grabación, producción musical y escuela de combos en Barcelona dirigido por David García.",
+      desc: "Estudio de grabación, producción musical y ECB (Escuela de Combo Barcelona), dirigido por David García.",
       services: "Servicios",
       studio: "Estudio",
       contact: "Contacto",
@@ -146,7 +146,7 @@ export const dictionaries = {
     nav: {
       estudio: "Studio",
       produccion: "Production",
-      combos: "Combos",
+      combos: "ECB",
       trabajos: "Work",
       artistas: "Artists",
       nosotros: "About Us",
@@ -159,7 +159,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Recording studio, music production and combos school in Barcelona.",
+          subtitle: "Recording studio, music production and ECB, Escuela de Combo Barcelona.",
           desc: "Recording, mixing, mastering, production and combos for musicians who want to develop their sound by playing for real.",
           cta1: { text: "I want to record", href: "#contacto" },
           cta2: { text: "Join a combo", href: "#escuela-combos" }
@@ -177,10 +177,10 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "COMBOS ",
-          titleHighlight: "SCHOOL",
-          subtitle: "Music makes sense when you share it.",
-          desc: "Join a band of your level, prepare a repertoire guided by professionals and get on stage.",
+          titlePrefix: "",
+          titleHighlight: "ECB",
+          subtitle: "Escuela de Combo Barcelona.",
+          desc: "Music makes sense when you share it. Join a band of your level, prepare a repertoire guided by professionals and get on stage.",
           cta1: { text: "View levels", href: "#escuela-combos" },
           cta2: { text: "Sign up", href: "#contacto" }
         }
@@ -217,7 +217,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Open enrollment",
-      title: "Combos School",
+      title: "ECB",
       subtitle: "Music makes sense when you share it. Join a band of your level, prepare a repertoire and get on stage.",
       step1Title: "1. We form your band",
       step1Desc: "We assign you to a group with musicians of your same level and musical interests.",
@@ -270,13 +270,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "you@email.com",
       subjectLabel: "What are you interested in?",
-      subjects: ["Studio recording", "Production / Mixing / Mastering", "Combos School", "Other"],
+      subjects: ["Studio recording", "Production / Mixing / Mastering", "ECB - Escuela de Combo Barcelona", "Other"],
       messageLabel: "Message",
       messagePlaceholder: "Tell us about your project...",
       sendBtn: "Send message"
     },
     footer: {
-      desc: "Recording studio, music production and combos school in Barcelona directed by David García.",
+      desc: "Recording studio, music production and ECB (Escuela de Combo Barcelona), directed by David García.",
       services: "Services",
       studio: "Studio",
       contact: "Contact",
@@ -289,7 +289,7 @@ export const dictionaries = {
     nav: {
       estudio: "Estudi",
       produccion: "Producció",
-      combos: "Combos",
+      combos: "ECB",
       trabajos: "Treballs",
       artistas: "Artistes",
       nosotros: "Nosaltres",
@@ -302,7 +302,7 @@ export const dictionaries = {
           image: "/images/hero-wide.png",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
-          subtitle: "Estudi de gravació, producció musical i escola de combos a Barcelona.",
+          subtitle: "Estudi de gravació, producció musical i ECB, Escuela de Combo Barcelona.",
           desc: "Gravació, mescla, mastering, producció i combos per a músics que volen desenvolupar el seu so tocant de veritat.",
           cta1: { text: "Vull gravar", href: "#contacto" },
           cta2: { text: "Apuntar-me a un combo", href: "#escuela-combos" }
@@ -320,10 +320,10 @@ export const dictionaries = {
         {
           id: "combos",
           image: "/images/drums.png",
-          titlePrefix: "ESCOLA DE ",
-          titleHighlight: "COMBOS",
-          subtitle: "La música cobra sentit quan la comparteixes.",
-          desc: "Uneix-te a una banda del teu nivell, prepara un repertori guiat per professionals i puja a l'escenari.",
+          titlePrefix: "",
+          titleHighlight: "ECB",
+          subtitle: "Escuela de Combo Barcelona.",
+          desc: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori guiat per professionals i puja a l'escenari.",
           cta1: { text: "Veure nivells", href: "#escuela-combos" },
           cta2: { text: "Apuntar-me", href: "#contacto" }
         }
@@ -360,7 +360,7 @@ export const dictionaries = {
     },
     combos: {
       tag: "Matrícula oberta",
-      title: "Escola de Combos",
+      title: "ECB",
       subtitle: "La música cobra sentit quan la comparteixes. Uneix-te a una banda del teu nivell, prepara un repertori i puja a l'escenari.",
       step1Title: "1. Formem la teva banda",
       step1Desc: "T'assignem a un grup amb músics del teu mateix nivell i inquietuds musicals.",
@@ -413,13 +413,13 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "En què estàs interessat?",
-      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "Escola de Combos", "Altre"],
+      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "ECB - Escuela de Combo Barcelona", "Altre"],
       messageLabel: "Missatge",
       messagePlaceholder: "Explica'ns sobre el teu projecte...",
       sendBtn: "Enviar missatge"
     },
     footer: {
-      desc: "Estudi de gravació, producció musical i escola de combos a Barcelona dirigit per David García.",
+      desc: "Estudi de gravació, producció musical i ECB (Escuela de Combo Barcelona), dirigit per David García.",
       services: "Serveis",
       studio: "Estudi",
       contact: "Contacte",
