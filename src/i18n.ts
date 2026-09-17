@@ -61,17 +61,6 @@ export const dictionaries = {
     trabajos: {
       title: "Nuestros Trabajos"
     },
-    artistas: {
-      title: "Artistas",
-      subtitle: "Músicos y bandas que han grabado, producido o colaborado en Z Estudio BCN.",
-      roles: {
-        coprod: "Co-producción",
-        rec: "Grabación",
-        mix: "Mezcla",
-        master: "Mastering",
-        prod: "Producción"
-      }
-    },
     nosotros: {
       title: "Sobre Nosotros",
       subtitle: "El equipo creativo y técnico detrás de Z Estudio BCN.",
@@ -173,17 +162,6 @@ export const dictionaries = {
     trabajos: {
       title: "Our Work"
     },
-    artistas: {
-      title: "Artists",
-      subtitle: "Musicians and bands who have recorded, produced or collaborated at Z Estudio BCN.",
-      roles: {
-        coprod: "Co-production",
-        rec: "Recording",
-        mix: "Mixing",
-        master: "Mastering",
-        prod: "Production"
-      }
-    },
     nosotros: {
       title: "About Us",
       subtitle: "The creative and technical team behind Z Estudio BCN.",
@@ -284,17 +262,6 @@ export const dictionaries = {
     },
     trabajos: {
       title: "Els Nostres Treballs"
-    },
-    artistas: {
-      title: "Artistes",
-      subtitle: "Músics i bandes que han gravat, produït o col·laborat a Z Estudio BCN.",
-      roles: {
-        coprod: "Co-producció",
-        rec: "Gravació",
-        mix: "Mescla",
-        master: "Mastering",
-        prod: "Producción"
-      }
     },
     nosotros: {
       title: "Sobre Nosaltres",

@@ -1,11 +1,13 @@
 import { 
-  Mic, Sliders, Guitar, Play,
+  Mic, Sliders, Guitar,
   Speaker, Headphones, Disc,
   Mail, MapPin, MessageCircle, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import ContactForm from "@/components/ContactForm";
 import ReleasesSlider from "@/components/ReleasesSlider";
+import TrabajosGrid from "@/components/TrabajosGrid";
+import { trabajos } from "@/data/trabajos";
 import { releases } from "@/data/releases";
 import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
@@ -23,15 +25,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   const { lang } = await params;
   const validLang = (lang === "en" || lang === "ca") ? lang : "es";
   const dict = dictionaries[validLang as Locale];
-
-  const trabajos = [
-    { id: 1, title: "EP Debut", artist: "Banda Local", role: dict.artistas.roles.mix, genre: "Indie Rock" },
-    { id: 2, title: "Single de Verano", artist: "Artista Pop", role: dict.artistas.roles.prod, genre: "Pop" },
-    { id: 3, title: "Álbum Acústico", artist: "Cantautor", role: dict.artistas.roles.rec, genre: "Folk" },
-    { id: 4, title: "Tema Instrumental", artist: "Guitarrista", role: dict.artistas.roles.master, genre: "Jazz Fusion" },
-    { id: 5, title: "Demo", artist: "Banda Emergente", role: dict.artistas.roles.rec, genre: "Punk Rock" },
-    { id: 6, title: "Banda Sonora", artist: "Cortometraje", role: dict.artistas.roles.prod, genre: "Cinematic" },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -128,28 +121,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <h2 className="text-4xl font-bold text-white">Nuestros Trabajos</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trabajos.map((trabajo) => (
-              <div key={trabajo.id} className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden group hover:border-amber-500/50 transition-colors">
-                <div className="aspect-square bg-neutral-950 relative flex items-center justify-center">
-                  <Music className="h-16 w-16 text-neutral-800" />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <button className="bg-amber-500 text-neutral-950 rounded-full p-4 transform translate-y-4 group-hover:translate-y-0 transition-all">
-                      <Play className="h-6 w-6 fill-current" />
-                    </button>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="text-xs text-amber-500 font-medium mb-2">{trabajo.genre}</div>
-                  <h4 className="text-lg font-bold text-white">{trabajo.title}</h4>
-                  <p className="text-neutral-400 text-sm mb-4">{trabajo.artist}</p>
-                  <div className="inline-block bg-neutral-950 border border-neutral-800 rounded px-3 py-1 text-xs text-neutral-300">
-                    {trabajo.role}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TrabajosGrid trabajos={trabajos} />
         </div>
       </section>
 
