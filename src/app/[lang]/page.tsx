@@ -203,65 +203,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
-      {/* CLASES SECTION */}
-      <section id="clases" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Clases Individuales</h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              Aprende a tu ritmo con clases personalizadas de guitarra, armonía y producción musical.
-            </p>
-          </div>
-
-          <div className="space-y-8 max-w-5xl mx-auto">
-            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
-                <Guitar className="h-16 w-16 text-amber-500 mb-4" />
-                <h3 className="text-2xl font-bold text-white">Guitarra</h3>
-                <p className="text-amber-500 mt-2">Eléctrica y Acústica</p>
-              </div>
-              <div className="md:w-2/3 p-8">
-                <p className="text-neutral-300 mb-6">Clases adaptadas a tus gustos musicales y objetivos. Desde los primeros acordes hasta técnicas avanzadas de improvisación.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Técnica y repertorio</div>
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Improvisación y escalas</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
-                <Music className="h-16 w-16 text-amber-500 mb-4" />
-                <h3 className="text-2xl font-bold text-white">Armonía</h3>
-                <p className="text-amber-500 mt-2">Moderna y Arreglos</p>
-              </div>
-              <div className="md:w-2/3 p-8">
-                <p className="text-neutral-300 mb-6">Entiende cómo funciona la música que escuchas. Aprende a componer, rearmonizar y crear arreglos para tus propias canciones.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Formación de acordes</div>
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Composición de melodías</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#0a0a0a] border border-neutral-800 rounded-2xl overflow-hidden flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-neutral-950 p-8 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-neutral-800">
-                <Sliders className="h-16 w-16 text-amber-500 mb-4" />
-                <h3 className="text-2xl font-bold text-white">Producción</h3>
-                <p className="text-amber-500 mt-2">Grabación y Mezcla</p>
-              </div>
-              <div className="md:w-2/3 p-8">
-                <p className="text-neutral-300 mb-6">Aprende a usar tu ordenador como un estudio de grabación. Clases prácticas donde trabajaremos sobre tus propios proyectos.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Manejo de DAWs</div>
-                  <div className="flex items-start"><span className="text-amber-500 mr-2">•</span>Criterios de mezcla</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* TRABAJOS SECTION */}
       <section id="trabajos" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

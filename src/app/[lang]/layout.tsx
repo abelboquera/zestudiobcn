@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Z Estudio BCN | Grabación, Producción y Escuela de Combos en Barcelona",
-  description: "Estudio de grabación profesional en Barcelona. Producción musical, mezcla, mastering, clases de guitarra y escuela de combos dirigida por David García.",
-  keywords: "estudio de grabación Barcelona, producción musical Barcelona, mezcla y mastering Barcelona, clases de guitarra Barcelona, escuela de combos Barcelona, combos musicales Barcelona, grabar canción Barcelona",
+  description: "Estudio de grabación profesional en Barcelona. Producción musical, mezcla, mastering y escuela de combos dirigida por David García.",
+  keywords: "estudio de grabación Barcelona, producción musical Barcelona, mezcla y mastering Barcelona, escuela de combos Barcelona, combos musicales Barcelona, grabar canción Barcelona",
 };
 
 export async function generateStaticParams() {
