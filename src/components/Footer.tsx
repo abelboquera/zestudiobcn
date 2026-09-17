@@ -30,8 +30,7 @@ export default function Footer({ dict }: { dict: any }) {
             <ul className="space-y-2">
               <li><a href="#estudio" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.studio}</a></li>
               <li><a href="#produccion" className="text-neutral-400 hover:text-amber-500 text-sm">Producción y Mezcla</a></li>
-              <li><a href="#escuela-combos" className="text-neutral-400 hover:text-amber-500 text-sm">Escuela de Combos</a></li>
-              <li><a href="#clases" className="text-neutral-400 hover:text-amber-500 text-sm">Clases con David</a></li>
+              <li><a href="#escuela-combos" className="text-neutral-400 hover:text-amber-500 text-sm">ECB - Escuela de Combo Barcelona</a></li>
             </ul>
           </div>
 
