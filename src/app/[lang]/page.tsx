@@ -212,7 +212,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
               <p className="text-xl text-amber-500 mb-6">Productor, Compositor y CEO de Z Estudio BCN</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Con más de 15 años de experiencia, ha producido a artistas como Noan, Maren, Hey Kid, Paula Koops y Lauren Nine, ha compuesto música para League of Legends, Vèrtex (TV3), West Side Story (El musical) y en grabación, mezcla y masterización ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.</p>
+                <p>Con más de 15 años de experiencia, ha producido a artistas como Noan, Maren, Hey Kid, Paula Koops y Lauren Nine, ha compuesto música para Vèrtex (TV3), West Side Story (El musical), spots de League of Legends, Cupra y Aperol. En grabación, mezcla y mastering ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
