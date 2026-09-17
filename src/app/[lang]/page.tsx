@@ -236,10 +236,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-row-reverse lg:flex-row">
             <div className="order-2 lg:order-1">
               <h3 className="text-4xl font-bold text-white mb-2">Joan Isern</h3>
-              <p className="text-xl text-amber-500 mb-6">Co-productor y Colaborador (MÄLMO 040)</p>
+              <p className="text-xl text-amber-500 mb-6">Productor</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Joan aporta su visión fresca y experiencia directa en la escena pop e indie actual gracias a su trabajo en MÄLMO 040.</p>
-                <p>Se involucra en los proyectos aportando ideas de arreglos, estructuras y sonidos que conectan con el público de hoy. La sinergia entre la experiencia técnica de David y la intuición creativa de Joan crea el entorno perfecto.</p>
+                <p>Joan aporta una mirada actual y fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como Depol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
