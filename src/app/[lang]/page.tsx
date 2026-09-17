@@ -40,6 +40,60 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ESTUDIO SECTION */}
       <section id="estudio" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Produccion musical (antes seccion propia) */}
+          <div id="produccion" className="mb-24 scroll-mt-28">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Producción Musical</h2>
+              <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
+                <Disc className="h-12 w-12 text-amber-500 mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Producción</h3>
+                <p className="text-neutral-400 mb-6">
+                  Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
+                </p>
+                <ul className="space-y-2 text-sm text-neutral-300">
+                  <li>• Pre-producción y maquetas</li>
+                  <li>• Arreglos musicales</li>
+                  <li>• Grabación de instrumentos</li>
+                  <li>• Programación de baterías y beats</li>
+                </ul>
+              </div>
+
+              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
+                <Sliders className="h-12 w-12 text-amber-500 mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Mezcla</h3>
+                <p className="text-neutral-400 mb-6">
+                  Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido.
+                </p>
+                <ul className="space-y-2 text-sm text-neutral-300">
+                  <li>• Edición y afinación</li>
+                  <li>• EQ y compresión analógica/digital</li>
+                  <li>• Efectos espaciales</li>
+                  <li>• Automatización detallada</li>
+                </ul>
+              </div>
+
+              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
+                <Headphones className="h-12 w-12 text-amber-500 mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Mastering</h3>
+                <p className="text-neutral-400 mb-6">
+                  El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
+                </p>
+                <ul className="space-y-2 text-sm text-neutral-300">
+                  <li>• EQ correctiva y tonal</li>
+                  <li>• Compresión multibanda</li>
+                  <li>• Limitación y maximización</li>
+                  <li>• Formatos para streaming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white">Equipamiento</h2>
           </div>
@@ -71,62 +125,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCCION SECTION */}
-      <section id="produccion" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Producción Musical</h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
-              <Disc className="h-12 w-12 text-amber-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Producción</h3>
-              <p className="text-neutral-400 mb-6">
-                Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
-              </p>
-              <ul className="space-y-2 text-sm text-neutral-300">
-                <li>• Pre-producción y maquetas</li>
-                <li>• Arreglos musicales</li>
-                <li>• Grabación de instrumentos</li>
-                <li>• Programación de baterías y beats</li>
-              </ul>
-            </div>
-
-            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
-              <Sliders className="h-12 w-12 text-amber-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Mezcla</h3>
-              <p className="text-neutral-400 mb-6">
-                Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido.
-              </p>
-              <ul className="space-y-2 text-sm text-neutral-300">
-                <li>• Edición y afinación</li>
-                <li>• EQ y compresión analógica/digital</li>
-                <li>• Efectos espaciales</li>
-                <li>• Automatización detallada</li>
-              </ul>
-            </div>
-
-            <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl">
-              <Headphones className="h-12 w-12 text-amber-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Mastering</h3>
-              <p className="text-neutral-400 mb-6">
-                El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
-              </p>
-              <ul className="space-y-2 text-sm text-neutral-300">
-                <li>• EQ correctiva y tonal</li>
-                <li>• Compresión multibanda</li>
-                <li>• Limitación y maximización</li>
-                <li>• Formatos para streaming</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>

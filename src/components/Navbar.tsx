@@ -11,7 +11,6 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
 
   const navLinks = [
     { name: dict.estudio, href: "#estudio" },
-    { name: dict.produccion, href: "#produccion" },
     { name: dict.trabajos, href: "#trabajos" },
     { name: dict.nosotros, href: "#sobre-nosotros" },
     { name: dict.contacto, href: "#contacto" },

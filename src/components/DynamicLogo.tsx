@@ -36,10 +36,6 @@ export default function DynamicLogo({ className = "" }: { className?: string }) 
       logoSrc = "/logos/estudio.png";
       sectionName = "RECORDING";
       break;
-    case "produccion":
-      logoSrc = "/logos/produccion.png";
-      sectionName = "PRODUCTION";
-      break;
     case "trabajos":
     case "sobre-nosotros":
     case "contacto":

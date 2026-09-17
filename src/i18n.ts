@@ -2,7 +2,6 @@ export const dictionaries = {
   es: {
     nav: {
       estudio: "Estudio",
-      produccion: "Producción",
       trabajos: "Trabajos",
       nosotros: "Nosotros",
       contacto: "Contacto"
@@ -120,7 +119,6 @@ export const dictionaries = {
   en: {
     nav: {
       estudio: "Studio",
-      produccion: "Production",
       trabajos: "Work",
       nosotros: "About Us",
       contacto: "Contact"
@@ -238,7 +236,6 @@ export const dictionaries = {
   ca: {
     nav: {
       estudio: "Estudi",
-      produccion: "Producció",
       trabajos: "Treballs",
       nosotros: "Nosaltres",
       contacto: "Contacte"
