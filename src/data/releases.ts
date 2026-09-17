@@ -30,11 +30,11 @@ export const releases: Release[] = [
   {
     type: "playlist",
     id: "7onaaMSWiZN2xDP5GlqO4P",
-    title: "Grabaciones Z Estudio",
+    title: "REC",
   },
   {
     type: "playlist",
     id: "3OxeMRhCftYabOQplRQM4a",
-    title: "Mastering Z ESTUDIO BCN",
+    title: "MASTERING",
   },
 ];
