@@ -241,7 +241,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <p className="text-sm font-bold text-white">Compositor</p>
                 </div>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
-                  <Headphones className="h-6 w-6 text-amber-500 mx-auto mb-2" />
+                  <Sliders className="h-6 w-6 text-amber-500 mx-auto mb-2" />
                   <p className="text-sm font-bold text-white">Productor</p>
                 </div>
               </div>
