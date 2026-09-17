@@ -125,19 +125,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="trabajos" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Nuestros Trabajos</h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-              Una selección de los últimos proyectos que han pasado por el estudio.
-            </p>
-          </div>
-
-          <div className="mb-16 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 text-center max-w-4xl mx-auto">
-            <Music className="h-12 w-12 text-amber-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">Playlist del Estudio</h3>
-            <p className="text-neutral-400 mb-6">Escucha nuestra playlist en Spotify con todos los lanzamientos producidos en Z Estudio BCN.</p>
-            <div className="aspect-video bg-neutral-950 rounded-xl border border-neutral-800 flex items-center justify-center">
-              <p className="text-neutral-500">[ Aquí iría el embed de Spotify ]</p>
-            </div>
+            <h2 className="text-4xl font-bold text-white">Nuestros Trabajos</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

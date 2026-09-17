@@ -59,11 +59,7 @@ export const dictionaries = {
       masterDesc: "El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta."
     },
     trabajos: {
-      title: "Nuestros Trabajos",
-      subtitle: "Una selección de los últimos proyectos que han pasado por el estudio.",
-      playlistTitle: "Playlist del Estudio",
-      playlistDesc: "Escucha nuestra playlist en Spotify con todos los lanzamientos producidos en Z Estudio BCN.",
-      playlistPlaceholder: "[ Aquí iría el embed de Spotify ]"
+      title: "Nuestros Trabajos"
     },
     artistas: {
       title: "Artistas",
@@ -175,11 +171,7 @@ export const dictionaries = {
       masterDesc: "The final step before publishing. We optimize the volume and overall tone so your music sounds perfect."
     },
     trabajos: {
-      title: "Our Work",
-      subtitle: "A selection of the latest projects that have passed through the studio.",
-      playlistTitle: "Studio Playlist",
-      playlistDesc: "Listen to our Spotify playlist with all the releases produced at Z Estudio BCN.",
-      playlistPlaceholder: "[ Spotify embed would go here ]"
+      title: "Our Work"
     },
     artistas: {
       title: "Artists",
@@ -291,11 +283,7 @@ export const dictionaries = {
       masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta."
     },
     trabajos: {
-      title: "Els Nostres Treballs",
-      subtitle: "Una selecció dels últims projectes que han passat per l'estudi.",
-      playlistTitle: "Playlist de l'Estudi",
-      playlistDesc: "Escolta la nostra playlist a Spotify amb tots els llançaments produïts a Z Estudio BCN.",
-      playlistPlaceholder: "[ Aquí aniria l'embed de Spotify ]"
+      title: "Els Nostres Treballs"
     },
     artistas: {
       title: "Artistes",
