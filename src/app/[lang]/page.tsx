@@ -58,7 +58,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
                 <Music className="h-12 w-12 text-amber-500 mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Composición</h3>
@@ -77,6 +77,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <li>• Pre-producción</li>
                   <li>• Arreglos musicales</li>
                   <li>• Grabación de máxima calidad</li>
+                </ul>
+              </div>
+
+              <div className="bg-neutral-900/50 border border-neutral-800 p-8 rounded-2xl">
+                <Mic className="h-12 w-12 text-amber-500 mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Grabación</h3>
+                <p className="text-neutral-400 mb-6">
+                  Grabación de todo tipo de instrumentos y voces al máximo nivel.
+                </p>
+                <ul className="space-y-2 text-sm text-neutral-300">
+                  <li>• Stock de instrumentos de primera calidad</li>
+                  <li>• Instrumentos vintage</li>
+                  <li>• Previos y microfonía de primer nivel</li>
                 </ul>
               </div>
 
