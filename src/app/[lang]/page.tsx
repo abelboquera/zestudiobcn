@@ -245,7 +245,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <div className="ml-4">
                   <p className="text-sm text-neutral-400">Ubicación</p>
                   <p className="text-lg font-medium text-white">08024 Barcelona</p>
-                  <p className="text-sm text-neutral-500">Visitas solo con cita previa</p>
                 </div>
               </div>
               <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
