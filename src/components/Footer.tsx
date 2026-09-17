@@ -47,7 +47,7 @@ export default function Footer({ dict }: { dict: any }) {
             <ul className="space-y-3">
               <li className="flex items-start text-neutral-400 text-sm">
                 <MapPin className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
-                <span>Barcelona, España<br/>(Visitas concertadas)</span>
+                <span>Barcelona<br/>(Visitas concertadas)</span>
               </li>
               <li className="flex items-center text-neutral-400 text-sm">
                 <Phone className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
