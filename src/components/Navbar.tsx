@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Instagram, Menu, X } from "lucide-react";
 import DynamicLogo from "./DynamicLogo";
 import Link from "next/link";
 import { Locale } from "@/i18n";
@@ -43,6 +43,16 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
                 <Link href="/en" className={`text-sm font-medium hover:text-amber-500 transition-colors ${lang === 'en' ? 'text-amber-500' : 'text-neutral-500'}`}>EN</Link>
                 <Link href="/ca" className={`text-sm font-medium hover:text-amber-500 transition-colors ${lang === 'ca' ? 'text-amber-500' : 'text-neutral-500'}`}>CA</Link>
               </div>
+
+              <a
+                href="https://instagram.com/zestudiobcn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Z Estudio BCN"
+                className="ml-4 pl-4 border-l border-neutral-800 self-center text-neutral-400 hover:text-amber-500 transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
           </div>
           <div className="-mr-2 flex lg:hidden">
@@ -83,6 +93,16 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
               <Link href="/es" className={`text-base font-medium ${lang === 'es' ? 'text-amber-500' : 'text-neutral-500'}`}>ES</Link>
               <Link href="/en" className={`text-base font-medium ${lang === 'en' ? 'text-amber-500' : 'text-neutral-500'}`}>EN</Link>
               <Link href="/ca" className={`text-base font-medium ${lang === 'ca' ? 'text-amber-500' : 'text-neutral-500'}`}>CA</Link>
+              <a
+                href="https://instagram.com/zestudiobcn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Z Estudio BCN"
+                className="ml-auto text-neutral-400 hover:text-amber-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
