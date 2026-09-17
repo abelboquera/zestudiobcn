@@ -221,7 +221,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
                 <div className="ml-4">
                   <p className="text-sm text-neutral-400">Ubicación</p>
-                  <p className="text-lg font-medium text-white">Barcelona, España</p>
+                  <p className="text-lg font-medium text-white">08024 Barcelona, España</p>
                   <p className="text-sm text-neutral-500">Visitas solo con cita previa</p>
                 </div>
               </div>
