@@ -58,8 +58,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-6">
+              <div className="lg:col-span-3 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Music className="h-10 w-10 text-amber-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Composición</h3>
                 <p className="text-neutral-400 text-sm">
@@ -67,7 +67,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </p>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+              <div className="lg:col-span-3 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Disc className="h-10 w-10 text-amber-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Producción musical</h3>
                 <p className="text-neutral-400 text-sm mb-4">
@@ -80,7 +80,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+              <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Mic className="h-10 w-10 text-amber-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Grabación</h3>
                 <p className="text-neutral-400 text-sm mb-4">
@@ -93,7 +93,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+              <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Sliders className="h-10 w-10 text-amber-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Mezcla</h3>
                 <p className="text-neutral-400 text-sm mb-4">
@@ -106,7 +106,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
+              <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Headphones className="h-10 w-10 text-amber-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Mastering</h3>
                 <p className="text-neutral-400 text-sm">
