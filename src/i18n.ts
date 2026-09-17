@@ -4,7 +4,6 @@ export const dictionaries = {
       estudio: "Estudio",
       produccion: "Producción",
       trabajos: "Trabajos",
-      artistas: "Artistas",
       nosotros: "Nosotros",
       contacto: "Contacto"
     },
@@ -123,7 +122,6 @@ export const dictionaries = {
       estudio: "Studio",
       produccion: "Production",
       trabajos: "Work",
-      artistas: "Artists",
       nosotros: "About Us",
       contacto: "Contact"
     },
@@ -242,7 +240,6 @@ export const dictionaries = {
       estudio: "Estudi",
       produccion: "Producció",
       trabajos: "Treballs",
-      artistas: "Artistes",
       nosotros: "Nosaltres",
       contacto: "Contacte"
     },

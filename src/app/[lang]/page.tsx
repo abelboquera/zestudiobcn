@@ -4,7 +4,6 @@ import {
   Mail, MapPin, MessageCircle, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
-import ArtistsPlayer from "@/components/ArtistsPlayer";
 import ContactForm from "@/components/ContactForm";
 import ReleasesSlider from "@/components/ReleasesSlider";
 import { releases } from "@/data/releases";
@@ -32,17 +31,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     { id: 4, title: "Tema Instrumental", artist: "Guitarrista", role: dict.artistas.roles.master, genre: "Jazz Fusion" },
     { id: 5, title: "Demo", artist: "Banda Emergente", role: dict.artistas.roles.rec, genre: "Punk Rock" },
     { id: 6, title: "Banda Sonora", artist: "Cortometraje", role: dict.artistas.roles.prod, genre: "Cinematic" },
-  ];
-
-  const artistsData = [
-    { name: "MÄLMO 040", role: dict.artistas.roles.coprod, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-    { name: "Artista 2", role: dict.artistas.roles.rec, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-    { name: "Banda 3", role: dict.artistas.roles.mix, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-    { name: "Artista 4", role: dict.artistas.roles.master, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-    { name: "Banda 5", role: dict.artistas.roles.prod, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-    { name: "Artista 6", role: dict.artistas.roles.rec, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
-    { name: "Banda 7", role: dict.artistas.roles.mix, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
-    { name: "Artista 8", role: dict.artistas.roles.master, audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
   ];
 
   return (
@@ -189,9 +177,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
       {/* RELEASES SECTION (no aparece en el menu de navegacion) */}
       <ReleasesSlider releases={releases} />
-
-      {/* ARTISTAS SECTION */}
-      <ArtistsPlayer dict={dict.artistas} artists={artistsData} />
 
       {/* SOBRE NOSOTROS SECTION */}
       <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">

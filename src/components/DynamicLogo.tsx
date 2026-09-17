@@ -41,7 +41,6 @@ export default function DynamicLogo({ className = "" }: { className?: string }) 
       sectionName = "PRODUCTION";
       break;
     case "trabajos":
-    case "artistas":
     case "sobre-nosotros":
     case "contacto":
     case "inicio":
