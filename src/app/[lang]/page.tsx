@@ -41,14 +41,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <TrabajosGrid trabajos={trabajos} />
 
-          {/* Releases: playlist de Spotify del estudio (ancla #releases) */}
-          <div className="mt-20">
-            <ReleasesSlider releases={releases} />
-          </div>
-
           {/* TV y publicidad (no aparece en el menu de navegacion) */}
           <div className="mt-24">
             <VideosGrid videos={videos} />
+          </div>
+
+          {/* Releases: playlist de Spotify del estudio (ancla #releases) */}
+          <div className="mt-20">
+            <ReleasesSlider releases={releases} />
           </div>
         </div>
       </section>
