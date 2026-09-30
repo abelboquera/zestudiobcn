@@ -27,4 +27,9 @@ export const videos: Video[] = [
     brand: "League of Legends",
     title: "EU LCS Spring Finals Hamburg · Aftermovie",
   },
+  {
+    youtubeId: "sOSRONM8zik",
+    brand: "Malmö 040, Maren",
+    title: "Voy a Estar (En directo · Live Session)",
+  },
 ];
