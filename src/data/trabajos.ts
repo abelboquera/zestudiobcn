@@ -12,11 +12,28 @@ export type Trabajo = {
 /**
  * Trabajos reales del estudio (seccion "Nuestros Trabajos").
  *
- * Ordenados de mas a menos reproducciones en Spotify, segun los contadores
- * del 17/09/2026 (anotados encima de cada tema). "Ja Emprenya!" salio el
- * 14/09/2026 y Spotify aun no mostraba su contador, por eso va la ultima.
+ * Los dos primeros van destacados por peticion del estudio; el resto siguen
+ * el orden de reproducciones en Spotify a 17/09/2026 (anotado encima de cada
+ * tema). "Ja Emprenya!" salio el 14/09/2026 y Spotify aun no mostraba su
+ * contador, por eso va la ultima.
  */
 export const trabajos: Trabajo[] = [
+  // lanzado el 25/09/2026
+  {
+    spotifyId: "2G0bNyYe4kiEQ9AyCuw3NQ",
+    title: "Bocetos",
+    artists: ["DePol"],
+    cover: "/images/trabajos/depol-bocetos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/69869b1fc4a0831b03ae52c226bcbd53ad590c5f",
+  },
+  // 4.870.780
+  {
+    spotifyId: "3ELI7WxrRSvTuzWnVuUT4H",
+    title: "ven a mi casa esta navidad",
+    artists: ["Ivan Cornejo"],
+    cover: "/images/trabajos/ivan-cornejo-ven-a-mi-casa-esta-navidad.jpg",
+    preview: "https://p.scdn.co/mp3-preview/75afd1207ec66354fab08e669ffbecec2b3fc717",
+  },
   // 66.368.162
   {
     spotifyId: "4p1C7lssRJgOkdpPWlb6s1",
@@ -56,14 +73,6 @@ export const trabajos: Trabajo[] = [
     artists: ["Hey Kid", "Besmaya", "Inazio"],
     cover: "/images/trabajos/hey-kid-lo-que-haga-falta.jpg",
     preview: "https://p.scdn.co/mp3-preview/526b9145609b98d2add5c87df8076e6d2f7ff7ba",
-  },
-  // 4.870.780
-  {
-    spotifyId: "3ELI7WxrRSvTuzWnVuUT4H",
-    title: "ven a mi casa esta navidad",
-    artists: ["Ivan Cornejo"],
-    cover: "/images/trabajos/ivan-cornejo-ven-a-mi-casa-esta-navidad.jpg",
-    preview: "https://p.scdn.co/mp3-preview/75afd1207ec66354fab08e669ffbecec2b3fc717",
   },
   // 1.490.650
   {
@@ -144,14 +153,6 @@ export const trabajos: Trabajo[] = [
     artists: ["Biel Martí"],
     cover: "/images/trabajos/biel-marti-els-colors-de-la-magia.jpg",
     preview: "https://p.scdn.co/mp3-preview/82b45f942d8157e6c461ff0b63b85e4ed2e49e53",
-  },
-  // 1.548
-  {
-    spotifyId: "1yF6957Bus7nqA8GctV500",
-    title: "Lo Que No Sé Decir Con Palabras",
-    artists: ["Jesús Prieto \"Pitti\""],
-    cover: "/images/trabajos/jesus-prieto-pitti-lo-que-no-se-decir-con-palabras.jpg",
-    preview: "https://p.scdn.co/mp3-preview/93681a7f0f40b355ee43f1e720adb3c0b57cc533",
   },
   // sin contador
   {
