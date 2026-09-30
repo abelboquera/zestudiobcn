@@ -32,4 +32,9 @@ export const videos: Video[] = [
     brand: "Malmö 040, Maren",
     title: "Voy a Estar (En directo · Live Session)",
   },
+  {
+    youtubeId: "74BUbGuBhoA",
+    brand: "Hey Kid",
+    title: "noche de san juan (en directo)",
+  },
 ];
