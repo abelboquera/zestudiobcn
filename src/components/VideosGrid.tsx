@@ -6,10 +6,10 @@ export default function VideosGrid({ videos }: { videos: Video[] }) {
   return (
     <div id="tv-publicidad" className="scroll-mt-28">
       <div className="text-center mb-10">
-        <h3 className="text-3xl font-bold text-white">TV y Publicidad</h3>
+        <h3 className="text-3xl font-bold text-white">TV, Vídeo, Publicidad</h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {videos.map((video) => (
           <div key={video.youtubeId}>
             <div className="aspect-video overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
