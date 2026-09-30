@@ -6,6 +6,8 @@ import { ChevronDown, ChevronUp, ExternalLink, Pause, Play } from "lucide-react"
 import type { Trabajo } from "@/data/trabajos";
 
 const VISIBLES = 18;
+/** En movil se ven menos antes del boton */
+const VISIBLES_MOVIL = 10;
 
 type Dict = { showMore: string; showLess: string };
 type Ui = { play: string; pause: string; cover: string; onSpotify: string };
@@ -56,16 +58,19 @@ export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo
   };
 
   const visibles = expanded ? trabajos : trabajos.slice(0, VISIBLES);
-  const ocultos = trabajos.length - VISIBLES;
+  const ocultos = trabajos.length - VISIBLES_MOVIL;
 
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-      {visibles.map((trabajo) => {
+      {visibles.map((trabajo, index) => {
         const isPlaying = playingId === trabajo.spotifyId;
         const artists = trabajo.artists.join(", ");
         return (
-          <article key={trabajo.spotifyId} className="group">
+          <article
+            key={trabajo.spotifyId}
+            className={`group ${!expanded && index >= VISIBLES_MOVIL ? "hidden sm:block" : ""}`}
+          >
             <div
               className={`relative aspect-square overflow-hidden rounded-xl border transition-colors ${
                 isPlaying ? "border-amber-500" : "border-neutral-800 group-hover:border-amber-500/50"
