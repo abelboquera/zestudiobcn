@@ -80,17 +80,17 @@ export default function HeroSlider({ slides, ui }: { slides: any[]; ui: Ui }) {
       {/* Controls */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm"
+        className="absolute z-30 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm p-1.5 bottom-10 left-1/2 -translate-x-[4.5rem] md:p-2 md:bottom-auto md:left-8 md:top-1/2 md:translate-x-0 md:-translate-y-1/2"
         aria-label={ui.prevSlide}
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm"
+        className="absolute z-30 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm p-1.5 bottom-10 left-1/2 translate-x-[2.5rem] md:p-2 md:bottom-auto md:left-auto md:right-8 md:top-1/2 md:translate-x-0 md:-translate-y-1/2"
         aria-label={ui.nextSlide}
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
       </button>
 
       {/* Indicators */}
