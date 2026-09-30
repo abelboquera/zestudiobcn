@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function HeroSlider({ slides }: { slides: any[] }) {
+type Ui = { prevSlide: string; nextSlide: string; goToSlide: string };
+
+export default function HeroSlider({ slides, ui }: { slides: any[]; ui: Ui }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -79,14 +81,14 @@ export default function HeroSlider({ slides }: { slides: any[] }) {
       <button 
         onClick={prevSlide}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm"
-        aria-label="Anterior"
+        aria-label={ui.prevSlide}
       >
         <ChevronLeft className="h-8 w-8" />
       </button>
       <button 
         onClick={nextSlide}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 hover:bg-amber-500 text-white transition-colors border border-white/10 backdrop-blur-sm"
-        aria-label="Siguiente"
+        aria-label={ui.nextSlide}
       >
         <ChevronRight className="h-8 w-8" />
       </button>
@@ -97,7 +99,7 @@ export default function HeroSlider({ slides }: { slides: any[] }) {
           <button
             key={`dot-${index}`}
             onClick={() => setCurrent(index)}
-            aria-label={`Ir a la diapositiva ${index + 1}`}
+            aria-label={`${ui.goToSlide} ${index + 1}`}
             className={`w-3 h-3 rounded-full transition-colors ${
               index === current ? "bg-amber-500" : "bg-white/30 hover:bg-white/50"
             }`}

@@ -50,7 +50,7 @@ export default async function RootLayout({
   return (
     <html lang={validLang} className="scroll-smooth">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        <Navbar dict={dict.nav} lang={validLang as Locale} />
+        <Navbar dict={dict.nav} ui={dict.ui} lang={validLang as Locale} />
         <main className="flex-grow">
           {children}
         </main>

@@ -1,5 +1,20 @@
 export const dictionaries = {
   es: {
+    ui: {
+      openMenu: "Abrir menú principal",
+      instagram: "Instagram de Z Estudio BCN",
+      prevSlide: "Diapositiva anterior",
+      nextSlide: "Diapositiva siguiente",
+      goToSlide: "Ir a la diapositiva",
+      play: "Escuchar",
+      pause: "Pausar",
+      cover: "Portada de",
+      onSpotify: "Escuchar en Spotify",
+      mailName: "Nombre",
+      mailEmail: "Email",
+      mailInterest: "Interesado en",
+      mailSubject: "Z Estudio / Contacto"
+    },
     nav: {
       trabajos: "Trabajos",
       nosotros: "Nosotros",
@@ -124,6 +139,21 @@ export const dictionaries = {
     }
   },
   en: {
+    ui: {
+      openMenu: "Open main menu",
+      instagram: "Z Estudio BCN on Instagram",
+      prevSlide: "Previous slide",
+      nextSlide: "Next slide",
+      goToSlide: "Go to slide",
+      play: "Play",
+      pause: "Pause",
+      cover: "Cover of",
+      onSpotify: "Listen on Spotify",
+      mailName: "Name",
+      mailEmail: "Email",
+      mailInterest: "Interested in",
+      mailSubject: "Z Estudio / Contact"
+    },
     nav: {
       trabajos: "Work",
       nosotros: "About Us",
@@ -248,6 +278,21 @@ export const dictionaries = {
     }
   },
   ca: {
+    ui: {
+      openMenu: "Obrir menú principal",
+      instagram: "Instagram de Z Estudio BCN",
+      prevSlide: "Diapositiva anterior",
+      nextSlide: "Diapositiva següent",
+      goToSlide: "Anar a la diapositiva",
+      play: "Escoltar",
+      pause: "Pausar",
+      cover: "Portada de",
+      onSpotify: "Escoltar a Spotify",
+      mailName: "Nom",
+      mailEmail: "Email",
+      mailInterest: "Interessat en",
+      mailSubject: "Z Estudio / Contacte"
+    },
     nav: {
       trabajos: "Treballs",
       nosotros: "Nosaltres",

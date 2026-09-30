@@ -30,7 +30,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
   return (
     <div className="flex flex-col min-h-screen">
-      <HeroSlider slides={dict.hero.slides} />
+      <HeroSlider slides={dict.hero.slides} ui={dict.ui} />
 
       {/* TRABAJOS SECTION */}
       <section id="trabajos" className="py-24 bg-[#0a0a0a] scroll-mt-20">
@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <h2 className="text-4xl font-bold text-white">{dict.trabajos.title}</h2>
           </div>
 
-          <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} />
+          <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} ui={dict.ui} />
 
           {/* TV y publicidad (no aparece en el menu de navegacion) */}
           <div className="mt-24">
@@ -124,7 +124,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <div key={category.title} className="break-inside-avoid mb-6 bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
                   <div className="flex items-center gap-3 pb-3 mb-1 border-b border-amber-500/60">
                     <Icon className="h-5 w-5 text-amber-500 shrink-0" />
-                    <h3 className="text-sm font-bold uppercase tracking-widest text-white">{category.title}</h3>
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-white">
+                      {validLang === "en" ? category.titleEn : validLang === "ca" ? category.titleCa : category.title}
+                    </h3>
                   </div>
                   <ul>
                     {category.items.map((item, i) => (
@@ -257,7 +259,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-white mb-6">{dict.contacto.formTitle}</h3>
-              <ContactForm dict={dict.contacto} />
+              <ContactForm dict={dict.contacto} ui={dict.ui} />
             </div>
           </div>
         </div>

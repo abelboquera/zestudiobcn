@@ -6,7 +6,7 @@ import DynamicLogo from "./DynamicLogo";
 import Link from "next/link";
 import { Locale } from "@/i18n";
 
-export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
+export default function Navbar({ dict, ui, lang }: { dict: any, ui: any, lang: Locale }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -48,7 +48,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
                 href="https://instagram.com/zestudiobcn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram de Z Estudio BCN"
+                aria-label={ui.instagram}
                 className="ml-4 pl-4 border-l border-neutral-800 self-center text-neutral-400 hover:text-amber-500 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
@@ -63,7 +63,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <span className="sr-only">Abrir menú principal</span>
+              <span className="sr-only">{ui.openMenu}</span>
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -97,7 +97,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: Locale }) {
                 href="https://instagram.com/zestudiobcn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram de Z Estudio BCN"
+                aria-label={ui.instagram}
                 className="ml-auto text-neutral-400 hover:text-amber-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

@@ -8,8 +8,9 @@ import type { Trabajo } from "@/data/trabajos";
 const VISIBLES = 18;
 
 type Dict = { showMore: string; showLess: string };
+type Ui = { play: string; pause: string; cover: string; onSpotify: string };
 
-export default function TrabajosGrid({ trabajos, dict }: { trabajos: Trabajo[]; dict: Dict }) {
+export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo[]; dict: Dict; ui: Ui }) {
   const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
@@ -72,7 +73,7 @@ export default function TrabajosGrid({ trabajos, dict }: { trabajos: Trabajo[]; 
             >
               <Image
                 src={trabajo.cover}
-                alt={`Portada de ${trabajo.title} - ${artists}`}
+                alt={`${ui.cover} ${trabajo.title} - ${artists}`}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className={`object-cover transition-transform duration-700 ${isPlaying ? "scale-105" : "group-hover:scale-105"}`}
@@ -86,7 +87,7 @@ export default function TrabajosGrid({ trabajos, dict }: { trabajos: Trabajo[]; 
               <button
                 type="button"
                 onClick={() => toggle(trabajo)}
-                aria-label={isPlaying ? `Pausar ${trabajo.title}` : `Escuchar ${trabajo.title}`}
+                aria-label={`${isPlaying ? ui.pause : ui.play} ${trabajo.title}`}
                 aria-pressed={isPlaying}
                 className="absolute bottom-4 right-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-500 text-neutral-950 shadow-lg transition-transform hover:scale-110 hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
@@ -110,7 +111,7 @@ export default function TrabajosGrid({ trabajos, dict }: { trabajos: Trabajo[]; 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-neutral-400 transition-colors hover:text-amber-500"
-                aria-label={`Escuchar ${trabajo.title} completa en Spotify`}
+                aria-label={`${ui.onSpotify}: ${trabajo.title}`}
               >
                 Spotify
                 <ExternalLink className="h-3.5 w-3.5" />

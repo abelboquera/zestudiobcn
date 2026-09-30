@@ -20,7 +20,9 @@ const CONTACT_EMAIL = "davidggmusic@gmail.com";
 const inputClass =
   "w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all";
 
-export default function ContactForm({ dict }: { dict: Dict }) {
+type Ui = { mailName: string; mailEmail: string; mailInterest: string; mailSubject: string };
+
+export default function ContactForm({ dict, ui }: { dict: Dict; ui: Ui }) {
   const [sent, setSent] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -34,11 +36,11 @@ export default function ContactForm({ dict }: { dict: Dict }) {
 
     const subjectLabel = subjectValue;
 
-    const subject = `Z Estudio / Contacto / ${name} / ${subjectLabel}`;
+    const subject = `${ui.mailSubject} / ${name} / ${subjectLabel}`;
     const body = [
-      `Nombre: ${name}`,
-      `Email: ${email}`,
-      `Interesado en: ${subjectLabel}`,
+      `${ui.mailName}: ${name}`,
+      `${ui.mailEmail}: ${email}`,
+      `${ui.mailInterest}: ${subjectLabel}`,
       "",
       message,
     ].join("\n");

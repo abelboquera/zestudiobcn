@@ -8,7 +8,10 @@ export type GearItem = {
 };
 
 export type GearCategory = {
+  /** Titulo en espanol; en/ca son sus traducciones (los equipos no se traducen) */
   title: string;
+  titleEn: string;
+  titleCa: string;
   /** Icono que se muestra junto al titulo */
   icon: "guitar" | "keys" | "amp" | "mic" | "monitor" | "preamp";
   items: GearItem[];
@@ -22,6 +25,8 @@ export type GearCategory = {
 export const gear: GearCategory[] = [
   {
     title: "Guitarras eléctricas",
+    titleEn: "Electric guitars",
+    titleCa: "Guitarres elèctriques",
     icon: "guitar",
     items: [
       { name: "Gibson ES-345", detail: "1971", tag: "11-48" },
@@ -51,6 +56,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Guitarras acústicas",
+    titleEn: "Acoustic guitars",
+    titleCa: "Guitarres acústiques",
     icon: "guitar",
     items: [
       { name: "Martin D-28", detail: "2009" },
@@ -60,6 +67,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Guitarras de nylon",
+    titleEn: "Nylon-string guitars",
+    titleCa: "Guitarres de niló",
     icon: "guitar",
     items: [
       { name: "Ramírez Flamenca", detail: "1983" },
@@ -68,6 +77,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Otros instrumentos acústicos",
+    titleEn: "Other acoustic instruments",
+    titleCa: "Altres instruments acústics",
     icon: "guitar",
     items: [
       { name: "Ukelele Ortega" },
@@ -79,6 +90,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Bajos",
+    titleEn: "Basses",
+    titleCa: "Baixos",
     icon: "guitar",
     items: [
       { name: "Fender Precision", detail: "4 cuerdas" },
@@ -88,6 +101,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Otros instrumentos",
+    titleEn: "Other instruments",
+    titleCa: "Altres instruments",
     icon: "keys",
     items: [
       { name: "Fender Rhodes MkII", detail: "1979" },
@@ -102,6 +117,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Amplificadores",
+    titleEn: "Amplifiers",
+    titleCa: "Amplificadors",
     icon: "amp",
     items: [
       { name: "Kemper Profiling Amp" },
@@ -117,6 +134,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Microfonía",
+    titleEn: "Microphones",
+    titleCa: "Microfonia",
     icon: "mic",
     items: [
       { name: "Neumann U87" },
@@ -134,6 +153,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Escuchas",
+    titleEn: "Monitoring",
+    titleCa: "Escoltes",
     icon: "monitor",
     items: [
       { name: "Yamaha NS10", tag: "×2" },
@@ -144,6 +165,8 @@ export const gear: GearCategory[] = [
   },
   {
     title: "Preamps",
+    titleEn: "Preamps",
+    titleCa: "Preamps",
     icon: "preamp",
     items: [
       { name: "Millennia STT-1", tag: "×2" },
