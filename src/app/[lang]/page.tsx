@@ -7,6 +7,8 @@ import HeroSlider from "@/components/HeroSlider";
 import ContactForm from "@/components/ContactForm";
 import ReleasesSlider from "@/components/ReleasesSlider";
 import TrabajosGrid from "@/components/TrabajosGrid";
+import VideosGrid from "@/components/VideosGrid";
+import { videos } from "@/data/videos";
 import { trabajos } from "@/data/trabajos";
 import { releases } from "@/data/releases";
 import { gear, type GearCategory } from "@/data/gear";
@@ -42,6 +44,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {/* Releases: playlist de Spotify del estudio (ancla #releases) */}
           <div className="mt-20">
             <ReleasesSlider releases={releases} />
+          </div>
+
+          {/* TV y publicidad (no aparece en el menu de navegacion) */}
+          <div className="mt-24">
+            <VideosGrid videos={videos} />
           </div>
         </div>
       </section>
