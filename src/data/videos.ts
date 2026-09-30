@@ -3,7 +3,7 @@ export type Video = {
   youtubeId: string;
   /** Marca o produccion: "League of Legends", "Aperol"... */
   brand: string;
-  /** Titulo del video */
+  /** Titulo real del video en YouTube: no se muestra, sirve de texto alternativo */
   title: string;
 };
 

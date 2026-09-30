@@ -24,7 +24,6 @@ export default function VideosGrid({ videos }: { videos: Video[] }) {
               />
             </div>
             <p className="mt-3 text-lg font-bold text-white">{video.brand}</p>
-            <p className="text-sm text-neutral-400">{video.title}</p>
           </div>
         ))}
       </div>
