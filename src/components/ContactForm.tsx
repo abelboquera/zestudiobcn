@@ -3,19 +3,19 @@
 import { useState } from "react";
 
 type Dict = {
+  nameLabel: string;
+  namePlaceholder: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  subjectLabel: string;
+  subjects: string[];
   messageLabel: string;
   messagePlaceholder: string;
   sendBtn: string;
+  sentMsg: string;
 };
 
 const CONTACT_EMAIL = "davidggmusic@gmail.com";
-
-const SUBJECTS = [
-  { value: "produccion", label: "Producción" },
-  { value: "grabacion", label: "Grabación / Mezcla / Mastering" },
-  { value: "combos", label: "Escuela de combo" },
-  { value: "otro", label: "Otro" },
-];
 
 const inputClass =
   "w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all";
@@ -32,8 +32,7 @@ export default function ContactForm({ dict }: { dict: Dict }) {
     const subjectValue = String(data.get("subject") ?? "");
     const message = String(data.get("message") ?? "");
 
-    const subjectLabel =
-      SUBJECTS.find((s) => s.value === subjectValue)?.label ?? subjectValue;
+    const subjectLabel = subjectValue;
 
     const subject = `Z Estudio / Contacto / ${name} / ${subjectLabel}`;
     const body = [
@@ -56,25 +55,25 @@ export default function ContactForm({ dict }: { dict: Dict }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-neutral-400 mb-2">
-            Nombre
+            {dict.nameLabel}
           </label>
-          <input type="text" id="name" name="name" required className={inputClass} placeholder="Tu nombre" />
+          <input type="text" id="name" name="name" required className={inputClass} placeholder={dict.namePlaceholder} />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-neutral-400 mb-2">
-            Email
+            {dict.emailLabel}
           </label>
-          <input type="email" id="email" name="email" required className={inputClass} placeholder="tu@email.com" />
+          <input type="email" id="email" name="email" required className={inputClass} placeholder={dict.emailPlaceholder} />
         </div>
       </div>
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-neutral-400 mb-2">
-          ¿En qué estás interesado?
+          {dict.subjectLabel}
         </label>
         <select id="subject" name="subject" className={`${inputClass} appearance-none`}>
-          {SUBJECTS.map((s) => (
-            <option key={s.value} value={s.value}>
-              {s.label}
+          {dict.subjects.map((s) => (
+            <option key={s} value={s}>
+              {s}
             </option>
           ))}
         </select>
@@ -101,8 +100,7 @@ export default function ContactForm({ dict }: { dict: Dict }) {
 
       {sent && (
         <p className="text-sm text-amber-500" role="status">
-          Se abrirá tu aplicación de correo con el mensaje listo. Solo tienes que
-          pulsar enviar. Si no se abre, escríbenos a {CONTACT_EMAIL}.
+          {dict.sentMsg} {CONTACT_EMAIL}
         </p>
       )}
     </form>

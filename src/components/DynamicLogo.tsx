@@ -28,33 +28,19 @@ export default function DynamicLogo({ className = "" }: { className?: string }) 
     };
   }, []);
 
-  let logoSrc = "/logos/home.png";
-  let sectionName = "ESTUDIO";
-
-  switch (activeSection) {
-    case "estudio":
-      logoSrc = "/logos/estudio.png";
-      sectionName = "RECORDING";
-      break;
-    case "trabajos":
-    case "sobre-nosotros":
-    case "contacto":
-    case "inicio":
-    default:
-      logoSrc = "/logos/home.png";
-      sectionName = "ESTUDIO";
-      break;
-  }
+  // El logo es siempre la Z; solo cambia el nombre de la seccion
+  const sectionName = activeSection === "estudio" ? "RECORDING" : "ESTUDIO";
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <div className="relative w-12 h-12 rounded-lg overflow-hidden border border-neutral-800 shadow-lg flex-shrink-0">
-        <Image 
-          src={logoSrc} 
-          alt={`Z ${sectionName} Logo`} 
-          fill 
-          className="object-cover"
-          sizes="48px"
+        <Image
+          src="/logos/z-mark.png"
+          alt="Z Estudio BCN"
+          fill
+          className="object-contain"
+          sizes="96px"
+          priority
         />
       </div>
       <div className="flex flex-col justify-center">

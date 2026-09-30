@@ -29,15 +29,15 @@ export default function Footer({ dict }: { dict: any }) {
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.services}</h3>
             <ul className="space-y-2">
               <li><a href="#estudio" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.studio}</a></li>
-              <li><a href="#produccion" className="text-neutral-400 hover:text-amber-500 text-sm">Producción y Mezcla</a></li>
+              <li><a href="#produccion" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.production}</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.studio}</h3>
             <ul className="space-y-2">
-              <li><a href="#trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">Nuestros Trabajos</a></li>
-              <li><a href="#sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">Sobre nosotros</a></li>
+              <li><a href="#trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.works}</a></li>
+              <li><a href="#sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.about}</a></li>
               <li><a href="#contacto" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.contact}</a></li>
             </ul>
           </div>

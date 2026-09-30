@@ -7,7 +7,9 @@ import type { Trabajo } from "@/data/trabajos";
 
 const VISIBLES = 18;
 
-export default function TrabajosGrid({ trabajos }: { trabajos: Trabajo[] }) {
+type Dict = { showMore: string; showLess: string };
+
+export default function TrabajosGrid({ trabajos, dict }: { trabajos: Trabajo[]; dict: Dict }) {
   const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
@@ -127,7 +129,7 @@ export default function TrabajosGrid({ trabajos }: { trabajos: Trabajo[] }) {
             aria-expanded={expanded}
             className="inline-flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-amber-500 hover:text-amber-500"
           >
-            {expanded ? "Ver menos" : "Ver más trabajos"}
+            {expanded ? dict.showLess : dict.showMore}
             {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
           </button>
         </div>

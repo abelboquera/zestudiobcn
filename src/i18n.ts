@@ -40,6 +40,7 @@ export const dictionaries = {
       ]
     },
     estudio: {
+      gearTitle: "Equipamiento",
       title: "El Estudio",
       subtitle: "Un espacio diseñado para la creatividad. Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital.",
       controlRoom: "Control Room",
@@ -73,7 +74,10 @@ export const dictionaries = {
       masterDesc: "El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta."
     },
     trabajos: {
-      title: "Nuestros Trabajos"
+      title: "Nuestros Trabajos",
+      videosTitle: "TV, Vídeo, Publicidad",
+      showMore: "Ver más trabajos",
+      showLess: "Ver menos"
     },
     nosotros: {
       title: "Sobre Nosotros",
@@ -89,6 +93,9 @@ export const dictionaries = {
     contacto: {
       title: "Contacto",
       subtitle: "¿Tienes un proyecto en mente? Escríbenos y le daremos forma.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      instagram: "Instagram",
       location: "Ubicación",
       locationDesc: "08024 Barcelona",
       formTitle: "Envíanos un mensaje",
@@ -97,15 +104,19 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "¿En qué estás interesado?",
-      subjects: ["Grabación en estudio", "Producción / Mezcla / Mastering", "Otro"],
+      subjects: ["Producción", "Grabación / Mezcla / Mastering", "Escuela de combo", "Otro"],
       messageLabel: "Mensaje",
       messagePlaceholder: "Cuéntanos sobre tu proyecto...",
-      sendBtn: "Enviar mensaje"
+      sendBtn: "Enviar mensaje",
+      sentMsg: "Se abrirá tu aplicación de correo con el mensaje listo. Solo tienes que pulsar enviar."
     },
     footer: {
       desc: "Estudio de grabación y producción musical en Barcelona, dirigido por David García.",
       services: "Servicios",
       studio: "Estudio",
+      production: "Producción y Mezcla",
+      works: "Nuestros Trabajos",
+      about: "Sobre nosotros",
       contact: "Contacto",
       legal: "Aviso Legal",
       privacy: "Privacidad",
@@ -153,6 +164,7 @@ export const dictionaries = {
       ]
     },
     estudio: {
+      gearTitle: "Equipment",
       title: "The Studio",
       subtitle: "A space designed for creativity. Careful acoustics, relaxed atmosphere and the best analog and digital equipment.",
       controlRoom: "Control Room",
@@ -186,7 +198,10 @@ export const dictionaries = {
       masterDesc: "The final step before publishing. We optimize the volume and overall tone so your music sounds perfect."
     },
     trabajos: {
-      title: "Our Work"
+      title: "Our Work",
+      videosTitle: "TV, Video, Advertising",
+      showMore: "Show more work",
+      showLess: "Show less"
     },
     nosotros: {
       title: "About Us",
@@ -202,6 +217,9 @@ export const dictionaries = {
     contacto: {
       title: "Contact",
       subtitle: "Do you have a project in mind? Write to us and we'll shape it.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      instagram: "Instagram",
       location: "Location",
       locationDesc: "08024 Barcelona",
       formTitle: "Send us a message",
@@ -210,15 +228,19 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "you@email.com",
       subjectLabel: "What are you interested in?",
-      subjects: ["Studio recording", "Production / Mixing / Mastering", "Other"],
+      subjects: ["Production", "Recording / Mixing / Mastering", "Combo school", "Other"],
       messageLabel: "Message",
       messagePlaceholder: "Tell us about your project...",
-      sendBtn: "Send message"
+      sendBtn: "Send message",
+      sentMsg: "Your email app will open with the message ready. Just hit send."
     },
     footer: {
       desc: "Recording and music production studio in Barcelona, directed by David García.",
       services: "Services",
       studio: "Studio",
+      production: "Production and Mixing",
+      works: "Our Work",
+      about: "About us",
       contact: "Contact",
       legal: "Legal Notice",
       privacy: "Privacy Policy",
@@ -266,6 +288,7 @@ export const dictionaries = {
       ]
     },
     estudio: {
+      gearTitle: "Equipament",
       title: "L'Estudi",
       subtitle: "Un espai dissenyat per a la creativitat. Acústica cuidada, ambient relaxat i el millor equip analògic i digital.",
       controlRoom: "Control Room",
@@ -299,7 +322,10 @@ export const dictionaries = {
       masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta."
     },
     trabajos: {
-      title: "Els Nostres Treballs"
+      title: "Els Nostres Treballs",
+      videosTitle: "TV, Vídeo, Publicitat",
+      showMore: "Veure més treballs",
+      showLess: "Veure menys"
     },
     nosotros: {
       title: "Sobre Nosaltres",
@@ -315,6 +341,9 @@ export const dictionaries = {
     contacto: {
       title: "Contacte",
       subtitle: "Tens un projecte al cap? Escriu-nos i li donarem forma.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      instagram: "Instagram",
       location: "Ubicació",
       locationDesc: "08024 Barcelona",
       formTitle: "Envia'ns un missatge",
@@ -323,15 +352,19 @@ export const dictionaries = {
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       subjectLabel: "En què estàs interessat?",
-      subjects: ["Gravació a l'estudi", "Producció / Mescla / Mastering", "Altre"],
+      subjects: ["Producció", "Gravació / Mescla / Mastering", "Escola de combo", "Altre"],
       messageLabel: "Missatge",
       messagePlaceholder: "Explica'ns sobre el teu projecte...",
-      sendBtn: "Enviar missatge"
+      sendBtn: "Enviar missatge",
+      sentMsg: "S'obrirà la teva aplicació de correu amb el missatge a punt. Només has de prémer enviar."
     },
     footer: {
       desc: "Estudi de gravació i producció musical a Barcelona, dirigit per David García.",
       services: "Serveis",
       studio: "Estudi",
+      production: "Producció i Mescla",
+      works: "Els Nostres Treballs",
+      about: "Sobre nosaltres",
       contact: "Contacte",
       legal: "Avís Legal",
       privacy: "Privacitat",

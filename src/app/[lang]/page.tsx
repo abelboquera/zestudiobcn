@@ -36,14 +36,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="trabajos" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white">Nuestros Trabajos</h2>
+            <h2 className="text-4xl font-bold text-white">{dict.trabajos.title}</h2>
           </div>
 
-          <TrabajosGrid trabajos={trabajos} />
+          <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} />
 
           {/* TV y publicidad (no aparece en el menu de navegacion) */}
           <div className="mt-24">
-            <VideosGrid videos={videos} />
+            <VideosGrid videos={videos} title={dict.trabajos.videosTitle} />
           </div>
 
           {/* Releases: playlist de Spotify del estudio (ancla #releases) */}
@@ -59,72 +59,62 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {/* Produccion musical (antes seccion propia) */}
           <div id="produccion" className="mb-24 scroll-mt-28">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Servicios</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">{dict.produccion.title}</h2>
               <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                Desde la primera nota hasta el master final. Te ayudamos a encontrar tu sonido y a llevar tus canciones al siguiente nivel.
+                {dict.produccion.subtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-6">
               <div className="lg:col-span-3 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Music className="h-10 w-10 text-amber-500 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Composición</h3>
-                <p className="text-neutral-400 text-sm">
-                  Construimos tu música desde cero, tanto para fines comerciales como artísticos.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{dict.produccion.compTitle}</h3>
+                <p className="text-neutral-400 text-sm">{dict.produccion.compDesc}</p>
               </div>
 
               <div className="lg:col-span-3 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Disc className="h-10 w-10 text-amber-500 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Producción musical</h3>
-                <p className="text-neutral-400 text-sm mb-4">
-                  Trabajamos juntos en la estructura, arreglos e instrumentación de tus canciones. Te asesoramos en la dirección artística.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{dict.produccion.prodTitle}</h3>
+                <p className="text-neutral-400 text-sm mb-4">{dict.produccion.prodDesc}</p>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  <li>• Pre-producción</li>
-                  <li>• Arreglos musicales</li>
-                  <li>• Grabación de máxima calidad</li>
+                  {dict.produccion.prodList.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Mic className="h-10 w-10 text-amber-500 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Grabación</h3>
-                <p className="text-neutral-400 text-sm mb-4">
-                  Grabación de todo tipo de instrumentos y voces al máximo nivel.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{dict.produccion.recTitle}</h3>
+                <p className="text-neutral-400 text-sm mb-4">{dict.produccion.recDesc}</p>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  <li>• Stock de instrumentos de primera calidad</li>
-                  <li>• Instrumentos vintage</li>
-                  <li>• Previos y microfonía de primer nivel</li>
+                  {dict.produccion.recList.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Sliders className="h-10 w-10 text-amber-500 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Mezcla</h3>
-                <p className="text-neutral-400 text-sm mb-4">
-                  Equilibramos todos los elementos de tu canción para que suene potente, clara y con profundidad usando equipo híbrido analógico y digital.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{dict.produccion.mixTitle}</h3>
+                <p className="text-neutral-400 text-sm mb-4">{dict.produccion.mixDesc}</p>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  <li>• Edición y afinación</li>
-                  <li>• EQ y compresión analógica/digital</li>
-                  <li>• FX analógicos</li>
+                  {dict.produccion.mixList.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="lg:col-span-2 xl:col-span-1 bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl">
                 <Headphones className="h-10 w-10 text-amber-500 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Mastering</h3>
-                <p className="text-neutral-400 text-sm">
-                  El último paso antes de publicar. Optimizamos el volumen y el tono general para que tu música suene perfecta.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{dict.produccion.masterTitle}</h3>
+                <p className="text-neutral-400 text-sm">{dict.produccion.masterDesc}</p>
               </div>
             </div>
           </div>
 
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white">Equipamiento</h2>
+            <h2 className="text-4xl font-bold text-white">{dict.estudio.gearTitle}</h2>
           </div>
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
@@ -162,7 +152,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="sobre-nosotros" className="py-24 bg-[#0a0a0a] border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white">Sobre Nosotros</h2>
+            <h2 className="text-4xl font-bold text-white">{dict.nosotros.title}</h2>
           </div>
 
           {/* David García */}
@@ -171,19 +161,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <div className="absolute inset-0 bg-[url('/images/david-garcia.jpg')] bg-cover bg-center" />
             </div>
             <div>
-              <h3 className="text-4xl font-bold text-white mb-2">David García</h3>
-              <p className="text-xl text-amber-500 mb-6">Productor, Compositor y CEO de Z Estudio BCN</p>
+              <h3 className="text-4xl font-bold text-white mb-2">{dict.nosotros.davidTitle}</h3>
+              <p className="text-xl text-amber-500 mb-6">{dict.nosotros.davidSub}</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Con más de 15 años de experiencia, ha producido a artistas como Noan, Maren, Hey Kid, Paula Koops, Claudia Infante y Lauren Nine, ha compuesto música para Vèrtex (TV3), West Side Story (El musical), spots de League of Legends, Cupra y Aperol. En grabación, mezcla y mastering ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.</p>
+                <p>{dict.nosotros.davidDesc1}</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Sliders className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Productor</p>
+                  <p className="text-sm font-bold text-white">{dict.nosotros.davidRoles[0]}</p>
                 </div>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Compositor</p>
+                  <p className="text-sm font-bold text-white">{dict.nosotros.davidRoles[1]}</p>
                 </div>
               </div>
             </div>
@@ -192,19 +182,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {/* Joan Isern */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-row-reverse lg:flex-row">
             <div className="order-2 lg:order-1">
-              <h3 className="text-4xl font-bold text-white mb-2">Joan Isern</h3>
-              <p className="text-xl text-amber-500 mb-6">Productor y Compositor</p>
+              <h3 className="text-4xl font-bold text-white mb-2">{dict.nosotros.joanTitle}</h3>
+              <p className="text-xl text-amber-500 mb-6">{dict.nosotros.joanSub}</p>
               <div className="space-y-4 text-neutral-300 mb-8">
-                <p>Joan aporta una mirada fresca con experiencia directa en la escena pop e indie actual, con producciones para artistas como DePol, Hey Kid, Maren, Noan, Paul Alone, Paula Koops, Claudia Infante y Pla Moguda, además de su propia banda, MÄLMO 040.</p>
+                <p>{dict.nosotros.joanDesc1}</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Sliders className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Productor</p>
+                  <p className="text-sm font-bold text-white">{dict.nosotros.joanRoles[0]}</p>
                 </div>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl text-center">
                   <Music className="h-6 w-6 text-amber-500 mx-auto mb-2" />
-                  <p className="text-sm font-bold text-white">Compositor</p>
+                  <p className="text-sm font-bold text-white">{dict.nosotros.joanRoles[1]}</p>
                 </div>
               </div>
             </div>
@@ -219,9 +209,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section id="contacto" className="py-24 bg-neutral-900 border-t border-neutral-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Contacto</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">{dict.contacto.title}</h2>
             <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-              ¿Tienes un proyecto en mente? Escríbenos y le daremos forma.
+              {dict.contacto.subtitle}
             </p>
           </div>
 
@@ -232,7 +222,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <MessageCircle className="h-6 w-6 text-amber-500" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-neutral-400">WhatsApp</p>
+                  <p className="text-sm text-neutral-400">{dict.contacto.whatsapp}</p>
                   <p className="text-lg font-medium text-white">+34 687 281 762</p>
                 </div>
               </a>
@@ -241,7 +231,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <Mail className="h-6 w-6 text-amber-500" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-neutral-400">Email</p>
+                  <p className="text-sm text-neutral-400">{dict.contacto.email}</p>
                   <p className="text-lg font-medium text-white">davidggmusic@gmail.com</p>
                 </div>
               </a>
@@ -250,8 +240,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <MapPin className="h-6 w-6 text-amber-500" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-neutral-400">Ubicación</p>
-                  <p className="text-lg font-medium text-white">08024 Barcelona</p>
+                  <p className="text-sm text-neutral-400">{dict.contacto.location}</p>
+                  <p className="text-lg font-medium text-white">{dict.contacto.locationDesc}</p>
                 </div>
               </div>
               <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
@@ -259,14 +249,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <Instagram className="h-6 w-6 text-amber-500" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-neutral-400">Instagram</p>
+                  <p className="text-sm text-neutral-400">{dict.contacto.instagram}</p>
                   <p className="text-lg font-medium text-white">@zestudiobcn</p>
                 </div>
               </a>
             </div>
 
             <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Envíanos un mensaje</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{dict.contacto.formTitle}</h3>
               <ContactForm dict={dict.contacto} />
             </div>
           </div>

@@ -1,12 +1,12 @@
 import type { Video } from "@/data/videos";
 
-export default function VideosGrid({ videos }: { videos: Video[] }) {
+export default function VideosGrid({ videos, title }: { videos: Video[]; title: string }) {
   if (videos.length === 0) return null;
 
   return (
     <div id="tv-publicidad" className="scroll-mt-28">
       <div className="text-center mb-10">
-        <h3 className="text-3xl font-bold text-white">TV, Vídeo, Publicidad</h3>
+        <h3 className="text-3xl font-bold text-white">{title}</h3>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
