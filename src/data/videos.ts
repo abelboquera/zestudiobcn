@@ -13,14 +13,14 @@ export type Video = {
  */
 export const videos: Video[] = [
   {
-    youtubeId: "PZWDiXDwSek",
-    brand: "League of Legends",
-    title: "We have something in common · EU LCS Finals Hamburg",
-  },
-  {
     youtubeId: "0q8EYsyjP2Y",
     brand: "Aperol",
     title: "Himno de la Amistad",
+  },
+  {
+    youtubeId: "PZWDiXDwSek",
+    brand: "League of Legends",
+    title: "We have something in common · EU LCS Finals Hamburg",
   },
   {
     youtubeId: "DjgmJfqKPRQ",
