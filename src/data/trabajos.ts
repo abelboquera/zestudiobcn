@@ -16,6 +16,9 @@ export type Trabajo = {
  * el orden de reproducciones en Spotify a 17/09/2026 (anotado encima de cada
  * tema). "Ja Emprenya!" salio el 14/09/2026 y Spotify aun no mostraba su
  * contador, por eso va la ultima.
+ *
+ * La web muestra los 18 primeros y el resto se ven al pulsar "Ver mas
+ * trabajos", asi la cuadricula queda completa (filas de 3).
  */
 export const trabajos: Trabajo[] = [
   // lanzado el 25/09/2026
@@ -161,5 +164,13 @@ export const trabajos: Trabajo[] = [
     artists: ["PLA MOGUDA"],
     cover: "/images/trabajos/pla-moguda-ja-emprenya.jpg",
     preview: "https://p.scdn.co/mp3-preview/6dec22621facffc74e0442c343fa6034c1a82c52",
+  },
+  // 1.548
+  {
+    spotifyId: "1yF6957Bus7nqA8GctV500",
+    title: "Lo Que No Sé Decir Con Palabras",
+    artists: ["Jesús Prieto \"Pitti\""],
+    cover: "/images/trabajos/jesus-prieto-pitti-lo-que-no-se-decir-con-palabras.jpg",
+    preview: "https://p.scdn.co/mp3-preview/93681a7f0f40b355ee43f1e720adb3c0b57cc533",
   },
 ];

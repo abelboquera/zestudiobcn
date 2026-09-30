@@ -2,10 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Pause, Play } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, Pause, Play } from "lucide-react";
 import type { Trabajo } from "@/data/trabajos";
 
+const VISIBLES = 18;
+
 export default function TrabajosGrid({ trabajos }: { trabajos: Trabajo[] }) {
+  const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
@@ -49,9 +52,13 @@ export default function TrabajosGrid({ trabajos }: { trabajos: Trabajo[] }) {
     }
   };
 
+  const visibles = expanded ? trabajos : trabajos.slice(0, VISIBLES);
+  const ocultos = trabajos.length - VISIBLES;
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-      {trabajos.map((trabajo) => {
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+      {visibles.map((trabajo) => {
         const isPlaying = playingId === trabajo.spotifyId;
         const artists = trabajo.artists.join(", ");
         return (
@@ -110,6 +117,21 @@ export default function TrabajosGrid({ trabajos }: { trabajos: Trabajo[] }) {
           </article>
         );
       })}
-    </div>
+      </div>
+
+      {ocultos > 0 && (
+        <div className="mt-12 text-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-amber-500 hover:text-amber-500"
+          >
+            {expanded ? "Ver menos" : "Ver más trabajos"}
+            {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </button>
+        </div>
+      )}
+    </>
   );
 }
