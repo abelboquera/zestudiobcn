@@ -367,7 +367,7 @@ export const dictionaries = {
       masterDesc: "L'últim pas abans de publicar. Optimitzem el volum i el to general perquè la teva música soni perfecta."
     },
     trabajos: {
-      title: "Els Nostres Treballs",
+      title: "Treballs",
       videosTitle: "TV, Vídeo, Publicitat",
       showMore: "Veure més treballs",
       showLess: "Veure menys"
@@ -408,7 +408,7 @@ export const dictionaries = {
       services: "Serveis",
       studio: "Estudi",
       production: "Producció i Mescla",
-      works: "Els Nostres Treballs",
+      works: "Treballs",
       about: "Sobre nosaltres",
       contact: "Contacte",
       legal: "Avís Legal",
