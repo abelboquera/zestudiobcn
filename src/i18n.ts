@@ -19,13 +19,23 @@ export const dictionaries = {
         },
         {
           id: "estudio",
-          image: "/images/live-room.png",
+          image: "/images/estudio/cuerpos-guitarras.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Acústica cuidada y ambiente relajado.",
           desc: "El mejor equipo analógico y digital a tu disposición.",
           cta1: { text: "Ver equipamiento", href: "#estudio" },
           cta2: { text: "Reservar sesión", href: "#contacto" }
+        },
+        {
+          id: "instrumentos",
+          image: "/images/estudio/rhodes-mark-i.jpg",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Instrumentos vintage a tu disposición.",
+          desc: "Guitarras, teclados y amplificadores de época listos para grabar.",
+          cta1: { text: "Ver equipamiento", href: "#estudio" },
+          cta2: { text: "Quiero grabar", href: "#contacto" }
         }
       ]
     },
@@ -122,13 +132,23 @@ export const dictionaries = {
         },
         {
           id: "estudio",
-          image: "/images/live-room.png",
+          image: "/images/estudio/cuerpos-guitarras.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Careful acoustics and a relaxed atmosphere.",
           desc: "The best analog and digital equipment at your disposal.",
           cta1: { text: "View equipment", href: "#estudio" },
           cta2: { text: "Book session", href: "#contacto" }
+        },
+        {
+          id: "instrumentos",
+          image: "/images/estudio/rhodes-mark-i.jpg",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Vintage instruments at your disposal.",
+          desc: "Guitars, keyboards and period amplifiers ready to record.",
+          cta1: { text: "View equipment", href: "#estudio" },
+          cta2: { text: "I want to record", href: "#contacto" }
         }
       ]
     },
@@ -225,13 +245,23 @@ export const dictionaries = {
         },
         {
           id: "estudio",
-          image: "/images/live-room.png",
+          image: "/images/estudio/cuerpos-guitarras.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Acústica cuidada i ambient relaxat.",
           desc: "El millor equip analògic i digital a la teva disposició.",
           cta1: { text: "Veure equipament", href: "#estudio" },
           cta2: { text: "Reservar sessió", href: "#contacto" }
+        },
+        {
+          id: "instrumentos",
+          image: "/images/estudio/rhodes-mark-i.jpg",
+          titlePrefix: "Z ESTUDIO ",
+          titleHighlight: "BCN",
+          subtitle: "Instruments vintage a la teva disposició.",
+          desc: "Guitarres, teclats i amplificadors d'època a punt per gravar.",
+          cta1: { text: "Veure equipament", href: "#estudio" },
+          cta2: { text: "Vull gravar", href: "#contacto" }
         }
       ]
     },
