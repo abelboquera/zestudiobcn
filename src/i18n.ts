@@ -15,7 +15,7 @@ export const dictionaries = {
           subtitle: "Estudio de producción musical en Barcelona.",
           desc: "Composición, producción, grabación, mezcla y mastering.",
           cta1: { text: "Quiero grabar", href: "#contacto" },
-          cta2: { text: "Escuchar releases", href: "#releases" }
+          cta2: { text: "Escuchar releases", href: "#trabajos" }
         },
         {
           id: "estudio",
@@ -128,7 +128,7 @@ export const dictionaries = {
           subtitle: "Music production studio in Barcelona.",
           desc: "Songwriting, production, recording, mixing and mastering.",
           cta1: { text: "I want to record", href: "#contacto" },
-          cta2: { text: "Listen to releases", href: "#releases" }
+          cta2: { text: "Listen to releases", href: "#trabajos" }
         },
         {
           id: "estudio",
@@ -241,7 +241,7 @@ export const dictionaries = {
           subtitle: "Estudi de producció musical a Barcelona.",
           desc: "Composició, producció, gravació, mescla i mastering.",
           cta1: { text: "Vull gravar", href: "#contacto" },
-          cta2: { text: "Escoltar releases", href: "#releases" }
+          cta2: { text: "Escoltar releases", href: "#trabajos" }
         },
         {
           id: "estudio",
