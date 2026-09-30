@@ -9,7 +9,7 @@ export const dictionaries = {
       slides: [
         {
           id: "inicio",
-          image: "/images/hero-wide.png",
+          image: "/images/estudio/amplificadores.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Estudio de producción musical en Barcelona.",
@@ -112,7 +112,7 @@ export const dictionaries = {
       slides: [
         {
           id: "inicio",
-          image: "/images/hero-wide.png",
+          image: "/images/estudio/amplificadores.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Music production studio in Barcelona.",
@@ -215,7 +215,7 @@ export const dictionaries = {
       slides: [
         {
           id: "inicio",
-          image: "/images/hero-wide.png",
+          image: "/images/estudio/amplificadores.jpg",
           titlePrefix: "Z ESTUDIO ",
           titleHighlight: "BCN",
           subtitle: "Estudi de producció musical a Barcelona.",
