@@ -5,14 +5,11 @@ export default function Footer({ dict }: { dict: any }) {
   return (
     <footer className="bg-neutral-950 border-t border-neutral-900 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <a href="#inicio" className="inline-block mb-6">
               <DynamicLogo />
             </a>
-            <p className="text-neutral-400 text-sm mb-6">
-              {dict.desc}
-            </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-amber-500 transition-colors">
                 <span className="sr-only">Instagram</span>
@@ -24,24 +21,6 @@ export default function Footer({ dict }: { dict: any }) {
               </a>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.services}</h3>
-            <ul className="space-y-2">
-              <li><a href="#estudio" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.studio}</a></li>
-              <li><a href="#produccion" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.production}</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.studio}</h3>
-            <ul className="space-y-2">
-              <li><a href="#trabajos" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.works}</a></li>
-              <li><a href="#sobre-nosotros" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.about}</a></li>
-              <li><a href="#contacto" className="text-neutral-400 hover:text-amber-500 text-sm">{dict.contact}</a></li>
-            </ul>
-          </div>
-
           <div>
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.contact}</h3>
             <ul className="space-y-3">
