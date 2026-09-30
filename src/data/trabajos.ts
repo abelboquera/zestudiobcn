@@ -16,7 +16,8 @@ export type Trabajo = {
 /**
  * Trabajos del estudio (seccion "Nuestros Trabajos").
  *
- * Los marcados con destacado: true van arriba y fijos. El resto se ordenan
+ * Los marcados con destacado: true van arriba y fijos, en el orden en que
+ * aparecen aqui. El resto se ordenan
  * solos de mas a menos reproducciones, asi que para anadir un tema basta con
  * pegarlo aqui con su numero de reproducciones, sin preocuparse del orden.
  *
@@ -61,6 +62,25 @@ const catalogo: Trabajo[] = [
     cover: "/images/trabajos/hey-kid-noche-de-san-juan.jpg",
     preview: "https://p.scdn.co/mp3-preview/3b6174c22a4ef28b0acd06f72d795b751c36bee7",
     plays: 31967280,
+    destacado: true,
+  },
+  {
+    spotifyId: "35asUXcK4uvCEcJCRIlHXz",
+    title: "Por Qué No Ser Amigos",
+    artists: ["Paula Koops", "Noan"],
+    cover: "/images/trabajos/paula-koops-por-que-no-ser-amigos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/1ac3839c85cda11e6ac6b7d74f4d38bbb1cb99dc",
+    plays: 633591,
+    destacado: true,
+  },
+  {
+    spotifyId: "2lI8dLRqKTG3NHyxokhmXO",
+    title: "MI LUGAR",
+    artists: ["Noan"],
+    cover: "/images/trabajos/noan-mi-lugar.jpg",
+    preview: "https://p.scdn.co/mp3-preview/19449fb35ec0f1feea0b192ec62c3d4f4a502a5c",
+    plays: 1490650,
+    destacado: true,
   },
   {
     spotifyId: "3Ts4fStHVtUojl6pEW4TJR",
@@ -85,22 +105,6 @@ const catalogo: Trabajo[] = [
     cover: "/images/trabajos/hey-kid-lo-que-haga-falta.jpg",
     preview: "https://p.scdn.co/mp3-preview/526b9145609b98d2add5c87df8076e6d2f7ff7ba",
     plays: 7902618,
-  },
-  {
-    spotifyId: "2lI8dLRqKTG3NHyxokhmXO",
-    title: "MI LUGAR",
-    artists: ["Noan"],
-    cover: "/images/trabajos/noan-mi-lugar.jpg",
-    preview: "https://p.scdn.co/mp3-preview/19449fb35ec0f1feea0b192ec62c3d4f4a502a5c",
-    plays: 1490650,
-  },
-  {
-    spotifyId: "35asUXcK4uvCEcJCRIlHXz",
-    title: "Por Qué No Ser Amigos",
-    artists: ["Paula Koops", "Noan"],
-    cover: "/images/trabajos/paula-koops-por-que-no-ser-amigos.jpg",
-    preview: "https://p.scdn.co/mp3-preview/1ac3839c85cda11e6ac6b7d74f4d38bbb1cb99dc",
-    plays: 633591,
   },
   {
     spotifyId: "03O8I7mjzJlIYELgoG5Ojw",
