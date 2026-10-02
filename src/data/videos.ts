@@ -13,6 +13,11 @@ export type Video = {
  */
 export const videos: Video[] = [
   {
+    youtubeId: "-qa6mlJ8Yzg",
+    brand: "Vèrtex (TV3)",
+    title: "Vèrtex TV3",
+  },
+  {
     youtubeId: "0q8EYsyjP2Y",
     brand: "Aperol",
     title: "Himno de la Amistad",
