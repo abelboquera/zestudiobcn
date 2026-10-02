@@ -83,6 +83,15 @@ const catalogo: Trabajo[] = [
     destacado: true,
   },
   {
+    spotifyId: "5rIPGNOUHCkNoSdlvphReB",
+    title: "Ja Emprenya!",
+    artists: ["PLA MOGUDA"],
+    cover: "/images/trabajos/pla-moguda-ja-emprenya.jpg",
+    preview: "https://p.scdn.co/mp3-preview/6dec22621facffc74e0442c343fa6034c1a82c52",
+    plays: 0,
+    destacado: true,
+  },
+  {
     spotifyId: "3Ts4fStHVtUojl6pEW4TJR",
     title: "La Última Canción",
     artists: ["Malmö 040", "Ciao Marina"],
@@ -169,14 +178,6 @@ const catalogo: Trabajo[] = [
     cover: "/images/trabajos/biel-marti-els-colors-de-la-magia.jpg",
     preview: "https://p.scdn.co/mp3-preview/82b45f942d8157e6c461ff0b63b85e4ed2e49e53",
     plays: 7039,
-  },
-  {
-    spotifyId: "5rIPGNOUHCkNoSdlvphReB",
-    title: "Ja Emprenya!",
-    artists: ["PLA MOGUDA"],
-    cover: "/images/trabajos/pla-moguda-ja-emprenya.jpg",
-    preview: "https://p.scdn.co/mp3-preview/6dec22621facffc74e0442c343fa6034c1a82c52",
-    plays: 0,
   },
   {
     spotifyId: "1yF6957Bus7nqA8GctV500",
