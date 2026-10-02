@@ -65,6 +65,15 @@ const catalogo: Trabajo[] = [
     destacado: true,
   },
   {
+    spotifyId: "5i7P2fWF2sTLuNCUsbwlNg",
+    title: "Berandu",
+    artists: ["Maren"],
+    cover: "/images/trabajos/maren-berandu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/cbd3187ce8ff8ca82d07497bc170bd370f5382f7",
+    plays: 0,
+    destacado: true,
+  },
+  {
     spotifyId: "35asUXcK4uvCEcJCRIlHXz",
     title: "Por Qué No Ser Amigos",
     artists: ["Paula Koops", "Noan"],
