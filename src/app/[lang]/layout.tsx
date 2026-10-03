@@ -9,7 +9,7 @@ import { trabajos } from "@/data/trabajos";
 const inter = Inter({ subsets: ["latin"] });
 
 const TITLE = "Z Estudio BCN | Estudio de Producción Musical en Barcelona";
-const DESCRIPTION = "Estudio de producción musical en Barcelona";
+const DESCRIPTION = "Estudio de producción musical en Barcelona. Composición, producción, publicidad, mezcla, mastering";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zestudiobcn.com"),
