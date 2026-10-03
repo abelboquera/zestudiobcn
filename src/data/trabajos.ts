@@ -26,6 +26,9 @@ export type Trabajo = {
  *
  * La web muestra los 18 primeros y el resto se ven al pulsar "Ver mas
  * trabajos", asi la cuadricula queda completa (filas de 3).
+ *
+ * Los temas sin contador (plays: 0) van al final, en el orden en que
+ * aparecen aqui: de publicacion mas reciente a mas antigua.
  */
 const catalogo: Trabajo[] = [
   {
@@ -202,4 +205,463 @@ const catalogo: Trabajo[] = [
 export const trabajos: Trabajo[] = [
   ...catalogo.filter((t) => t.destacado),
   ...catalogo.filter((t) => !t.destacado).sort((a, b) => b.plays - a.plays),
+  // 2026-06-16
+  {
+    spotifyId: "5NN7fUmFi5GnkTD9ELOfnN",
+    title: "Dins la batalla",
+    artists: ["Biel Martí", "María Cielos"],
+    cover: "/images/trabajos/biel-marti-dins-la-batalla.jpg",
+    preview: "https://p.scdn.co/mp3-preview/837e5c1dda61f8d383325efd9becb244e2cd4e8d",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "0yOOfdp30xQ5mcDWZwE9MG",
+    title: "ahora que nos perdimos",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-ahora-que-nos-perdimos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/09955f4ffc607da67358c1e81b0e022e1cf2fc24",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "4nkXPDsdu8cmxfjRgmHCI5",
+    title: "una vez más",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-una-vez-mas.jpg",
+    preview: "https://p.scdn.co/mp3-preview/dc1b2b7f265e0558b12b53b0c184bbb8923c196d",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "1r8Thp7SaJkHANHip6ULDd",
+    title: "nuestro hogar",
+    artists: ["Hey Kid", "Paula Mattheus"],
+    cover: "/images/trabajos/hey-kid-nuestro-hogar.jpg",
+    preview: "https://p.scdn.co/mp3-preview/1dbae88b992b67cfc5040cb1789b811e4a88ac8d",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "2SI5fn2MhnV2udpXPOiux3",
+    title: "el mundo contigo",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-el-mundo-contigo.jpg",
+    preview: "https://p.scdn.co/mp3-preview/c6f81147f9836dafd24b6dd6b11edbe8b4527cdf",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "2bCkOfAvtwJwSgWgPxKvPm",
+    title: "nuestra historia",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-nuestra-historia.jpg",
+    preview: "https://p.scdn.co/mp3-preview/8843981d7d93b6dc820d2e0fb8557503de455a17",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "6OWwUq5AX6GanuRs8fwWBI",
+    title: "si tú no estás",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-si-tu-no-estas.jpg",
+    preview: "https://p.scdn.co/mp3-preview/c8d59dd0c0bb36080a4d9590fe1b3f5dbb6afef8",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "0KsHVKNr0McBukzPDcDhzR",
+    title: "de alguna manera",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-de-alguna-manera.jpg",
+    preview: "https://p.scdn.co/mp3-preview/7d166650dda9bd86b3ecccc292485ee476e33167",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "6VRERMyrRgHwjUvIXZVlZZ",
+    title: "alguien debería hablar con Dios",
+    artists: ["Hey Kid", "Íñigo Merino"],
+    cover: "/images/trabajos/hey-kid-alguien-deberia-hablar-con-dios.jpg",
+    preview: "https://p.scdn.co/mp3-preview/3846c04e98b2076518abad9f35f23251346a2e6f",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "35XchAnNXuN16o5wP43AfI",
+    title: "por si volvemos a vernos",
+    artists: ["Hey Kid", "Moni Motes"],
+    cover: "/images/trabajos/hey-kid-por-si-volvemos-a-vernos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/df67cf73b1b82468a96ac93aab6012179cb5ca2d",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "0ceO3btLnwdjovDVrZOwyG",
+    title: "noche de san juan",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-noche-de-san-juan.jpg",
+    preview: "https://p.scdn.co/mp3-preview/fff855274dab2ef6e2a95346b95d6218ef0d36cd",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "3ngEo950TOB1UgEfog7IIC",
+    title: "alguien como tú",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-alguien-como-tu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/516ee1b33e72ccb65ccfa808d78e36aa4f8cb7f7",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "7D3gy8sM4W9aWlKf6x0ZvO",
+    title: "y es bonito",
+    artists: ["Hey Kid", "Paul Alone"],
+    cover: "/images/trabajos/hey-kid-y-es-bonito.jpg",
+    preview: "https://p.scdn.co/mp3-preview/93c68d5f3641087ec064f14f64d383040fc6c801",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "55uco7G8SmPv1mBYP5Ivrf",
+    title: "qué hay de mi",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-que-hay-de-mi.jpg",
+    preview: "https://p.scdn.co/mp3-preview/cb7a4cd6a6fec77ecce0f2ea677159404b7b0f81",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "0GflVlnYfHfeGEsfApjCbL",
+    title: "donde estés tú",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/60465f6ed9dd722467ba5c7087b5c20dd56d2abc",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "4Cqe0KRurE0REtf1Weapz5",
+    title: "saber de ti",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-saber-de-ti.jpg",
+    preview: "https://p.scdn.co/mp3-preview/97540a89518d855f2518b36f2406ebe5bee09c7f",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "4zvVXoMufQo8L2pR6Byqjw",
+    title: "si vienes a buscarme",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-si-vienes-a-buscarme.jpg",
+    preview: "https://p.scdn.co/mp3-preview/0bc1f15fdf84fc86c52ede782eded072bf7d9401",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "2XTaRE2QCYcGBozxstCUjL",
+    title: "lo que haga falta",
+    artists: ["Hey Kid", "Besmaya", "Inazio"],
+    cover: "/images/trabajos/hey-kid-lo-que-haga-falta.jpg",
+    preview: "https://p.scdn.co/mp3-preview/526b9145609b98d2add5c87df8076e6d2f7ff7ba",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "2Qp333fRbdnQcN4YaLrrKi",
+    title: "más que ayer",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-mas-que-ayer.jpg",
+    preview: "https://p.scdn.co/mp3-preview/7b0b7078b56b9acc3e550f8b6d9fb01c62590373",
+    plays: 0,
+  },
+  // 2026-02-27
+  {
+    spotifyId: "04tyCrnH8ZcMGVHCowefEI",
+    title: "volver a empezar",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-volver-a-empezar.jpg",
+    preview: "https://p.scdn.co/mp3-preview/d2ae7ea2393f1462f6faa6ed6ca6fa6d22f61064",
+    plays: 0,
+  },
+  // 2026-01-16
+  {
+    spotifyId: "5LYCA74jjeJzvBMOi9Ah9Y",
+    title: "Zure Zain",
+    artists: ["Maren"],
+    cover: "/images/trabajos/maren-zure-zain.jpg",
+    preview: "https://p.scdn.co/mp3-preview/bb76fafe48844eeab1b4276e749c9510ee28ef27",
+    plays: 0,
+  },
+  // 2025-10-21
+  {
+    spotifyId: "2PspT2EwXrxYGcnWvX18jC",
+    title: "Ja no em vols",
+    artists: ["Terrae"],
+    cover: "/images/trabajos/terrae-ja-no-em-vols.jpg",
+    preview: "https://p.scdn.co/mp3-preview/41eb11280369d9760a9495dad1e765a459bb7406",
+    plays: 0,
+  },
+  // 2025-10-21
+  {
+    spotifyId: "1YkDrBtGmyOW0TjF56zDJd",
+    title: "Cançó de les plegadores",
+    artists: ["Terrae"],
+    cover: "/images/trabajos/terrae-canco-de-les-plegadores.jpg",
+    preview: "https://p.scdn.co/mp3-preview/2746444f7d74d24bf06649c4204af691e8502fb9",
+    plays: 0,
+  },
+  // 2025-10-21
+  {
+    spotifyId: "5g9akxr30wLrBEaz58HATD",
+    title: "Virgínia Amposta",
+    artists: ["Terrae"],
+    cover: "/images/trabajos/terrae-virginia-amposta.jpg",
+    preview: "https://p.scdn.co/mp3-preview/df15f183fd5ccd82cf4a83b68a34af343ae190a1",
+    plays: 0,
+  },
+  // 2025-09-26
+  {
+    spotifyId: "4rDgBYFQyJkXm1Lu5LRmUf",
+    title: "El quadern",
+    artists: ["Biel Martí"],
+    cover: "/images/trabajos/biel-marti-el-quadern.jpg",
+    preview: "https://p.scdn.co/mp3-preview/832e87930560f076dcf79f575050e35555df103d",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "6uoZFef5I7kDZ3yfNRpESu",
+    title: "alguien como tú",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-alguien-como-tu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/736b0b8858f3039ef8de3e1ea6b9d489ae87ba80",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "5OZ8ZH0uIO1aqDeOBYb7tZ",
+    title: "qué hay de mi",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-que-hay-de-mi.jpg",
+    preview: "https://p.scdn.co/mp3-preview/74abe8487cb0bbc118d353ce9c05e13919f8a42a",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "5zDJs7QzBYYviuyrryKYnf",
+    title: "donde estés tú",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/ce1e497b764ffd7d4dd68bc63c3a0339844809ea",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "5QSLOVn7evWfLc11BrLTCu",
+    title: "saber de ti",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-saber-de-ti.jpg",
+    preview: "https://p.scdn.co/mp3-preview/8465e29f0c154cec965d5238689656be9a5b4736",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "6BxT4aou8vy9iKpq5N6NXA",
+    title: "si vienes a buscarme",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-si-vienes-a-buscarme.jpg",
+    preview: "https://p.scdn.co/mp3-preview/d0786ae051a8d6051ace8c1424e7f48816dc8969",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "47lnQLtVcuwsX3bdRqcvo3",
+    title: "más que ayer",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-mas-que-ayer.jpg",
+    preview: "https://p.scdn.co/mp3-preview/58d3dbdfed334b2c5f9df58ec58f5583ed9ae02a",
+    plays: 0,
+  },
+  // 2024-11-29
+  {
+    spotifyId: "4F5ADneDztd4uiiKTZF0oL",
+    title: "volver a empezar",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-volver-a-empezar.jpg",
+    preview: "https://p.scdn.co/mp3-preview/a1cfe447279b9d42df4b69f902b6c79ec17061fe",
+    plays: 0,
+  },
+  // 2024-10-25
+  {
+    spotifyId: "2nXLYjDXP0p5dyliLFGMbp",
+    title: "Verde y Amarillo",
+    artists: ["Jeremías San Martín"],
+    cover: "/images/trabajos/jeremias-san-martin-verde-y-amarillo.jpg",
+    preview: "https://p.scdn.co/mp3-preview/8a9c759619e0ed5d1bdeb23a6fcb27a64e4a3721",
+    plays: 0,
+  },
+  // 2024-06-14
+  {
+    spotifyId: "7mMv6W2Jny0fLAXuduxYPf",
+    title: "y es bonito",
+    artists: ["Hey Kid", "Paul Alone"],
+    cover: "/images/trabajos/hey-kid-y-es-bonito.jpg",
+    preview: "https://p.scdn.co/mp3-preview/236177b1bbc19dd2ab6104f64ec5d1593b246366",
+    plays: 0,
+  },
+  // 2024-06-06
+  {
+    spotifyId: "7woYSTdm96I66VZhSplPLr",
+    title: "Teu",
+    artists: ["Biel Martí"],
+    cover: "/images/trabajos/biel-marti-teu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/0a76c6818e1e750d240edee4edefd97acb683b5e",
+    plays: 0,
+  },
+  // 2024-05-31
+  {
+    spotifyId: "2hZ5uKUl5nbn4DlYoUMShE",
+    title: "Sin ti",
+    artists: ["Ariso"],
+    cover: "/images/trabajos/ariso-sin-ti.jpg",
+    preview: "https://p.scdn.co/mp3-preview/4c6c55d538bbe532d69a2bc638d289f5e193be80",
+    plays: 0,
+  },
+  // 2024-04-19
+  {
+    spotifyId: "2s076zU8by2OjxXKr3MokH",
+    title: "Tú y Yo",
+    artists: ["Ariso"],
+    cover: "/images/trabajos/ariso-tu-y-yo.jpg",
+    preview: "https://p.scdn.co/mp3-preview/168be608e9639468fde40400210bb644db6e6b3b",
+    plays: 0,
+  },
+  // 2024-04-05
+  {
+    spotifyId: "6tGc5ksGGbMXsxjJLzYYfv",
+    title: "donde estés tú",
+    artists: ["Hey Kid"],
+    cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
+    preview: "https://p.scdn.co/mp3-preview/7aa2ea94290fa8dd60e33c7db6cc172552de9b6c",
+    plays: 0,
+  },
+  // 2023-10-20
+  {
+    spotifyId: "06HnU7mD7qBnkDMZoQuGVY",
+    title: "Aviones de papel",
+    artists: ["Ariso"],
+    cover: "/images/trabajos/ariso-aviones-de-papel.jpg",
+    preview: "https://p.scdn.co/mp3-preview/ad83123332924a7c5203b04b7fce4b2855ae996f",
+    plays: 0,
+  },
+  // 2023-06-30
+  {
+    spotifyId: "7A06ah5X99giuAenkTYEmB",
+    title: "Lo Que Hay Dentro de Mí",
+    artists: ["Malmö 040"],
+    cover: "/images/trabajos/malmo-040-lo-que-hay-dentro-de-mi.jpg",
+    preview: "https://p.scdn.co/mp3-preview/da1872b75acf6fdb21ed3f018df327c8028c5cd6",
+    plays: 0,
+  },
+  // 2023-04-21
+  {
+    spotifyId: "0FHOixexpCWOhOfpSMFnei",
+    title: "Lo Que La Luna Gritaba",
+    artists: ["Susi Abanades", "Pol Bordas"],
+    cover: "/images/trabajos/susi-abanades-lo-que-la-luna-gritaba.jpg",
+    preview: "https://p.scdn.co/mp3-preview/243d5e9938765c0e5c2c846959ad3f3ff2f8d948",
+    plays: 0,
+  },
+  // 2023-03-31
+  {
+    spotifyId: "1xulb90MOqqR6g9UmzjlDY",
+    title: "Lo Que La Luna Gritaba",
+    artists: ["Susi Abanades", "Pol Bordas"],
+    cover: "/images/trabajos/susi-abanades-lo-que-la-luna-gritaba.jpg",
+    preview: "https://p.scdn.co/mp3-preview/633a32120012214dbfa314e040fca1f22b91866c",
+    plays: 0,
+  },
+  // 2023-03-10
+  {
+    spotifyId: "4YVSF9Il9YQanoJE9styhZ",
+    title: "Te Volvería A Elegir",
+    artists: ["Susi Abanades"],
+    cover: "/images/trabajos/susi-abanades-te-volveria-a-elegir.jpg",
+    preview: "https://p.scdn.co/mp3-preview/b9bd48ebe79c52b041b65eea9b98d514686484b5",
+    plays: 0,
+  },
+  // 2023-03-10
+  {
+    spotifyId: "72XnVJ3njBZ4bxG74b28xb",
+    title: "Te Volvería A Elegir",
+    artists: ["Susi Abanades"],
+    cover: "/images/trabajos/susi-abanades-te-volveria-a-elegir.jpg",
+    preview: "https://p.scdn.co/mp3-preview/b9bd48ebe79c52b041b65eea9b98d514686484b5",
+    plays: 0,
+  },
+  // 2022-08-19
+  {
+    spotifyId: "5crlbqHn0ya0FzFun3nl5C",
+    title: "Entre la Espada y la Pared",
+    artists: ["Lluis Rotger"],
+    cover: "/images/trabajos/lluis-rotger-entre-la-espada-y-la-pared.jpg",
+    preview: "https://p.scdn.co/mp3-preview/9e815024bb5986caf32a8bbf748efb93bae2a1a6",
+    plays: 0,
+  },
+  // 2022-07-22
+  {
+    spotifyId: "0RU3VGrszpwSBK9HXqQYfV",
+    title: "Canción de Amor Sin Tapujos",
+    artists: ["Lluis Rotger"],
+    cover: "/images/trabajos/lluis-rotger-cancion-de-amor-sin-tapujos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/654d790fc1a112567639275b1bc0caad3a1ca954",
+    plays: 0,
+  },
+  // 2022-03-18
+  {
+    spotifyId: "5aaNNWOqmufFfZV8MQjj3P",
+    title: "Moon River",
+    artists: ["Jesús Prieto \"Pitti\""],
+    cover: "/images/trabajos/jesus-prieto-pitti-moon-river.jpg",
+    preview: "https://p.scdn.co/mp3-preview/936cdd102adf9628b3a3a4d9b66ff42180a2c84b",
+    plays: 0,
+  },
+  // 2022-01-14
+  {
+    spotifyId: "01QuFsCW15drduLlBcyKkq",
+    title: "Cuando No Nos Echen De Menos",
+    artists: ["Susi Abanades", "Joan Isern"],
+    cover: "/images/trabajos/susi-abanades-cuando-no-nos-echen-de-menos.jpg",
+    preview: "https://p.scdn.co/mp3-preview/58dfea4a8588919d736c58cff96f9a8d62680dd6",
+    plays: 0,
+  },
+  // 2019-03-08
+  {
+    spotifyId: "1y3pdM4zm5j9DWxlAlaIrL",
+    title: "Metamórfica",
+    artists: ["Lauren Nine", "Jasperino"],
+    cover: "/images/trabajos/lauren-nine-metamorfica.jpg",
+    preview: "https://p.scdn.co/mp3-preview/ace44f8219640b0758aea4c9fac76f4d5118ad43",
+    plays: 0,
+  },
+  // 2018-05-25
+  {
+    spotifyId: "2uHsPtrr3eoTEB766djtIk",
+    title: "Intro",
+    artists: ["Lauren Nine"],
+    cover: "/images/trabajos/lauren-nine-intro.jpg",
+    preview: "https://p.scdn.co/mp3-preview/b320958ed58dd024e8e12382c7f6fa9c521a16ab",
+    plays: 0,
+  },
+  // 2018-05-25
+  {
+    spotifyId: "2KX5R5qBRWeUYnAgNgXjMs",
+    title: "Andromeda",
+    artists: ["Lauren Nine"],
+    cover: "/images/trabajos/lauren-nine-andromeda.jpg",
+    preview: "https://p.scdn.co/mp3-preview/eaf78ff006b0171b011b9444aca239df791a3ac9",
+    plays: 0,
+  },
 ];
