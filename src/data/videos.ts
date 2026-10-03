@@ -27,6 +27,12 @@ export const videos: Video[] = [
     tipo: "publicidad",
   },
   {
+    youtubeId: "VDXOQylJR4c",
+    brand: "Cupra",
+    title: "CUPRA RAVAL",
+    tipo: "publicidad",
+  },
+  {
     youtubeId: "PZWDiXDwSek",
     brand: "League of Legends",
     title: "We have something in common · EU LCS Finals Hamburg",
