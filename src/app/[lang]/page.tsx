@@ -46,7 +46,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <h3 className="text-3xl font-bold text-white">{dict.trabajos.musicTitle}</h3>
           </div>
 
-          <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} ui={dict.ui} />
+          <TrabajosGrid
+            trabajos={trabajos}
+            dict={{ showMore: dict.trabajos.showMoreShort, showLess: dict.trabajos.showLess }}
+            ui={dict.ui}
+          />
 
           {/* Publicidad: el ancla se llama "spots" porque los bloqueadores de
               anuncios ocultan los elementos con id="publicidad" */}
