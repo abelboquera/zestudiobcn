@@ -38,8 +38,12 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
                 </a>
               ))}
               
+              <div className="ml-4 pl-4 border-l border-neutral-800 self-center">
+                <RadioPlayer tracks={radio} labels={{ on: ui.radioOn, off: ui.radioOff }} />
+              </div>
+
               {/* Language Switcher */}
-              <div className="flex items-center gap-2 ml-4 pl-4 border-l border-neutral-800">
+              <div className="flex items-center gap-2">
                 <Link href="/es" className={`text-sm font-medium hover:text-amber-500 transition-colors ${lang === 'es' ? 'text-amber-500' : 'text-neutral-500'}`}>ES</Link>
                 <Link href="/en" className={`text-sm font-medium hover:text-amber-500 transition-colors ${lang === 'en' ? 'text-amber-500' : 'text-neutral-500'}`}>EN</Link>
                 <Link href="/ca" className={`text-sm font-medium hover:text-amber-500 transition-colors ${lang === 'ca' ? 'text-amber-500' : 'text-neutral-500'}`}>CA</Link>
@@ -50,12 +54,11 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={ui.instagram}
-                className="ml-4 pl-4 border-l border-neutral-800 self-center text-neutral-400 hover:text-amber-500 transition-colors"
+                className="self-center text-neutral-400 hover:text-amber-500 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
 
-              <RadioPlayer tracks={radio} labels={{ on: ui.radioOn, off: ui.radioOff }} />
             </div>
           </div>
           <div className="-mr-2 flex items-center gap-4 lg:hidden">
