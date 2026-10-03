@@ -55,6 +55,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               videos={videos.filter((v) => v.tipo === "publicidad")}
               title={dict.trabajos.videosTitle}
               anchor="spots"
+              limite={4}
+              labels={{ more: dict.trabajos.showMoreShort, less: dict.trabajos.showLess }}
             />
           </div>
 
