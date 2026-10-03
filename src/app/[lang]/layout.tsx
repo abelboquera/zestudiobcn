@@ -9,7 +9,7 @@ import { trabajos } from "@/data/trabajos";
 const inter = Inter({ subsets: ["latin"] });
 
 const TITLE = "Z Estudio BCN | Estudio de Producción Musical en Barcelona";
-const DESCRIPTION = "Estudio de grabación profesional en Barcelona. Producción musical, mezcla y mastering, dirigido por David García.";
+const DESCRIPTION = "Estudio de producción musical en Barcelona";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zestudiobcn.com"),
