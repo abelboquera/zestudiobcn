@@ -91,7 +91,8 @@ export const dictionaries = {
     trabajos: {
       title: "Nuestros Trabajos",
       musicTitle: "Música",
-      videosTitle: "TV, Vídeo, Publicidad",
+      liveTitle: "Live",
+      videosTitle: "Publicidad",
       showMore: "Ver más trabajos",
       showLess: "Ver menos"
     },
@@ -231,7 +232,8 @@ export const dictionaries = {
     trabajos: {
       title: "Our Work",
       musicTitle: "Music",
-      videosTitle: "TV, Video, Advertising",
+      liveTitle: "Live",
+      videosTitle: "Advertising",
       showMore: "Show more work",
       showLess: "Show less"
     },
@@ -371,7 +373,8 @@ export const dictionaries = {
     trabajos: {
       title: "Treballs",
       musicTitle: "Música",
-      videosTitle: "TV, Vídeo, Publicitat",
+      liveTitle: "Live",
+      videosTitle: "Publicitat",
       showMore: "Veure més treballs",
       showLess: "Veure menys"
     },

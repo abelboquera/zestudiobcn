@@ -1,10 +1,18 @@
 import type { Video } from "@/data/videos";
 
-export default function VideosGrid({ videos, title }: { videos: Video[]; title: string }) {
+export default function VideosGrid({
+  videos,
+  title,
+  anchor,
+}: {
+  videos: Video[];
+  title: string;
+  anchor: string;
+}) {
   if (videos.length === 0) return null;
 
   return (
-    <div id="tv-publicidad" className="scroll-mt-28">
+    <div id={anchor} className="scroll-mt-28">
       <div className="text-center mb-10">
         <h3 className="text-3xl font-bold text-white">{title}</h3>
       </div>
