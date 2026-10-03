@@ -68,4 +68,10 @@ export const videos: Video[] = [
     title: "El vaquero (BalconyTV)",
     tipo: "live",
   },
+  {
+    youtubeId: "bnIL-j_lW5I",
+    brand: "Malmö 040",
+    title: "Los de Siempre (En directo · Live Session)",
+    tipo: "live",
+  },
 ];
