@@ -45,6 +45,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} ui={dict.ui} />
 
+          {/* Publicidad (no aparece en el menu de navegacion) */}
+          <div className="mt-24">
+            <VideosGrid
+              videos={videos.filter((v) => v.tipo === "publicidad")}
+              title={dict.trabajos.videosTitle}
+              anchor="publicidad"
+            />
+          </div>
+
           {/* Live (no aparece en el menu de navegacion) */}
           <div className="mt-24">
             <VideosGrid
@@ -59,14 +68,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <ReleasesSlider releases={releases} />
           </div>
 
-          {/* Publicidad (no aparece en el menu de navegacion) */}
-          <div className="mt-24">
-            <VideosGrid
-              videos={videos.filter((v) => v.tipo === "publicidad")}
-              title={dict.trabajos.videosTitle}
-              anchor="publicidad"
-            />
-          </div>
         </div>
       </section>
 
