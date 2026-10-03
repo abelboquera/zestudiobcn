@@ -35,6 +35,8 @@ const radio = {
   orden: [] as RadioTrack[],
   indice: 0,
   sonando: false,
+  /** Suena en silencio porque el navegador no deja mas: basta un clic */
+  esperando: false,
   oyentes: new Set<() => void>(),
 
   avisar() {
@@ -76,11 +78,21 @@ const radio = {
       .play()
       .then(() => {
         this.sonando = !audio.muted;
+        this.esperando = audio.muted;
         this.avisar();
       })
       .catch(() => {
         audio.muted = true;
-        audio.play().catch(() => undefined);
+        audio
+          .play()
+          .then(() => {
+            this.esperando = true;
+            this.avisar();
+          })
+          .catch(() => {
+            this.esperando = true;
+            this.avisar();
+          });
       });
 
     const quitarSilencio = () => {
@@ -90,6 +102,7 @@ const radio = {
         audio.play().catch(() => undefined);
       }
       this.sonando = true;
+      this.esperando = false;
       this.avisar();
       eventos.forEach((e) => window.removeEventListener(e, quitarSilencio));
     };
@@ -121,6 +134,7 @@ const radio = {
       ?.play()
       .then(() => {
         this.sonando = true;
+        this.esperando = false;
         this.avisar();
       })
       .catch(() => {
@@ -135,6 +149,7 @@ const radio = {
     if (this.sonando) {
       this.audio.pause();
       this.sonando = false;
+      this.esperando = false;
       guardarSilenciada(true);
       this.avisar();
     } else {
@@ -193,11 +208,13 @@ export default function RadioPlayer({
   tracks: RadioTrack[];
   labels: { on: string; off: string };
 }) {
-  const sonando = useSyncExternalStore(
+  const estado = useSyncExternalStore(
     (f) => radio.suscribir(f),
-    () => radio.sonando,
-    () => false
+    () => (radio.sonando ? "sonando" : radio.esperando ? "esperando" : "apagada"),
+    () => "apagada" as const
   );
+  const sonando = estado === "sonando";
+  const esperando = estado === "esperando";
 
   useEffect(() => {
     radio.iniciar(tracks);
@@ -213,11 +230,15 @@ export default function RadioPlayer({
       aria-label={sonando ? labels.on : labels.off}
       title={sonando ? labels.on : labels.off}
       className={`relative transition-colors ${
-        sonando ? "text-amber-500" : "text-neutral-400 hover:text-amber-500"
+        sonando
+          ? "text-amber-500"
+          : esperando
+            ? "text-amber-500/80 animate-pulse"
+            : "text-neutral-400 hover:text-amber-500"
       }`}
     >
       <IconoRadio className="h-5 w-5" />
-      {!sonando && (
+      {!sonando && !esperando && (
         <span className="absolute left-1/2 top-1/2 h-5 w-0.5 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded bg-current" />
       )}
     </button>
