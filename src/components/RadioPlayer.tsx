@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { Radio } from "lucide-react";
 
 export type RadioTrack = { title: string; artist: string; preview: string };
@@ -23,9 +23,88 @@ function guardarSilenciada(valor: boolean) {
     if (valor) window.localStorage.setItem(CLAVE, "1");
     else window.localStorage.removeItem(CLAVE);
   } catch (error) {
-    // el navegador puede bloquear el almacenamiento; no pasa nada
+    // algunos navegadores bloquean el almacenamiento; no es grave
   }
 }
+
+/**
+ * Un unico reproductor para toda la web: el icono aparece dos veces
+ * (escritorio y movil) y los dos mandan sobre el mismo audio.
+ */
+const radio = {
+  audio: null as HTMLAudioElement | null,
+  orden: [] as RadioTrack[],
+  indice: 0,
+  sonando: false,
+  oyentes: new Set<() => void>(),
+
+  avisar() {
+    this.oyentes.forEach((f) => f());
+  },
+
+  iniciar(tracks: RadioTrack[]) {
+    if (this.audio || tracks.length === 0) return;
+
+    const orden = [...tracks];
+    for (let i = orden.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [orden[i], orden[j]] = [orden[j], orden[i]];
+    }
+    this.orden = orden;
+
+    const audio = new Audio(orden[0].preview);
+    audio.volume = VOLUMEN;
+    this.audio = audio;
+    audio.addEventListener("ended", () => this.siguiente());
+
+    setInterval(() => {
+      if (this.audio && !this.audio.paused) this.siguiente();
+    }, SEGUNDOS * 1000);
+
+    if (!leerSilenciada()) this.reproducir();
+  },
+
+  siguiente() {
+    if (!this.audio || this.orden.length === 0) return;
+    this.indice = (this.indice + 1) % this.orden.length;
+    this.audio.src = this.orden[this.indice].preview;
+    this.reproducir();
+  },
+
+  reproducir() {
+    this.audio
+      ?.play()
+      .then(() => {
+        this.sonando = true;
+        this.avisar();
+      })
+      .catch(() => {
+        // el navegador puede exigir que el visitante pulse antes de sonar
+        this.sonando = false;
+        this.avisar();
+      });
+  },
+
+  alternar() {
+    if (!this.audio) return;
+    if (this.sonando) {
+      this.audio.pause();
+      this.sonando = false;
+      guardarSilenciada(true);
+      this.avisar();
+    } else {
+      guardarSilenciada(false);
+      this.reproducir();
+    }
+  },
+
+  suscribir(f: () => void) {
+    this.oyentes.add(f);
+    return () => {
+      this.oyentes.delete(f);
+    };
+  },
+};
 
 export default function RadioPlayer({
   tracks,
@@ -34,74 +113,22 @@ export default function RadioPlayer({
   tracks: RadioTrack[];
   labels: { on: string; off: string };
 }) {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const ordenRef = useRef<RadioTrack[]>([]);
-  const indiceRef = useRef(0);
-  const [sonando, setSonando] = useState(false);
-
-  const siguiente = useCallback(() => {
-    const audio = audioRef.current;
-    const orden = ordenRef.current;
-    if (!audio || orden.length === 0) return;
-    indiceRef.current = (indiceRef.current + 1) % orden.length;
-    audio.src = orden[indiceRef.current].preview;
-    audio.play().catch(() => setSonando(false));
-  }, []);
+  const sonando = useSyncExternalStore(
+    (f) => radio.suscribir(f),
+    () => radio.sonando,
+    () => false
+  );
 
   useEffect(() => {
-    if (tracks.length === 0) return;
-
-    // Orden aleatorio, distinto en cada visita
-    const orden = [...tracks];
-    for (let i = orden.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [orden[i], orden[j]] = [orden[j], orden[i]];
-    }
-    ordenRef.current = orden;
-
-    const audio = new Audio(orden[0].preview);
-    audio.volume = VOLUMEN;
-    audio.preload = "none";
-    audioRef.current = audio;
-
-    const silenciada = leerSilenciada();
-
-    if (!silenciada) {
-      // Puede fallar: los navegadores bloquean el audio hasta que se interactua
-      audio.play().then(() => setSonando(true)).catch(() => setSonando(false));
-    }
-
-    const temporizador = setInterval(() => {
-      if (!audio.paused) siguiente();
-    }, SEGUNDOS * 1000);
-    audio.addEventListener("ended", siguiente);
-
-    return () => {
-      clearInterval(temporizador);
-      audio.removeEventListener("ended", siguiente);
-      audio.pause();
-    };
-  }, [tracks, siguiente]);
-
-  const alternar = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (sonando) {
-      audio.pause();
-      setSonando(false);
-      guardarSilenciada(true);
-    } else {
-      audio.play().then(() => setSonando(true)).catch(() => setSonando(false));
-      guardarSilenciada(false);
-    }
-  };
+    radio.iniciar(tracks);
+  }, [tracks]);
 
   if (tracks.length === 0) return null;
 
   return (
     <button
       type="button"
-      onClick={alternar}
+      onClick={() => radio.alternar()}
       aria-pressed={sonando}
       aria-label={sonando ? labels.on : labels.off}
       title={sonando ? labels.on : labels.off}
