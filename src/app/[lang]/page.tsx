@@ -45,12 +45,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} ui={dict.ui} />
 
-          {/* Publicidad (no aparece en el menu de navegacion) */}
+          {/* Publicidad: el ancla se llama "spots" porque los bloqueadores de
+              anuncios ocultan los elementos con id="publicidad" */}
           <div className="mt-24">
             <VideosGrid
               videos={videos.filter((v) => v.tipo === "publicidad")}
               title={dict.trabajos.videosTitle}
-              anchor="publicidad"
+              anchor="spots"
             />
           </div>
 
