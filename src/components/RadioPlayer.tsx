@@ -94,7 +94,16 @@ const radio = {
       eventos.forEach((e) => window.removeEventListener(e, quitarSilencio));
     };
 
-    const eventos = ["pointerdown", "keydown", "touchstart", "scroll", "wheel"] as const;
+    // Safari solo acepta como interaccion un clic, un toque o una tecla:
+    // con el scroll no basta, por eso estan todos
+    const eventos = [
+      "pointerdown",
+      "click",
+      "touchend",
+      "keydown",
+      "scroll",
+      "wheel",
+    ] as const;
     eventos.forEach((e) =>
       window.addEventListener(e, quitarSilencio, { once: false, passive: true })
     );
