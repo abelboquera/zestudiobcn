@@ -11,7 +11,12 @@ export default function ReleasesSlider({ releases }: { releases: Release[] }) {
   if (releases.length === 0) return null;
 
   return (
-    <div id="releases" className="scroll-mt-28 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <div
+      id="releases"
+      className={`scroll-mt-28 grid grid-cols-1 gap-6 lg:gap-8 items-stretch ${
+        releases.length > 1 ? "lg:grid-cols-2" : "max-w-3xl mx-auto"
+      }`}
+    >
       {releases.map((release) => (
         <div
           key={`${release.type}-${release.id}`}

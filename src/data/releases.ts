@@ -29,12 +29,7 @@ export type Release = {
 export const releases: Release[] = [
   {
     type: "playlist",
-    id: "7onaaMSWiZN2xDP5GlqO4P",
-    title: "REC",
-  },
-  {
-    type: "playlist",
-    id: "3OxeMRhCftYabOQplRQM4a",
-    title: "MASTERING",
+    id: "4UucilDQDAREDjJFtlHo7Q",
+    title: "Z ESTUDIO BCN",
   },
 ];
