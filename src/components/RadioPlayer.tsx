@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useSyncExternalStore } from "react";
-import { Radio } from "lucide-react";
 
 export type RadioTrack = { title: string; artist: string; preview: string };
 
@@ -144,6 +143,31 @@ const radio = {
   },
 };
 
+
+/** Icono de radio de toda la vida: antena, dial, rueda y altavoz */
+function IconoRadio({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M6.5 7.5 19 3" />
+      <path d="M4.6 7.5v-1a1.4 1.4 0 0 1 2.8 0v1" />
+      <rect x="2.5" y="7.5" width="19" height="13" rx="2" />
+      <rect x="5.5" y="10" width="13" height="3.6" rx="0.6" />
+      <circle cx="8.3" cy="17.2" r="1.9" />
+      <path d="M12.6 16.2h6" />
+      <path d="M12.6 18.6h6" />
+    </svg>
+  );
+}
+
 export default function RadioPlayer({
   tracks,
   labels,
@@ -174,7 +198,7 @@ export default function RadioPlayer({
         sonando ? "text-amber-500" : "text-neutral-400 hover:text-amber-500"
       }`}
     >
-      <Radio className="h-5 w-5" />
+      <IconoRadio className="h-5 w-5" />
       {!sonando && (
         <span className="absolute left-1/2 top-1/2 h-5 w-0.5 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded bg-current" />
       )}
