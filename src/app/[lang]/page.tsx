@@ -35,8 +35,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* TRABAJOS SECTION */}
       <section id="trabajos" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white">{dict.trabajos.title}</h2>
+          </div>
+
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-white">{dict.trabajos.musicTitle}</h3>
           </div>
 
           <TrabajosGrid trabajos={trabajos} dict={dict.trabajos} ui={dict.ui} />
