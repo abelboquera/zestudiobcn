@@ -39,6 +39,12 @@ export const videos: Video[] = [
     tipo: "publicidad",
   },
   {
+    youtubeId: "bnIL-j_lW5I",
+    brand: "Malmö 040",
+    title: "Los de Siempre (En directo · Live Session)",
+    tipo: "live",
+  },
+  {
     youtubeId: "sOSRONM8zik",
     brand: "Malmö 040, Maren",
     title: "Voy a Estar (En directo · Live Session)",
@@ -66,12 +72,6 @@ export const videos: Video[] = [
     youtubeId: "s-K6VLwyPTU",
     brand: "Tommy Emmanuel",
     title: "El vaquero (BalconyTV)",
-    tipo: "live",
-  },
-  {
-    youtubeId: "bnIL-j_lW5I",
-    brand: "Malmö 040",
-    title: "Los de Siempre (En directo · Live Session)",
     tipo: "live",
   },
 ];
