@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Locale, dictionaries } from "@/i18n";
+import { trabajos } from "@/data/trabajos";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,16 @@ export default async function RootLayout({
   return (
     <html lang={validLang} className="scroll-smooth">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        <Navbar dict={dict.nav} ui={dict.ui} lang={validLang as Locale} />
+        <Navbar
+          dict={dict.nav}
+          ui={dict.ui}
+          lang={validLang as Locale}
+          radio={trabajos.map((t) => ({
+            title: t.title,
+            artist: t.artists.join(", "),
+            preview: t.preview,
+          }))}
+        />
         <main className="flex-grow">
           {children}
         </main>

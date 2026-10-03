@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { Instagram, Menu, X } from "lucide-react";
+import RadioPlayer, { type RadioTrack } from "./RadioPlayer";
 import DynamicLogo from "./DynamicLogo";
 import Link from "next/link";
 import { Locale } from "@/i18n";
 
-export default function Navbar({ dict, ui, lang }: { dict: any, ui: any, lang: Locale }) {
+export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, lang: Locale, radio: RadioTrack[] }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -53,9 +54,12 @@ export default function Navbar({ dict, ui, lang }: { dict: any, ui: any, lang: L
               >
                 <Instagram className="h-5 w-5" />
               </a>
+
+              <RadioPlayer tracks={radio} labels={{ on: ui.radioOn, off: ui.radioOff }} />
             </div>
           </div>
-          <div className="-mr-2 flex lg:hidden">
+          <div className="-mr-2 flex items-center gap-4 lg:hidden">
+            <RadioPlayer tracks={radio} labels={{ on: ui.radioOn, off: ui.radioOff }} />
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"

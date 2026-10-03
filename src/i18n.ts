@@ -3,6 +3,8 @@ export const dictionaries = {
     ui: {
       openMenu: "Abrir menú principal",
       instagram: "Instagram de Z Estudio BCN",
+      radioOn: "Silenciar la radio del estudio",
+      radioOff: "Escuchar la radio del estudio",
       prevSlide: "Diapositiva anterior",
       nextSlide: "Diapositiva siguiente",
       goToSlide: "Ir a la diapositiva",
@@ -145,6 +147,8 @@ export const dictionaries = {
     ui: {
       openMenu: "Open main menu",
       instagram: "Z Estudio BCN on Instagram",
+      radioOn: "Mute the studio radio",
+      radioOff: "Play the studio radio",
       prevSlide: "Previous slide",
       nextSlide: "Next slide",
       goToSlide: "Go to slide",
@@ -287,6 +291,8 @@ export const dictionaries = {
     ui: {
       openMenu: "Obrir menú principal",
       instagram: "Instagram de Z Estudio BCN",
+      radioOn: "Silenciar la ràdio de l'estudi",
+      radioOff: "Escoltar la ràdio de l'estudi",
       prevSlide: "Diapositiva anterior",
       nextSlide: "Diapositiva següent",
       goToSlide: "Anar a la diapositiva",
