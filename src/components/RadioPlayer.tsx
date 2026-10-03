@@ -168,6 +168,15 @@ function IconoRadio({ className }: { className?: string }) {
   );
 }
 
+/** Para que la radio no suene a la vez que un tema */
+export function pausarRadio() {
+  if (radio.audio && !radio.audio.paused) {
+    radio.audio.pause();
+    radio.sonando = false;
+    radio.avisar();
+  }
+}
+
 export default function RadioPlayer({
   tracks,
   labels,

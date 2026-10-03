@@ -9,6 +9,8 @@ export type Trabajo = {
   preview: string;
   /** Reproducciones en Spotify. Sirve para ordenar la lista. */
   plays: number;
+  /** Fecha de lanzamiento en Spotify (YYYY-MM-DD) */
+  released: string;
   /** true = siempre arriba, en el orden en que aparecen aqui */
   destacado?: boolean;
 };
@@ -33,6 +35,7 @@ export type Trabajo = {
 const catalogo: Trabajo[] = [
   {
     spotifyId: "2G0bNyYe4kiEQ9AyCuw3NQ",
+    released: "2026-09-25",
     title: "Bocetos",
     artists: ["DePol"],
     cover: "/images/trabajos/depol-bocetos.jpg",
@@ -42,6 +45,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "3ELI7WxrRSvTuzWnVuUT4H",
+    released: "2025-12-12",
     title: "ven a mi casa esta navidad",
     artists: ["Ivan Cornejo"],
     cover: "/images/trabajos/ivan-cornejo-ven-a-mi-casa-esta-navidad.jpg",
@@ -51,6 +55,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "4p1C7lssRJgOkdpPWlb6s1",
+    released: "2023-09-29",
     title: "Los Lugares Donde Irás",
     artists: ["Hey Kid", "Malmö 040"],
     cover: "/images/trabajos/hey-kid-los-lugares-donde-iras.jpg",
@@ -60,6 +65,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "0OXUqgdMVTNGgV0LJ8irvP",
+    released: "2024-11-29",
     title: "noche de san juan",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-noche-de-san-juan.jpg",
@@ -69,6 +75,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "5i7P2fWF2sTLuNCUsbwlNg",
+    released: "2026-10-02",
     title: "Berandu",
     artists: ["Maren"],
     cover: "/images/trabajos/maren-berandu.jpg",
@@ -78,6 +85,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "35asUXcK4uvCEcJCRIlHXz",
+    released: "2025-07-02",
     title: "Por Qué No Ser Amigos",
     artists: ["Paula Koops", "Noan"],
     cover: "/images/trabajos/paula-koops-por-que-no-ser-amigos.jpg",
@@ -87,6 +95,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "2lI8dLRqKTG3NHyxokhmXO",
+    released: "2025-06-04",
     title: "MI LUGAR",
     artists: ["Noan"],
     cover: "/images/trabajos/noan-mi-lugar.jpg",
@@ -96,6 +105,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "5rIPGNOUHCkNoSdlvphReB",
+    released: "2026-09-14",
     title: "Ja Emprenya!",
     artists: ["PLA MOGUDA"],
     cover: "/images/trabajos/pla-moguda-ja-emprenya.jpg",
@@ -105,6 +115,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "3Ts4fStHVtUojl6pEW4TJR",
+    released: "2022-06-17",
     title: "La Última Canción",
     artists: ["Malmö 040", "Ciao Marina"],
     cover: "/images/trabajos/malmo-040-la-ultima-cancion.jpg",
@@ -113,6 +124,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "3enqNHy38RSMG8samJ6evm",
+    released: "2024-11-29",
     title: "y es bonito",
     artists: ["Hey Kid", "Paul Alone"],
     cover: "/images/trabajos/hey-kid-y-es-bonito.jpg",
@@ -121,6 +133,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "1TibgzzrdUY80Zz1Us3nQF",
+    released: "2024-11-29",
     title: "lo que haga falta",
     artists: ["Hey Kid", "Besmaya", "Inazio"],
     cover: "/images/trabajos/hey-kid-lo-que-haga-falta.jpg",
@@ -129,6 +142,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "03O8I7mjzJlIYELgoG5Ojw",
+    released: "2026-03-13",
     title: "Sekretuek",
     artists: ["Maren"],
     cover: "/images/trabajos/maren-sekretuek.jpg",
@@ -137,6 +151,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "61MZER6cdAJvmKGwTQRLRo",
+    released: "2018-05-25",
     title: "Instantes",
     artists: ["Lauren Nine"],
     cover: "/images/trabajos/lauren-nine-instantes.jpg",
@@ -145,6 +160,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "2MT0ZTD3KdsnOMdxrXhdnG",
+    released: "2026-05-08",
     title: "Si no vuelvo a verte",
     artists: ["Maren"],
     cover: "/images/trabajos/maren-si-no-vuelvo-a-verte.jpg",
@@ -153,6 +169,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "59Em0GbTuFkY72Qwrl3Pcf",
+    released: "2025-05-09",
     title: "Me Vas a Echar de Menos",
     artists: ["Jeremías San Martín"],
     cover: "/images/trabajos/jeremias-san-martin-me-vas-a-echar-de-menos.jpg",
@@ -161,6 +178,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "4vQpb15a3I1IXfMEpt2FB0",
+    released: "2025-10-21",
     title: "Delta",
     artists: ["Terrae", "Judit Neddermann"],
     cover: "/images/trabajos/terrae-delta.jpg",
@@ -169,6 +187,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "1qZyl7yVBfuU40atszXf4l",
+    released: "2025-01-24",
     title: "To Be True",
     artists: ["Elio Haven"],
     cover: "/images/trabajos/elio-haven-to-be-true.jpg",
@@ -177,6 +196,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "1Dnmk7G0hCBnr48qnatrFg",
+    released: "2026-05-29",
     title: "si llueve que llueva",
     artists: ["Claudia Infante"],
     cover: "/images/trabajos/claudia-infante-si-llueve-que-llueva.jpg",
@@ -185,6 +205,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "6siI0u3cCLQPScp3geMrmK",
+    released: "2024-06-06",
     title: "Els colors de la màgia",
     artists: ["Biel Martí"],
     cover: "/images/trabajos/biel-marti-els-colors-de-la-magia.jpg",
@@ -193,6 +214,7 @@ const catalogo: Trabajo[] = [
   },
   {
     spotifyId: "1yF6957Bus7nqA8GctV500",
+    released: "2022-03-18",
     title: "Lo Que No Sé Decir Con Palabras",
     artists: ["Jesús Prieto \"Pitti\""],
     cover: "/images/trabajos/jesus-prieto-pitti-lo-que-no-se-decir-con-palabras.jpg",
@@ -208,6 +230,7 @@ export const trabajos: Trabajo[] = [
   // 2026-06-16
   {
     spotifyId: "5NN7fUmFi5GnkTD9ELOfnN",
+    released: "2026-06-16",
     title: "Dins la batalla",
     artists: ["Biel Martí", "María Cielos"],
     cover: "/images/trabajos/biel-marti-dins-la-batalla.jpg",
@@ -217,6 +240,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "0yOOfdp30xQ5mcDWZwE9MG",
+    released: "2026-02-27",
     title: "ahora que nos perdimos",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-ahora-que-nos-perdimos.jpg",
@@ -226,6 +250,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "4nkXPDsdu8cmxfjRgmHCI5",
+    released: "2026-02-27",
     title: "una vez más",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-una-vez-mas.jpg",
@@ -235,6 +260,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "1r8Thp7SaJkHANHip6ULDd",
+    released: "2026-02-27",
     title: "nuestro hogar",
     artists: ["Hey Kid", "Paula Mattheus"],
     cover: "/images/trabajos/hey-kid-nuestro-hogar.jpg",
@@ -244,6 +270,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "2SI5fn2MhnV2udpXPOiux3",
+    released: "2026-02-27",
     title: "el mundo contigo",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-el-mundo-contigo.jpg",
@@ -253,6 +280,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "2bCkOfAvtwJwSgWgPxKvPm",
+    released: "2026-02-27",
     title: "nuestra historia",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-nuestra-historia.jpg",
@@ -262,6 +290,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "6OWwUq5AX6GanuRs8fwWBI",
+    released: "2026-02-27",
     title: "si tú no estás",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-si-tu-no-estas.jpg",
@@ -271,6 +300,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "0KsHVKNr0McBukzPDcDhzR",
+    released: "2026-02-27",
     title: "de alguna manera",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-de-alguna-manera.jpg",
@@ -280,6 +310,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "6VRERMyrRgHwjUvIXZVlZZ",
+    released: "2026-02-27",
     title: "alguien debería hablar con Dios",
     artists: ["Hey Kid", "Íñigo Merino"],
     cover: "/images/trabajos/hey-kid-alguien-deberia-hablar-con-dios.jpg",
@@ -289,6 +320,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "35XchAnNXuN16o5wP43AfI",
+    released: "2026-02-27",
     title: "por si volvemos a vernos",
     artists: ["Hey Kid", "Moni Motes"],
     cover: "/images/trabajos/hey-kid-por-si-volvemos-a-vernos.jpg",
@@ -298,6 +330,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "0ceO3btLnwdjovDVrZOwyG",
+    released: "2026-02-27",
     title: "noche de san juan",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-noche-de-san-juan.jpg",
@@ -307,6 +340,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "3ngEo950TOB1UgEfog7IIC",
+    released: "2026-02-27",
     title: "alguien como tú",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-alguien-como-tu.jpg",
@@ -316,6 +350,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "7D3gy8sM4W9aWlKf6x0ZvO",
+    released: "2026-02-27",
     title: "y es bonito",
     artists: ["Hey Kid", "Paul Alone"],
     cover: "/images/trabajos/hey-kid-y-es-bonito.jpg",
@@ -325,6 +360,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "55uco7G8SmPv1mBYP5Ivrf",
+    released: "2026-02-27",
     title: "qué hay de mi",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-que-hay-de-mi.jpg",
@@ -334,6 +370,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "0GflVlnYfHfeGEsfApjCbL",
+    released: "2026-02-27",
     title: "donde estés tú",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
@@ -343,6 +380,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "4Cqe0KRurE0REtf1Weapz5",
+    released: "2026-02-27",
     title: "saber de ti",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-saber-de-ti.jpg",
@@ -352,6 +390,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "4zvVXoMufQo8L2pR6Byqjw",
+    released: "2026-02-27",
     title: "si vienes a buscarme",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-si-vienes-a-buscarme.jpg",
@@ -361,6 +400,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "2XTaRE2QCYcGBozxstCUjL",
+    released: "2026-02-27",
     title: "lo que haga falta",
     artists: ["Hey Kid", "Besmaya", "Inazio"],
     cover: "/images/trabajos/hey-kid-lo-que-haga-falta.jpg",
@@ -370,6 +410,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "2Qp333fRbdnQcN4YaLrrKi",
+    released: "2026-02-27",
     title: "más que ayer",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-mas-que-ayer.jpg",
@@ -379,6 +420,7 @@ export const trabajos: Trabajo[] = [
   // 2026-02-27
   {
     spotifyId: "04tyCrnH8ZcMGVHCowefEI",
+    released: "2026-02-27",
     title: "volver a empezar",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-volver-a-empezar.jpg",
@@ -388,6 +430,7 @@ export const trabajos: Trabajo[] = [
   // 2026-01-16
   {
     spotifyId: "5LYCA74jjeJzvBMOi9Ah9Y",
+    released: "2026-01-16",
     title: "Zure Zain",
     artists: ["Maren"],
     cover: "/images/trabajos/maren-zure-zain.jpg",
@@ -397,6 +440,7 @@ export const trabajos: Trabajo[] = [
   // 2025-10-21
   {
     spotifyId: "2PspT2EwXrxYGcnWvX18jC",
+    released: "2025-10-21",
     title: "Ja no em vols",
     artists: ["Terrae"],
     cover: "/images/trabajos/terrae-ja-no-em-vols.jpg",
@@ -406,6 +450,7 @@ export const trabajos: Trabajo[] = [
   // 2025-10-21
   {
     spotifyId: "1YkDrBtGmyOW0TjF56zDJd",
+    released: "2025-10-21",
     title: "Cançó de les plegadores",
     artists: ["Terrae"],
     cover: "/images/trabajos/terrae-canco-de-les-plegadores.jpg",
@@ -415,6 +460,7 @@ export const trabajos: Trabajo[] = [
   // 2025-10-21
   {
     spotifyId: "5g9akxr30wLrBEaz58HATD",
+    released: "2025-10-21",
     title: "Virgínia Amposta",
     artists: ["Terrae"],
     cover: "/images/trabajos/terrae-virginia-amposta.jpg",
@@ -424,6 +470,7 @@ export const trabajos: Trabajo[] = [
   // 2025-09-26
   {
     spotifyId: "4rDgBYFQyJkXm1Lu5LRmUf",
+    released: "2025-09-26",
     title: "El quadern",
     artists: ["Biel Martí"],
     cover: "/images/trabajos/biel-marti-el-quadern.jpg",
@@ -433,6 +480,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "6uoZFef5I7kDZ3yfNRpESu",
+    released: "2024-11-29",
     title: "alguien como tú",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-alguien-como-tu.jpg",
@@ -442,6 +490,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "5OZ8ZH0uIO1aqDeOBYb7tZ",
+    released: "2024-11-29",
     title: "qué hay de mi",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-que-hay-de-mi.jpg",
@@ -451,6 +500,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "5zDJs7QzBYYviuyrryKYnf",
+    released: "2024-11-29",
     title: "donde estés tú",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
@@ -460,6 +510,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "5QSLOVn7evWfLc11BrLTCu",
+    released: "2024-11-29",
     title: "saber de ti",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-saber-de-ti.jpg",
@@ -469,6 +520,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "6BxT4aou8vy9iKpq5N6NXA",
+    released: "2024-11-29",
     title: "si vienes a buscarme",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-si-vienes-a-buscarme.jpg",
@@ -478,6 +530,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "47lnQLtVcuwsX3bdRqcvo3",
+    released: "2024-11-29",
     title: "más que ayer",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-mas-que-ayer.jpg",
@@ -487,6 +540,7 @@ export const trabajos: Trabajo[] = [
   // 2024-11-29
   {
     spotifyId: "4F5ADneDztd4uiiKTZF0oL",
+    released: "2024-11-29",
     title: "volver a empezar",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-volver-a-empezar.jpg",
@@ -496,6 +550,7 @@ export const trabajos: Trabajo[] = [
   // 2024-10-25
   {
     spotifyId: "2nXLYjDXP0p5dyliLFGMbp",
+    released: "2024-10-25",
     title: "Verde y Amarillo",
     artists: ["Jeremías San Martín"],
     cover: "/images/trabajos/jeremias-san-martin-verde-y-amarillo.jpg",
@@ -505,6 +560,7 @@ export const trabajos: Trabajo[] = [
   // 2024-06-14
   {
     spotifyId: "7mMv6W2Jny0fLAXuduxYPf",
+    released: "2024-06-14",
     title: "y es bonito",
     artists: ["Hey Kid", "Paul Alone"],
     cover: "/images/trabajos/hey-kid-y-es-bonito.jpg",
@@ -514,6 +570,7 @@ export const trabajos: Trabajo[] = [
   // 2024-06-06
   {
     spotifyId: "7woYSTdm96I66VZhSplPLr",
+    released: "2024-06-06",
     title: "Teu",
     artists: ["Biel Martí"],
     cover: "/images/trabajos/biel-marti-teu.jpg",
@@ -523,6 +580,7 @@ export const trabajos: Trabajo[] = [
   // 2024-05-31
   {
     spotifyId: "2hZ5uKUl5nbn4DlYoUMShE",
+    released: "2024-05-31",
     title: "Sin ti",
     artists: ["Ariso"],
     cover: "/images/trabajos/ariso-sin-ti.jpg",
@@ -532,6 +590,7 @@ export const trabajos: Trabajo[] = [
   // 2024-04-19
   {
     spotifyId: "2s076zU8by2OjxXKr3MokH",
+    released: "2024-04-19",
     title: "Tú y Yo",
     artists: ["Ariso"],
     cover: "/images/trabajos/ariso-tu-y-yo.jpg",
@@ -541,6 +600,7 @@ export const trabajos: Trabajo[] = [
   // 2024-04-05
   {
     spotifyId: "6tGc5ksGGbMXsxjJLzYYfv",
+    released: "2024-04-05",
     title: "donde estés tú",
     artists: ["Hey Kid"],
     cover: "/images/trabajos/hey-kid-donde-estes-tu.jpg",
@@ -550,6 +610,7 @@ export const trabajos: Trabajo[] = [
   // 2023-10-20
   {
     spotifyId: "06HnU7mD7qBnkDMZoQuGVY",
+    released: "2023-10-20",
     title: "Aviones de papel",
     artists: ["Ariso"],
     cover: "/images/trabajos/ariso-aviones-de-papel.jpg",
@@ -559,6 +620,7 @@ export const trabajos: Trabajo[] = [
   // 2023-06-30
   {
     spotifyId: "7A06ah5X99giuAenkTYEmB",
+    released: "2023-06-30",
     title: "Lo Que Hay Dentro de Mí",
     artists: ["Malmö 040"],
     cover: "/images/trabajos/malmo-040-lo-que-hay-dentro-de-mi.jpg",
@@ -568,6 +630,7 @@ export const trabajos: Trabajo[] = [
   // 2023-04-21
   {
     spotifyId: "0FHOixexpCWOhOfpSMFnei",
+    released: "2023-04-21",
     title: "Lo Que La Luna Gritaba",
     artists: ["Susi Abanades", "Pol Bordas"],
     cover: "/images/trabajos/susi-abanades-lo-que-la-luna-gritaba.jpg",
@@ -577,6 +640,7 @@ export const trabajos: Trabajo[] = [
   // 2023-03-31
   {
     spotifyId: "1xulb90MOqqR6g9UmzjlDY",
+    released: "2023-03-31",
     title: "Lo Que La Luna Gritaba",
     artists: ["Susi Abanades", "Pol Bordas"],
     cover: "/images/trabajos/susi-abanades-lo-que-la-luna-gritaba.jpg",
@@ -586,6 +650,7 @@ export const trabajos: Trabajo[] = [
   // 2023-03-10
   {
     spotifyId: "4YVSF9Il9YQanoJE9styhZ",
+    released: "2023-03-10",
     title: "Te Volvería A Elegir",
     artists: ["Susi Abanades"],
     cover: "/images/trabajos/susi-abanades-te-volveria-a-elegir.jpg",
@@ -595,6 +660,7 @@ export const trabajos: Trabajo[] = [
   // 2023-03-10
   {
     spotifyId: "72XnVJ3njBZ4bxG74b28xb",
+    released: "2023-03-10",
     title: "Te Volvería A Elegir",
     artists: ["Susi Abanades"],
     cover: "/images/trabajos/susi-abanades-te-volveria-a-elegir.jpg",
@@ -604,6 +670,7 @@ export const trabajos: Trabajo[] = [
   // 2022-08-19
   {
     spotifyId: "5crlbqHn0ya0FzFun3nl5C",
+    released: "2022-08-19",
     title: "Entre la Espada y la Pared",
     artists: ["Lluis Rotger"],
     cover: "/images/trabajos/lluis-rotger-entre-la-espada-y-la-pared.jpg",
@@ -613,6 +680,7 @@ export const trabajos: Trabajo[] = [
   // 2022-07-22
   {
     spotifyId: "0RU3VGrszpwSBK9HXqQYfV",
+    released: "2022-07-22",
     title: "Canción de Amor Sin Tapujos",
     artists: ["Lluis Rotger"],
     cover: "/images/trabajos/lluis-rotger-cancion-de-amor-sin-tapujos.jpg",
@@ -622,6 +690,7 @@ export const trabajos: Trabajo[] = [
   // 2022-03-18
   {
     spotifyId: "5aaNNWOqmufFfZV8MQjj3P",
+    released: "2022-03-18",
     title: "Moon River",
     artists: ["Jesús Prieto \"Pitti\""],
     cover: "/images/trabajos/jesus-prieto-pitti-moon-river.jpg",
@@ -631,6 +700,7 @@ export const trabajos: Trabajo[] = [
   // 2022-01-14
   {
     spotifyId: "01QuFsCW15drduLlBcyKkq",
+    released: "2022-01-14",
     title: "Cuando No Nos Echen De Menos",
     artists: ["Susi Abanades", "Joan Isern"],
     cover: "/images/trabajos/susi-abanades-cuando-no-nos-echen-de-menos.jpg",
@@ -640,6 +710,7 @@ export const trabajos: Trabajo[] = [
   // 2019-03-08
   {
     spotifyId: "1y3pdM4zm5j9DWxlAlaIrL",
+    released: "2019-03-08",
     title: "Metamórfica",
     artists: ["Lauren Nine", "Jasperino"],
     cover: "/images/trabajos/lauren-nine-metamorfica.jpg",
@@ -649,6 +720,7 @@ export const trabajos: Trabajo[] = [
   // 2018-05-25
   {
     spotifyId: "2uHsPtrr3eoTEB766djtIk",
+    released: "2018-05-25",
     title: "Intro",
     artists: ["Lauren Nine"],
     cover: "/images/trabajos/lauren-nine-intro.jpg",
@@ -658,6 +730,7 @@ export const trabajos: Trabajo[] = [
   // 2018-05-25
   {
     spotifyId: "2KX5R5qBRWeUYnAgNgXjMs",
+    released: "2018-05-25",
     title: "Andromeda",
     artists: ["Lauren Nine"],
     cover: "/images/trabajos/lauren-nine-andromeda.jpg",

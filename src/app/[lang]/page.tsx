@@ -5,12 +5,11 @@ import {
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import ContactForm from "@/components/ContactForm";
-import ReleasesSlider from "@/components/ReleasesSlider";
+import ListaEstudio from "@/components/ListaEstudio";
 import TrabajosGrid from "@/components/TrabajosGrid";
 import VideosGrid from "@/components/VideosGrid";
 import { videos } from "@/data/videos";
 import { trabajos } from "@/data/trabajos";
-import { releases } from "@/data/releases";
 import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
 
@@ -66,9 +65,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             />
           </div>
 
-          {/* Listas de Spotify del estudio (ancla #releases) */}
+          {/* Lista del estudio, de lo mas nuevo a lo mas antiguo */}
           <div className="mt-20">
-            <ReleasesSlider releases={releases} />
+            <ListaEstudio
+              trabajos={trabajos}
+              titulo="Z ESTUDIO BCN"
+              playlistUrl="https://open.spotify.com/playlist/4UucilDQDAREDjJFtlHo7Q"
+              ui={dict.ui}
+            />
           </div>
 
         </div>

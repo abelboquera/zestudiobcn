@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronUp, ExternalLink, Pause, Play } from "lucide-react";
 import type { Trabajo } from "@/data/trabajos";
+import { pausarRadio } from "./RadioPlayer";
 
 const VISIBLES = 18;
 /** En movil se ven menos antes del boton */
@@ -46,6 +47,7 @@ export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo
       return;
     }
 
+    pausarRadio();
     audio.pause();
     audio.src = trabajo.preview;
     setProgress(0);
