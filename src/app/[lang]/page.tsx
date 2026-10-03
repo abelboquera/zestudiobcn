@@ -9,6 +9,7 @@ import ListaEstudio from "@/components/ListaEstudio";
 import TrabajosGrid from "@/components/TrabajosGrid";
 import VideosGrid from "@/components/VideosGrid";
 import { videos } from "@/data/videos";
+import { episodios } from "@/data/podcast";
 import { trabajos } from "@/data/trabajos";
 import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
@@ -65,6 +66,27 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               anchor="live"
               limite={4}
               labels={{ more: dict.trabajos.showMoreShort, less: dict.trabajos.showLess }}
+            />
+          </div>
+
+          {/* Podcast (no aparece en el menu de navegacion) */}
+          <div id="podcast" className="mt-24 scroll-mt-28">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl font-bold text-white">{dict.trabajos.podcastTitle}</h3>
+            </div>
+            <TrabajosGrid
+              trabajos={episodios.map((e) => ({
+                spotifyId: e.spotifyId,
+                title: e.title,
+                artists: [e.show],
+                cover: e.cover,
+                preview: e.preview,
+              }))}
+              dict={{ showMore: dict.trabajos.showMoreShort, showLess: dict.trabajos.showLess }}
+              ui={dict.ui}
+              visibles={4}
+              visiblesMovil={4}
+              spotifyPath="episode"
             />
           </div>
 

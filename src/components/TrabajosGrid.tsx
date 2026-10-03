@@ -3,17 +3,36 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronUp, ExternalLink, Pause, Play } from "lucide-react";
-import type { Trabajo } from "@/data/trabajos";
+/** Sirve tanto para canciones como para episodios de podcast */
+export type Ficha = {
+  spotifyId: string;
+  title: string;
+  artists: string[];
+  cover: string;
+  preview: string;
+};
 import { pausarRadio } from "./RadioPlayer";
-
-const VISIBLES = 18;
-/** En movil se ven menos antes del boton */
-const VISIBLES_MOVIL = 10;
 
 type Dict = { showMore: string; showLess: string };
 type Ui = { play: string; pause: string; cover: string; onSpotify: string };
 
-export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo[]; dict: Dict; ui: Ui }) {
+export default function TrabajosGrid({
+  trabajos,
+  dict,
+  ui,
+  visibles: VISIBLES = 18,
+  visiblesMovil: VISIBLES_MOVIL = 10,
+  spotifyPath = "track",
+}: {
+  trabajos: Ficha[];
+  dict: Dict;
+  ui: Ui;
+  /** Cuantas fichas se ven antes del boton */
+  visibles?: number;
+  /** Y cuantas en movil */
+  visiblesMovil?: number;
+  spotifyPath?: "track" | "episode";
+}) {
   const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
@@ -37,7 +56,7 @@ export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo
     };
   }, []);
 
-  const toggle = async (trabajo: Trabajo) => {
+  const toggle = async (trabajo: Ficha) => {
     const audio = audioRef.current;
     if (!audio) return;
 
@@ -59,13 +78,13 @@ export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo
     }
   };
 
-  const visibles = expanded ? trabajos : trabajos.slice(0, VISIBLES);
+  const mostradas = expanded ? trabajos : trabajos.slice(0, VISIBLES);
   const ocultos = trabajos.length - VISIBLES_MOVIL;
 
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-      {visibles.map((trabajo, index) => {
+      {mostradas.map((trabajo, index) => {
         const isPlaying = playingId === trabajo.spotifyId;
         const artists = trabajo.artists.join(", ");
         return (
@@ -114,7 +133,7 @@ export default function TrabajosGrid({ trabajos, dict, ui }: { trabajos: Trabajo
                 <p className="mt-1 text-amber-500">{artists}</p>
               </div>
               <a
-                href={`https://open.spotify.com/track/${trabajo.spotifyId}`}
+                href={`https://open.spotify.com/${spotifyPath}/${trabajo.spotifyId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-neutral-400 transition-colors hover:text-amber-500"
