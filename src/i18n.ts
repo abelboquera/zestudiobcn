@@ -94,6 +94,7 @@ export const dictionaries = {
       liveTitle: "Live",
       videosTitle: "Publicidad",
       showMore: "Ver más trabajos",
+      showMoreShort: "Ver más",
       showLess: "Ver menos"
     },
     nosotros: {
@@ -235,6 +236,7 @@ export const dictionaries = {
       liveTitle: "Live",
       videosTitle: "Advertising",
       showMore: "Show more work",
+      showMoreShort: "Show more",
       showLess: "Show less"
     },
     nosotros: {
@@ -376,6 +378,7 @@ export const dictionaries = {
       liveTitle: "Live",
       videosTitle: "Publicitat",
       showMore: "Veure més treballs",
+      showMoreShort: "Veure més",
       showLess: "Veure menys"
     },
     nosotros: {

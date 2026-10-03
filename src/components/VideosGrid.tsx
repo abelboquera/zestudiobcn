@@ -1,15 +1,29 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import type { Video } from "@/data/videos";
 
 export default function VideosGrid({
   videos,
   title,
   anchor,
+  limite,
+  labels,
 }: {
   videos: Video[];
   title: string;
   anchor: string;
+  /** Cuantos se ven antes del boton "Ver mas" */
+  limite?: number;
+  labels?: { more: string; less: string };
 }) {
+  const [expanded, setExpanded] = useState(false);
+
   if (videos.length === 0) return null;
+
+  const hayBoton = !!limite && !!labels && videos.length > limite;
+  const visibles = hayBoton && !expanded ? videos.slice(0, limite) : videos;
 
   return (
     <div id={anchor} className="scroll-mt-28">
@@ -18,7 +32,7 @@ export default function VideosGrid({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {videos.map((video) => (
+        {visibles.map((video) => (
           <div key={video.youtubeId}>
             <div className="aspect-video overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
               <iframe
@@ -35,6 +49,20 @@ export default function VideosGrid({
           </div>
         ))}
       </div>
+
+      {hayBoton && (
+        <div className="mt-10 text-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((val) => !val)}
+            aria-expanded={expanded}
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-amber-500 hover:text-amber-500"
+          >
+            {expanded ? labels!.less : labels!.more}
+            {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
