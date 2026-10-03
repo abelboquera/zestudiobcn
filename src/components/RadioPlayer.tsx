@@ -10,6 +10,23 @@ const SEGUNDOS = 20;
 const VOLUMEN = 0.5;
 const CLAVE = "zestudio-radio-silenciada";
 
+function leerSilenciada(): boolean {
+  try {
+    return window.localStorage.getItem(CLAVE) === "1";
+  } catch (error) {
+    return false;
+  }
+}
+
+function guardarSilenciada(valor: boolean) {
+  try {
+    if (valor) window.localStorage.setItem(CLAVE, "1");
+    else window.localStorage.removeItem(CLAVE);
+  } catch (error) {
+    // el navegador puede bloquear el almacenamiento; no pasa nada
+  }
+}
+
 export default function RadioPlayer({
   tracks,
   labels,
@@ -47,10 +64,7 @@ export default function RadioPlayer({
     audio.preload = "none";
     audioRef.current = audio;
 
-    let silenciada = false;
-    try {
-      silenciada = window.localStorage.getItem(CLAVE) === "1";
-    } catch {}
+    const silenciada = leerSilenciada();
 
     if (!silenciada) {
       // Puede fallar: los navegadores bloquean el audio hasta que se interactua
@@ -75,14 +89,10 @@ export default function RadioPlayer({
     if (sonando) {
       audio.pause();
       setSonando(false);
-      try {
-        window.localStorage.setItem(CLAVE, "1");
-      } catch {}
+      guardarSilenciada(true);
     } else {
       audio.play().then(() => setSonando(true)).catch(() => setSonando(false));
-      try {
-        window.localStorage.removeItem(CLAVE);
-      } catch {}
+      guardarSilenciada(false);
     }
   };
 
