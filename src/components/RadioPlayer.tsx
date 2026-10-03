@@ -61,7 +61,44 @@ const radio = {
       if (this.audio && !this.audio.paused) this.siguiente();
     }, SEGUNDOS * 1000);
 
-    if (!leerSilenciada()) this.reproducir();
+    if (!leerSilenciada()) this.arrancar();
+  },
+
+  /**
+   * Los navegadores no dejan que suene audio hasta que el visitante
+   * interactua. Arrancamos en silencio (eso si lo permiten) y quitamos el
+   * silencio en cuanto toca, pulsa o hace scroll.
+   */
+  arrancar() {
+    const audio = this.audio;
+    if (!audio) return;
+
+    audio
+      .play()
+      .then(() => {
+        this.sonando = !audio.muted;
+        this.avisar();
+      })
+      .catch(() => {
+        audio.muted = true;
+        audio.play().catch(() => undefined);
+      });
+
+    const quitarSilencio = () => {
+      if (leerSilenciada()) return;
+      audio.muted = false;
+      if (audio.paused) {
+        audio.play().catch(() => undefined);
+      }
+      this.sonando = true;
+      this.avisar();
+      eventos.forEach((e) => window.removeEventListener(e, quitarSilencio));
+    };
+
+    const eventos = ["pointerdown", "keydown", "touchstart", "scroll", "wheel"] as const;
+    eventos.forEach((e) =>
+      window.addEventListener(e, quitarSilencio, { once: false, passive: true })
+    );
   },
 
   siguiente() {
@@ -94,6 +131,7 @@ const radio = {
       this.avisar();
     } else {
       guardarSilenciada(false);
+      this.audio.muted = false;
       this.reproducir();
     }
   },
