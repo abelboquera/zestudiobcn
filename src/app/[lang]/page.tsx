@@ -87,6 +87,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               visibles={4}
               visiblesMovil={4}
               spotifyPath="episode"
+              columnas={2}
             />
           </div>
 

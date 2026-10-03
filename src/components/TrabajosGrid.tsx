@@ -23,6 +23,7 @@ export default function TrabajosGrid({
   visibles: VISIBLES = 18,
   visiblesMovil: VISIBLES_MOVIL = 10,
   spotifyPath = "track",
+  columnas = 3,
 }: {
   trabajos: Ficha[];
   dict: Dict;
@@ -32,6 +33,8 @@ export default function TrabajosGrid({
   /** Y cuantas en movil */
   visiblesMovil?: number;
   spotifyPath?: "track" | "episode";
+  /** Cuantas fichas por fila en escritorio */
+  columnas?: 2 | 3;
 }) {
   const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -83,7 +86,11 @@ export default function TrabajosGrid({
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 ${
+          columnas === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3"
+        }`}
+      >
       {mostradas.map((trabajo, index) => {
         const isPlaying = playingId === trabajo.spotifyId;
         const artists = trabajo.artists.join(", ");
