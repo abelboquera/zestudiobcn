@@ -74,6 +74,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <div className="text-center mb-10">
               <h3 className="text-3xl font-bold text-white">{dict.trabajos.podcastTitle}</h3>
             </div>
+            {/* Mismo ancho que los videos para que las fichas no sean enormes */}
+            <div className="max-w-5xl mx-auto">
             <TrabajosGrid
               trabajos={episodios.map((e) => ({
                 spotifyId: e.spotifyId,
@@ -89,6 +91,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               spotifyPath="episode"
               columnas={2}
             />
+            </div>
           </div>
 
           {/* Lista del estudio, de lo mas nuevo a lo mas antiguo.
