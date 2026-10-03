@@ -11,6 +11,8 @@ import VideosGrid from "@/components/VideosGrid";
 import { videos } from "@/data/videos";
 import { episodios } from "@/data/podcast";
 import { trabajos } from "@/data/trabajos";
+import Galeria from "@/components/Galeria";
+import { galeria } from "@/data/galeria";
 import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
 
@@ -209,6 +211,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
               );
             })}
+          </div>
+
+          {/* Galeria del estudio */}
+          <div className="mt-24">
+            <Galeria fotos={galeria} titulo={dict.estudio.galleryTitle} />
           </div>
         </div>
       </section>

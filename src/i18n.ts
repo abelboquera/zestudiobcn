@@ -58,6 +58,7 @@ export const dictionaries = {
     },
     estudio: {
       gearTitle: "Equipamiento",
+      galleryTitle: "Galería",
       title: "El Estudio",
       subtitle: "Un espacio diseñado para la creatividad. Acústica cuidada, ambiente relajado y el mejor equipo analógico y digital.",
       controlRoom: "Control Room",
@@ -203,6 +204,7 @@ export const dictionaries = {
     },
     estudio: {
       gearTitle: "Equipment",
+      galleryTitle: "Gallery",
       title: "The Studio",
       subtitle: "A space designed for creativity. Careful acoustics, relaxed atmosphere and the best analog and digital equipment.",
       controlRoom: "Control Room",
@@ -348,6 +350,7 @@ export const dictionaries = {
     },
     estudio: {
       gearTitle: "Equipament",
+      galleryTitle: "Galeria",
       title: "L'Estudi",
       subtitle: "Un espai dissenyat per a la creativitat. Acústica cuidada, ambient relaxat i el millor equip analògic i digital.",
       controlRoom: "Control Room",
