@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
+import PantallaEntrada from "@/components/PantallaEntrada";
 import Footer from "@/components/Footer";
 import { Locale, dictionaries } from "@/i18n";
 import { trabajos } from "@/data/trabajos";
@@ -51,6 +52,7 @@ export default async function RootLayout({
   return (
     <html lang={validLang} className="scroll-smooth">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
+        <PantallaEntrada label={dict.ui.enter} />
         <Navbar
           dict={dict.nav}
           ui={dict.ui}

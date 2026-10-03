@@ -193,6 +193,19 @@ function IconoRadio({ className }: { className?: string }) {
 }
 
 /** Para que la radio no suene a la vez que un tema */
+/** La llama la pantalla de entrada: ese clic ya permite el sonido */
+export function arrancarRadioConSonido() {
+  if (!radio.audio) return;
+  if (leerSilenciada()) return;
+  radio.audio.muted = false;
+  radio.reproducir();
+}
+
+/** Si el visitante la tenia silenciada, la pantalla de entrada no insiste */
+export function radioSilenciada() {
+  return leerSilenciada();
+}
+
 export function pausarRadio() {
   if (radio.audio && !radio.audio.paused) {
     radio.audio.pause();
