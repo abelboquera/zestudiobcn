@@ -13,6 +13,9 @@ import { trabajos } from "@/data/trabajos";
 import { gear, type GearCategory } from "@/data/gear";
 import { Locale, dictionaries } from "@/i18n";
 
+/** La lista "Z ESTUDIO BCN" esta hecha pero todavia no se muestra */
+const MOSTRAR_LISTA = false;
+
 const gearIcons: Record<GearCategory["icon"], typeof Mic> = {
   guitar: Guitar,
   keys: Music,
@@ -65,15 +68,18 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             />
           </div>
 
-          {/* Lista del estudio, de lo mas nuevo a lo mas antiguo */}
-          <div className="mt-20">
-            <ListaEstudio
-              trabajos={trabajos}
-              titulo="Z ESTUDIO BCN"
-              playlistUrl="https://open.spotify.com/playlist/4UucilDQDAREDjJFtlHo7Q"
-              ui={dict.ui}
-            />
-          </div>
+          {/* Lista del estudio, de lo mas nuevo a lo mas antiguo.
+              Oculta de momento: poner MOSTRAR_LISTA en true para verla. */}
+          {MOSTRAR_LISTA && (
+            <div className="mt-20">
+              <ListaEstudio
+                trabajos={trabajos}
+                titulo="Z ESTUDIO BCN"
+                playlistUrl="https://open.spotify.com/playlist/4UucilDQDAREDjJFtlHo7Q"
+                ui={dict.ui}
+              />
+            </div>
+          )}
 
         </div>
       </section>
