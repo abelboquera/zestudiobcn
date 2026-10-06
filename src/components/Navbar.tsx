@@ -14,7 +14,6 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
   const navLinks = [
     { name: dict.trabajos, href: `/${lang}#trabajos` },
     { name: <><span className="text-amber-500">Z</span>Estudio</>, href: `/${lang}#estudio` },
-    { name: dict.galeria, href: `/${lang}/galeria` },
     { name: dict.nosotros, href: `/${lang}#sobre-nosotros` },
     { name: dict.contacto, href: `/${lang}#contacto` },
   ];
