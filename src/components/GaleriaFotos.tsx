@@ -117,6 +117,8 @@ export default function GaleriaFotos({
               className="object-contain"
               priority
             />
+            {/* Mismo degradado en los bordes que en las miniaturas */}
+            <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(0,0,0,0.55)_100%)]" />
           </div>
         </div>
       )}
