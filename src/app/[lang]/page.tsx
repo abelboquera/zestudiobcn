@@ -215,7 +215,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           {/* Galeria del estudio */}
           <div className="mt-24">
-            <Galeria fotos={galeria} titulo={dict.estudio.galleryTitle} />
+            <Galeria categorias={galeria} titulo={dict.estudio.galleryTitle} lang={validLang} />
           </div>
         </div>
       </section>
