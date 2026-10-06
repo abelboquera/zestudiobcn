@@ -178,6 +178,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             </div>
           </div>
 
+          {/* Galeria del estudio */}
+          <div className="mb-24">
+            <Galeria categorias={galeria} titulo={dict.estudio.galleryTitle} lang={validLang} />
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white">{dict.estudio.gearTitle}</h2>
           </div>
@@ -211,11 +216,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
               );
             })}
-          </div>
-
-          {/* Galeria del estudio */}
-          <div className="mt-24">
-            <Galeria categorias={galeria} titulo={dict.estudio.galleryTitle} lang={validLang} />
           </div>
         </div>
       </section>
