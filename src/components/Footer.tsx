@@ -1,15 +1,16 @@
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import DynamicLogo from "./DynamicLogo";
 
-export default function Footer({ dict }: { dict: any }) {
+export default function Footer({ dict, lang }: { dict: any; lang: string }) {
   return (
     <footer className="bg-neutral-950 border-t border-neutral-900 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <a href="#inicio" className="inline-block mb-6">
+            <Link href={`/${lang}#inicio`} className="inline-block mb-6">
               <DynamicLogo />
-            </a>
+            </Link>
             <div className="flex space-x-4">
               <a href="https://instagram.com/zestudiobcn" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-amber-500 transition-colors">
                 <span className="sr-only">Instagram</span>
