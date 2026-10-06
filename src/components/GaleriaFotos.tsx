@@ -46,15 +46,17 @@ export default function GaleriaFotos({
             key={foto.src}
             type="button"
             onClick={() => setAbierta(i)}
-            className="relative aspect-[4/3] overflow-hidden rounded-xl border border-neutral-800 transition-colors hover:border-amber-500 focus:outline-none focus-visible:border-amber-500"
+            className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-neutral-800 transition-colors hover:border-amber-500 focus:outline-none focus-visible:border-amber-500"
           >
             <Image
               src={foto.src}
               alt={foto.alt}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
+            {/* Un poco de sombra en los bordes */}
+            <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(0,0,0,0.6)_100%)]" />
           </button>
         ))}
       </div>

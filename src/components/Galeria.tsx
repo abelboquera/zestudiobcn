@@ -34,9 +34,10 @@ export default function Galeria({
               sizes="(min-width: 768px) 33vw, 100vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 transition-colors group-hover:from-black/50 group-hover:to-black/60" />
+            {/* Degradado solo en los bordes, para que el centro se vea nitido */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.85)_100%)]" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-3xl font-extrabold tracking-tight text-white">
+              <span className="px-4 text-center text-3xl font-extrabold uppercase tracking-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)] transition-colors group-hover:text-amber-500">
                 {lang === "en" ? c.titleEn : lang === "ca" ? c.titleCa : c.title}
               </span>
             </div>
