@@ -108,7 +108,7 @@ export const dictionaries = {
     nosotros: {
       title: "Sobre Nosotros",
       davidTitle: "David García",
-      davidSub: "Productor, Compositor y CEO de Z Estudio BCN",
+      davidSub: "Productor, Compositor, CEO de Z Estudio BCN",
       davidDesc1: "Con más de 15 años de experiencia, ha producido a artistas como Noan, Maren, Hey Kid, Paula Koops, Claudia Infante y Lauren Nine, ha compuesto música para Vèrtex (TV3), West Side Story (El musical), spots de League of Legends, Cupra y Aperol. En grabación, mezcla y mastering ha trabajado con artistas de la talla de Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre otros.",
       davidRoles: ["Productor", "Compositor"],
       joanTitle: "Joan Isern",
@@ -258,7 +258,7 @@ export const dictionaries = {
     nosotros: {
       title: "About Us",
       davidTitle: "David García",
-      davidSub: "Producer, Composer and CEO of Z Estudio BCN",
+      davidSub: "Producer, Composer, CEO of Z Estudio BCN",
       davidDesc1: "With over 15 years of experience, David has produced artists such as Noan, Maren, Hey Kid, Paula Koops, Claudia Infante and Lauren Nine, and composed music for Vèrtex (TV3), West Side Story (the musical) and ads for League of Legends, Cupra and Aperol. In recording, mixing and mastering, David has worked with artists of the calibre of Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison and Tommy Emmanuel, among others.",
       davidRoles: ["Producer", "Composer"],
       joanTitle: "Joan Isern",
@@ -408,7 +408,7 @@ export const dictionaries = {
     nosotros: {
       title: "Sobre Nosaltres",
       davidTitle: "David García",
-      davidSub: "Productor, Compositor i CEO de Z Estudio BCN",
+      davidSub: "Productor, Compositor, CEO de Z Estudio BCN",
       davidDesc1: "Amb més de 15 anys d'experiència, ha produït artistes com Noan, Maren, Hey Kid, Paula Koops, Claudia Infante i Lauren Nine, ha compost música per a Vèrtex (TV3), West Side Story (el musical) i espots de League of Legends, Cupra i Aperol. En gravació, mescla i mastering ha treballat amb artistes de la talla d'Iván Cornejo, Love of Lesbian, MÄLMO 040, Carla Morrison o Tommy Emmanuel, entre d'altres.",
       davidRoles: ["Productor", "Compositor"],
       joanTitle: "Joan Isern",
