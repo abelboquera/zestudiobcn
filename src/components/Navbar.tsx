@@ -10,11 +10,13 @@ import { Locale } from "@/i18n";
 export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, lang: Locale, radio: RadioTrack[] }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Rutas completas para que el menu tambien funcione desde /galeria
   const navLinks = [
-    { name: dict.trabajos, href: "#trabajos" },
-    { name: <><span className="text-amber-500">Z</span>Estudio</>, href: "#estudio" },
-    { name: dict.nosotros, href: "#sobre-nosotros" },
-    { name: dict.contacto, href: "#contacto" },
+    { name: dict.trabajos, href: `/${lang}#trabajos` },
+    { name: <><span className="text-amber-500">Z</span>Estudio</>, href: `/${lang}#estudio` },
+    { name: dict.galeria, href: `/${lang}/galeria` },
+    { name: dict.nosotros, href: `/${lang}#sobre-nosotros` },
+    { name: dict.contacto, href: `/${lang}#contacto` },
   ];
 
   return (
@@ -29,13 +31,13 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-neutral-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               
               <div className="ml-4 pl-4 border-l border-neutral-800 self-center">
@@ -85,14 +87,14 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
         <div className="lg:hidden bg-neutral-900 border-b border-neutral-800" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-neutral-300 hover:text-amber-500 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             
             {/* Mobile Language Switcher */}

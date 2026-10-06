@@ -22,6 +22,7 @@ export const dictionaries = {
     },
     nav: {
       trabajos: "Trabajos",
+      galeria: "Galería",
       nosotros: "Nosotros",
       contacto: "Contacto"
     },
@@ -171,6 +172,7 @@ export const dictionaries = {
     },
     nav: {
       trabajos: "Work",
+      galeria: "Gallery",
       nosotros: "About Us",
       contacto: "Contact"
     },
@@ -320,6 +322,7 @@ export const dictionaries = {
     },
     nav: {
       trabajos: "Treballs",
+      galeria: "Galeria",
       nosotros: "Nosaltres",
       contacto: "Contacte"
     },
