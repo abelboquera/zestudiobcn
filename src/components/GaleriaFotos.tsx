@@ -73,7 +73,7 @@ export default function GaleriaFotos({
             type="button"
             onClick={cerrar}
             aria-label={labels.close}
-            className="absolute right-4 top-4 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950"
+            className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950"
           >
             <X className="h-6 w-6" />
           </button>
@@ -87,7 +87,7 @@ export default function GaleriaFotos({
                   mover(-1);
                 }}
                 aria-label={labels.prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950 sm:left-6"
+                className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950 sm:left-6"
               >
                 <ChevronLeft className="h-7 w-7" />
               </button>
@@ -98,7 +98,7 @@ export default function GaleriaFotos({
                   mover(1);
                 }}
                 aria-label={labels.next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950 sm:right-6"
+                className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-black/40 p-2 text-white transition-colors hover:bg-amber-500 hover:text-neutral-950 sm:right-6"
               >
                 <ChevronRight className="h-7 w-7" />
               </button>
