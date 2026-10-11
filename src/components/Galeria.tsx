@@ -20,7 +20,7 @@ export default function Galeria({
         <h2 className="text-4xl font-bold text-white">{titulo}</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {categorias.map((c) => (
           <Link
             key={c.id}
