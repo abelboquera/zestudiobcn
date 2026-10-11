@@ -38,6 +38,17 @@ export const galeria: CategoriaGaleria[] = [
     ],
   },
   {
+    id: "instrumentos-acusticos",
+    title: "Acoustic",
+    titleEn: "Acoustic",
+    titleCa: "Acoustic",
+    // Foto provisional hasta tener fotos propias del apartado
+    portada: "/images/estudio/guitarras-pared.jpg",
+    fotos: [
+      { src: "/images/estudio/guitarras-pared.jpg", alt: "Guitarras colgadas en la pared del estudio" },
+    ],
+  },
+  {
     id: "amplificadores",
     title: "Amplificadores",
     titleEn: "Amplifiers",
@@ -58,17 +69,6 @@ export const galeria: CategoriaGaleria[] = [
     fotos: [
       { src: "/images/estudio/rhodes-mark-i.jpg", alt: "Piano electrico Fender Rhodes Mark I" },
       { src: "/images/estudio/rhodes-mark-i-2.jpg", alt: "Teclas del Fender Rhodes Mark I en primer plano" },
-    ],
-  },
-  {
-    id: "instrumentos-acusticos",
-    title: "Acoustic",
-    titleEn: "Acoustic",
-    titleCa: "Acoustic",
-    // Foto provisional hasta tener fotos propias del apartado
-    portada: "/images/estudio/guitarras-pared.jpg",
-    fotos: [
-      { src: "/images/estudio/guitarras-pared.jpg", alt: "Guitarras colgadas en la pared del estudio" },
     ],
   },
 ];
