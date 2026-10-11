@@ -1,12 +1,12 @@
 export type Foto = {
-  /** Ruta dentro de public/images/estudio */
+  /** Ruta dentro de public/images/galeria */
   src: string;
   /** Descripcion para buscadores y lectores de pantalla */
   alt: string;
 };
 
 export type CategoriaGaleria = {
-  /** Identificador para el enlace: /galeria#guitarras */
+  /** Identificador de la pagina: /galeria/guitarras-electricas */
   id: string;
   title: string;
   titleEn: string;
@@ -17,10 +17,10 @@ export type CategoriaGaleria = {
 };
 
 /**
- * Galeria del estudio. En la pagina principal se ven las tres portadas y
- * cada una lleva a /galeria, donde estan todas las fotos agrupadas.
+ * Galeria del estudio. En la pagina principal se ven las cuatro portadas
+ * y cada una abre su propia pagina con solo sus fotos.
  *
- * Para anadir fotos: deja el archivo en public/images/estudio y anade una
+ * Para anadir fotos: deja el archivo en public/images/galeria y anade una
  * linea en la categoria que corresponda.
  */
 export const galeria: CategoriaGaleria[] = [
@@ -29,12 +29,37 @@ export const galeria: CategoriaGaleria[] = [
     title: "Electric",
     titleEn: "Electric",
     titleCa: "Electric",
-    portada: "/images/estudio/cuerpos-guitarras.jpg",
+    portada: "/images/galeria/foto-8126.jpg",
     fotos: [
-      { src: "/images/estudio/cuerpos-guitarras.jpg", alt: "Cuerpos de las guitarras electricas en primer plano" },
-      { src: "/images/estudio/palas-guitarras.jpg", alt: "Palas de las guitarras Fender: Stratocaster, Mustang y Telecaster" },
-      { src: "/images/estudio/rack-guitarras.jpg", alt: "Rack con la coleccion de guitarras electricas del estudio" },
-      { src: "/images/estudio/guitarras-pared.jpg", alt: "Guitarras colgadas en la pared, con una Stratocaster verde en primer plano" },
+      { src: "/images/galeria/foto-8126.jpg", alt: "Guitarra electrica del estudio (1)" },
+      { src: "/images/galeria/foto-8121.jpg", alt: "Guitarra electrica del estudio (2)" },
+      { src: "/images/galeria/foto-8120.jpg", alt: "Guitarra electrica del estudio (3)" },
+      { src: "/images/galeria/foto-8119.jpg", alt: "Guitarra electrica del estudio (4)" },
+      { src: "/images/galeria/foto-8124.jpg", alt: "Guitarra electrica del estudio (5)" },
+      { src: "/images/galeria/foto-8125.jpg", alt: "Guitarra electrica del estudio (6)" },
+      { src: "/images/galeria/foto-8146.jpg", alt: "Guitarra electrica del estudio (7)" },
+      { src: "/images/galeria/foto-8105.jpg", alt: "Guitarra electrica del estudio (8)" },
+      { src: "/images/galeria/foto-8106.jpg", alt: "Guitarra electrica del estudio (9)" },
+      { src: "/images/galeria/foto-8107.jpg", alt: "Guitarra electrica del estudio (10)" },
+      { src: "/images/galeria/foto-8108.jpg", alt: "Guitarra electrica del estudio (11)" },
+      { src: "/images/galeria/foto-8109.jpg", alt: "Guitarra electrica del estudio (12)" },
+      { src: "/images/galeria/foto-8110.jpg", alt: "Guitarra electrica del estudio (13)" },
+      { src: "/images/galeria/foto-8111.jpg", alt: "Guitarra electrica del estudio (14)" },
+      { src: "/images/galeria/foto-8112.jpg", alt: "Guitarra electrica del estudio (15)" },
+      { src: "/images/galeria/foto-8113.jpg", alt: "Guitarra electrica del estudio (16)" },
+      { src: "/images/galeria/foto-8114.jpg", alt: "Guitarra electrica del estudio (17)" },
+      { src: "/images/galeria/foto-8115.jpg", alt: "Guitarra electrica del estudio (18)" },
+      { src: "/images/galeria/foto-8116.jpg", alt: "Guitarra electrica del estudio (19)" },
+      { src: "/images/galeria/foto-8117.jpg", alt: "Guitarra electrica del estudio (20)" },
+      { src: "/images/galeria/foto-8118.jpg", alt: "Guitarra electrica del estudio (21)" },
+      { src: "/images/galeria/foto-8122.jpg", alt: "Guitarra electrica del estudio (22)" },
+      { src: "/images/galeria/foto-8123.jpg", alt: "Guitarra electrica del estudio (23)" },
+      { src: "/images/galeria/foto-8127.jpg", alt: "Guitarra electrica del estudio (24)" },
+      { src: "/images/galeria/foto-8128.jpg", alt: "Guitarra electrica del estudio (25)" },
+      { src: "/images/galeria/foto-8129.jpg", alt: "Guitarra electrica del estudio (26)" },
+      { src: "/images/galeria/foto-8130.jpg", alt: "Guitarra electrica del estudio (27)" },
+      { src: "/images/galeria/foto-8131.jpg", alt: "Guitarra electrica del estudio (28)" },
+      { src: "/images/galeria/foto-8132.jpg", alt: "Guitarra electrica del estudio (29)" },
     ],
   },
   {
@@ -42,10 +67,19 @@ export const galeria: CategoriaGaleria[] = [
     title: "Acoustic",
     titleEn: "Acoustic",
     titleCa: "Acoustic",
-    // Foto provisional hasta tener fotos propias del apartado
-    portada: "/images/estudio/guitarras-pared.jpg",
+    portada: "/images/galeria/foto-8100.jpg",
     fotos: [
-      { src: "/images/estudio/guitarras-pared.jpg", alt: "Guitarras colgadas en la pared del estudio" },
+      { src: "/images/galeria/foto-8100.jpg", alt: "Instrumento acustico del estudio (1)" },
+      { src: "/images/galeria/foto-8097.jpg", alt: "Instrumento acustico del estudio (2)" },
+      { src: "/images/galeria/foto-8098.jpg", alt: "Instrumento acustico del estudio (3)" },
+      { src: "/images/galeria/foto-8101.jpg", alt: "Instrumento acustico del estudio (4)" },
+      { src: "/images/galeria/foto-8137.jpg", alt: "Instrumento acustico del estudio (5)" },
+      { src: "/images/galeria/foto-8133.jpg", alt: "Instrumento acustico del estudio (6)" },
+      { src: "/images/galeria/foto-8134.jpg", alt: "Instrumento acustico del estudio (7)" },
+      { src: "/images/galeria/foto-8135.jpg", alt: "Instrumento acustico del estudio (8)" },
+      { src: "/images/galeria/foto-8138.jpg", alt: "Instrumento acustico del estudio (9)" },
+      { src: "/images/galeria/foto-8139.jpg", alt: "Instrumento acustico del estudio (10)" },
+      { src: "/images/galeria/foto-8136.jpg", alt: "Instrumento acustico del estudio (11)" },
     ],
   },
   {
@@ -53,11 +87,14 @@ export const galeria: CategoriaGaleria[] = [
     title: "Amplificadores",
     titleEn: "Amplifiers",
     titleCa: "Amplificadors",
-    portada: "/images/estudio/amplificadores.jpg",
+    portada: "/images/galeria/foto-8141.jpg",
     fotos: [
-      { src: "/images/estudio/amplificadores.jpg", alt: "Amplificadores Fender Twin Reverb, Vox AC30 y Marshall con el magnetofono de bobina abierta" },
-      { src: "/images/estudio/sinmarc-pasillo.jpg", alt: "Amplificador Sinmarc con el pasillo y el control room al fondo" },
-      { src: "/images/estudio/sinmarc-pasillo-2.jpg", alt: "Otra vista del amplificador Sinmarc" },
+      { src: "/images/galeria/foto-8141.jpg", alt: "Amplificador del estudio (1)" },
+      { src: "/images/galeria/foto-8140.jpg", alt: "Amplificador del estudio (2)" },
+      { src: "/images/galeria/foto-8143.jpg", alt: "Amplificador del estudio (3)" },
+      { src: "/images/galeria/foto-8142.jpg", alt: "Amplificador del estudio (4)" },
+      { src: "/images/galeria/foto-8144.jpg", alt: "Amplificador del estudio (5)" },
+      { src: "/images/galeria/foto-8145.jpg", alt: "Amplificador del estudio (6)" },
     ],
   },
   {
@@ -65,10 +102,11 @@ export const galeria: CategoriaGaleria[] = [
     title: "Otros instrumentos",
     titleEn: "Other instruments",
     titleCa: "Altres instruments",
-    portada: "/images/estudio/rhodes-mark-i.jpg",
+    portada: "/images/galeria/foto-8103.jpg",
     fotos: [
-      { src: "/images/estudio/rhodes-mark-i.jpg", alt: "Piano electrico Fender Rhodes Mark I" },
-      { src: "/images/estudio/rhodes-mark-i-2.jpg", alt: "Teclas del Fender Rhodes Mark I en primer plano" },
+      { src: "/images/galeria/foto-8103.jpg", alt: "Bajo del estudio (1)" },
+      { src: "/images/galeria/foto-8104.jpg", alt: "Bajo del estudio (2)" },
+      { src: "/images/galeria/foto-8102.jpg", alt: "Bajo del estudio (3)" },
     ],
   },
 ];
