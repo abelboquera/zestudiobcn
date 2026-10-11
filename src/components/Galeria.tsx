@@ -24,7 +24,7 @@ export default function Galeria({
         {categorias.map((c) => (
           <Link
             key={c.id}
-            href={`/${lang}/galeria#${c.id}`}
+            href={`/${lang}/galeria/${c.id}`}
             className="group relative block h-72 overflow-hidden rounded-2xl border border-neutral-800"
           >
             <Image
