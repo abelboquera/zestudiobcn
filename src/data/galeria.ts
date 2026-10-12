@@ -101,6 +101,7 @@ export const galeria: CategoriaGaleria[] = [
     titleCa: "Altres instruments",
     portada: "/images/estudio/rhodes-mark-i.jpg",
     fotos: [
+      { src: "/images/galeria/foto-bateria.jpg", alt: "Bateria Yamaha Recording Custom con los microfonos colocados" },
       { src: "/images/estudio/rhodes-mark-i.jpg", alt: "Piano electrico Fender Rhodes Mark I" },
     ],
   },
