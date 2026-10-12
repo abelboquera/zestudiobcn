@@ -55,6 +55,9 @@ export const galeria: CategoriaGaleria[] = [
       { src: "/images/galeria/foto-8130.jpg", alt: "Guitarra electrica del estudio (22)" },
       { src: "/images/galeria/foto-8131.jpg", alt: "Guitarra electrica del estudio (23)" },
       { src: "/images/galeria/foto-8132.jpg", alt: "Guitarra electrica del estudio (24)" },
+      { src: "/images/galeria/foto-8103.jpg", alt: "Bajo electrico del estudio" },
+      { src: "/images/galeria/foto-8104.jpg", alt: "Bajo electrico del estudio" },
+      { src: "/images/galeria/foto-8102.jpg", alt: "Bajo electrico del estudio" },
     ],
   },
   {
@@ -95,11 +98,9 @@ export const galeria: CategoriaGaleria[] = [
     title: "Otros instrumentos",
     titleEn: "Other instruments",
     titleCa: "Altres instruments",
-    portada: "/images/galeria/foto-8103.jpg",
+    portada: "/images/estudio/rhodes-mark-i.jpg",
     fotos: [
-      { src: "/images/galeria/foto-8103.jpg", alt: "Bajo del estudio (1)" },
-      { src: "/images/galeria/foto-8104.jpg", alt: "Bajo del estudio (2)" },
-      { src: "/images/galeria/foto-8102.jpg", alt: "Bajo del estudio (3)" },
+      { src: "/images/estudio/rhodes-mark-i.jpg", alt: "Piano electrico Fender Rhodes Mark I" },
     ],
   },
 ];
