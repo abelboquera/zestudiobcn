@@ -84,7 +84,7 @@ export const galeria: CategoriaGaleria[] = [
     title: "Amplificadores",
     titleEn: "Amplifiers",
     titleCa: "Amplificadors",
-    portada: "/images/galeria/foto-8141.jpg",
+    portada: "/images/estudio/amplificadores.jpg",
     fotos: [
       { src: "/images/galeria/foto-grammont.jpg", alt: "Radio Grammont vintage del estudio" },
       { src: "/images/galeria/foto-8141.jpg", alt: "Amplificador del estudio (1)" },
