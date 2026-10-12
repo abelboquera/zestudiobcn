@@ -7,43 +7,26 @@ export type RadioTrack = { title: string; artist: string; preview: string };
 /** Cada tema suena 20 segundos y pasa al siguiente */
 const SEGUNDOS = 20;
 const VOLUMEN = 0.5;
-const CLAVE = "zestudio-radio-silenciada";
-
-function leerSilenciada(): boolean {
-  try {
-    return window.localStorage.getItem(CLAVE) === "1";
-  } catch (error) {
-    return false;
-  }
-}
-
-function guardarSilenciada(valor: boolean) {
-  try {
-    if (valor) window.localStorage.setItem(CLAVE, "1");
-    else window.localStorage.removeItem(CLAVE);
-  } catch (error) {
-    // algunos navegadores bloquean el almacenamiento; no es grave
-  }
-}
 
 /**
  * Un unico reproductor para toda la web: el icono aparece dos veces
  * (escritorio y movil) y los dos mandan sobre el mismo audio.
+ *
+ * La radio arranca siempre apagada; solo suena si el visitante pulsa el icono.
  */
 const radio = {
   audio: null as HTMLAudioElement | null,
   orden: [] as RadioTrack[],
   indice: 0,
   sonando: false,
-  /** Suena en silencio porque el navegador no deja mas: basta un clic */
-  esperando: false,
   oyentes: new Set<() => void>(),
 
   avisar() {
     this.oyentes.forEach((f) => f());
   },
 
-  iniciar(tracks: RadioTrack[]) {
+  /** Deja la lista barajada y el audio listos, pero en silencio */
+  preparar(tracks: RadioTrack[]) {
     if (this.audio || tracks.length === 0) return;
 
     const orden = [...tracks];
@@ -53,73 +36,16 @@ const radio = {
     }
     this.orden = orden;
 
-    const audio = new Audio(orden[0].preview);
+    const audio = new Audio();
+    audio.preload = "none";
     audio.volume = VOLUMEN;
+    audio.src = orden[0].preview;
     this.audio = audio;
     audio.addEventListener("ended", () => this.siguiente());
 
     setInterval(() => {
       if (this.audio && !this.audio.paused) this.siguiente();
     }, SEGUNDOS * 1000);
-
-    if (!leerSilenciada()) this.arrancar();
-  },
-
-  /**
-   * Los navegadores no dejan que suene audio hasta que el visitante
-   * interactua. Arrancamos en silencio (eso si lo permiten) y quitamos el
-   * silencio en cuanto toca, pulsa o hace scroll.
-   */
-  arrancar() {
-    const audio = this.audio;
-    if (!audio) return;
-
-    audio
-      .play()
-      .then(() => {
-        this.sonando = !audio.muted;
-        this.esperando = audio.muted;
-        this.avisar();
-      })
-      .catch(() => {
-        audio.muted = true;
-        audio
-          .play()
-          .then(() => {
-            this.esperando = true;
-            this.avisar();
-          })
-          .catch(() => {
-            this.esperando = true;
-            this.avisar();
-          });
-      });
-
-    const quitarSilencio = () => {
-      if (leerSilenciada()) return;
-      audio.muted = false;
-      if (audio.paused) {
-        audio.play().catch(() => undefined);
-      }
-      this.sonando = true;
-      this.esperando = false;
-      this.avisar();
-      eventos.forEach((e) => window.removeEventListener(e, quitarSilencio));
-    };
-
-    // Safari solo acepta como interaccion un clic, un toque o una tecla:
-    // con el scroll no basta, por eso estan todos
-    const eventos = [
-      "pointerdown",
-      "click",
-      "touchend",
-      "keydown",
-      "scroll",
-      "wheel",
-    ] as const;
-    eventos.forEach((e) =>
-      window.addEventListener(e, quitarSilencio, { once: false, passive: true })
-    );
   },
 
   siguiente() {
@@ -134,11 +60,10 @@ const radio = {
       ?.play()
       .then(() => {
         this.sonando = true;
-        this.esperando = false;
         this.avisar();
       })
       .catch(() => {
-        // el navegador puede exigir que el visitante pulse antes de sonar
+        // si el navegador se niega, el icono vuelve a quedar apagado
         this.sonando = false;
         this.avisar();
       });
@@ -149,12 +74,8 @@ const radio = {
     if (this.sonando) {
       this.audio.pause();
       this.sonando = false;
-      this.esperando = false;
-      guardarSilenciada(true);
       this.avisar();
     } else {
-      guardarSilenciada(false);
-      this.audio.muted = false;
       this.reproducir();
     }
   },
@@ -208,16 +129,14 @@ export default function RadioPlayer({
   tracks: RadioTrack[];
   labels: { on: string; off: string };
 }) {
-  const estado = useSyncExternalStore(
+  const sonando = useSyncExternalStore(
     (f) => radio.suscribir(f),
-    () => (radio.sonando ? "sonando" : radio.esperando ? "esperando" : "apagada"),
-    () => "apagada" as const
+    () => radio.sonando,
+    () => false
   );
-  const sonando = estado === "sonando";
-  const esperando = estado === "esperando";
 
   useEffect(() => {
-    radio.iniciar(tracks);
+    radio.preparar(tracks);
   }, [tracks]);
 
   if (tracks.length === 0) return null;
@@ -230,15 +149,11 @@ export default function RadioPlayer({
       aria-label={sonando ? labels.on : labels.off}
       title={sonando ? labels.on : labels.off}
       className={`relative transition-colors ${
-        sonando
-          ? "text-amber-500"
-          : esperando
-            ? "text-amber-500/80 animate-pulse"
-            : "text-neutral-400 hover:text-amber-500"
+        sonando ? "text-amber-500" : "text-neutral-400 hover:text-amber-500"
       }`}
     >
       <IconoRadio className="h-5 w-5" />
-      {!sonando && !esperando && (
+      {!sonando && (
         <span className="absolute left-1/2 top-1/2 h-5 w-0.5 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded bg-current" />
       )}
     </button>
