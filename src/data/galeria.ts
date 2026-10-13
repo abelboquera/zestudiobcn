@@ -92,6 +92,7 @@ export const galeria: CategoriaGaleria[] = [
       { src: "/images/galeria/foto-8142.jpg", alt: "Amplificador del estudio (3)" },
       { src: "/images/galeria/foto-8144.jpg", alt: "Amplificador del estudio (4)" },
       { src: "/images/galeria/foto-8145.jpg", alt: "Amplificador del estudio (5)" },
+      { src: "/images/galeria/foto-8178.jpg", alt: "Kemper Profiling Amplifier y pedal Strymon Compadre" },
       { src: "/images/galeria/foto-grammont.jpg", alt: "Radio Grammont vintage del estudio" },
     ],
   },
