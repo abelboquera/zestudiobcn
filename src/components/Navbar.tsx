@@ -63,6 +63,15 @@ export default function Navbar({ dict, ui, lang, radio }: { dict: any, ui: any, 
             </div>
           </div>
           <div className="-mr-2 flex items-center gap-4 lg:hidden">
+            <a
+              href="https://instagram.com/zestudiobcn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={ui.instagram}
+              className="text-neutral-400 hover:text-amber-500 transition-colors"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
             <RadioPlayer tracks={radio} labels={{ on: ui.radioOn, off: ui.radioOff }} />
             <button
               onClick={() => setIsOpen(!isOpen)}
