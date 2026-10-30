@@ -44,6 +44,16 @@ const catalogo: Trabajo[] = [
     destacado: true,
   },
   {
+    spotifyId: "68tvKmazRyLg7pdk6shul0",
+    released: "2026-10-30",
+    title: "Después de ti",
+    artists: ["Malmö 040"],
+    cover: "/images/trabajos/malmo-040-despues-de-ti.jpg",
+    preview: "https://p.scdn.co/mp3-preview/a60f3322f948e600924489a8377bfe72a696ab06",
+    plays: 0,
+    destacado: true,
+  },
+  {
     spotifyId: "3ELI7WxrRSvTuzWnVuUT4H",
     released: "2025-12-12",
     title: "ven a mi casa esta navidad",
