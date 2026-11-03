@@ -76,7 +76,10 @@ export default function GearSelector({
   );
 
   useEffect(() => {
+    const flechas = ["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"];
     const alPulsar = (e: KeyboardEvent) => {
+      // sin esto las flechas ademas hacen scroll a la pagina
+      if (flechas.includes(e.key)) e.preventDefault();
       if (e.key === "ArrowRight") mueve(1);
       if (e.key === "ArrowLeft") mueve(-1);
       if (e.key === "ArrowDown") mueveCategoria(1);
