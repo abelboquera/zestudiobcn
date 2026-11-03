@@ -23,6 +23,7 @@ export const dictionaries = {
     nav: {
       trabajos: "Trabajos",
       galeria: "Galería",
+      gear: "Gear",
       nosotros: "Nosotros",
       contacto: "Contacto"
     },
@@ -173,6 +174,7 @@ export const dictionaries = {
     nav: {
       trabajos: "Work",
       galeria: "Gallery",
+      gear: "Gear",
       nosotros: "About Us",
       contacto: "Contact"
     },
@@ -323,6 +325,7 @@ export const dictionaries = {
     nav: {
       trabajos: "Treballs",
       galeria: "Galeria",
+      gear: "Gear",
       nosotros: "Nosaltres",
       contacto: "Contacte"
     },
