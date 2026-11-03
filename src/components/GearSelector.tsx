@@ -125,7 +125,7 @@ export default function GearSelector({
       </header>
 
       <h1 className="gear-titulo">
-        CHOOSE YOUR GEAR <span className="gear-slash">///</span>
+        CHOOSE YOUR GEAR <span className="gear-slash">{"///"}</span>
       </h1>
 
       <main className="gear-escena">
