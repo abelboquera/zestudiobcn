@@ -15,7 +15,7 @@ type Dict = {
   sentMsg: string;
 };
 
-const CONTACT_EMAIL = "davidggmusic@gmail.com";
+const CONTACT_EMAIL = "hola@zestudiobcn.com";
 
 const inputClass =
   "w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all";
