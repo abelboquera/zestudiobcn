@@ -245,6 +245,15 @@ const catalogo: Trabajo[] = [
     preview: "https://p.scdn.co/mp3-preview/93681a7f0f40b355ee43f1e720adb3c0b57cc533",
     plays: 1548,
   },
+  {
+    spotifyId: "1pDRWj7Mzw5rgXO5TS39Yv",
+    released: "2026-11-13",
+    title: "Tu Laberinto",
+    artists: ["La Oveja Negra"],
+    cover: "/images/trabajos/la-oveja-negra-tu-laberinto.jpg",
+    preview: "https://p.scdn.co/mp3-preview/ced73e5818c3d48d1ff04d58cb769159655aa412",
+    plays: 1565,
+  },
 ];
 
 /** Primero los destacados, en su orden; luego el resto por reproducciones. */
