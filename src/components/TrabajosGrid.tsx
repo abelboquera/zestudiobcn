@@ -10,6 +10,8 @@ export type Ficha = {
   artists: string[];
   cover: string;
   preview: string;
+  /** Un disco entero enlaza al album en vez de al tema */
+  tipo?: "track" | "album";
 };
 import { pausarRadio } from "./RadioPlayer";
 
@@ -140,7 +142,7 @@ export default function TrabajosGrid({
                 <p className="mt-1 text-amber-500">{artists}</p>
               </div>
               <a
-                href={`https://open.spotify.com/${spotifyPath}/${trabajo.spotifyId}`}
+                href={`https://open.spotify.com/${trabajo.tipo ?? spotifyPath}/${trabajo.spotifyId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-neutral-400 transition-colors hover:text-amber-500"

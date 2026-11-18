@@ -13,6 +13,8 @@ export type Trabajo = {
   released: string;
   /** true = siempre arriba, en el orden en que aparecen aqui */
   destacado?: boolean;
+  /** "album" para un disco entero: el enlace lleva al album en Spotify */
+  tipo?: "track" | "album";
 };
 
 /**
@@ -50,6 +52,18 @@ const catalogo: Trabajo[] = [
     artists: ["Malmö 040"],
     cover: "/images/trabajos/malmo-040-despues-de-ti.jpg",
     preview: "https://p.scdn.co/mp3-preview/a60f3322f948e600924489a8377bfe72a696ab06",
+    plays: 0,
+    destacado: true,
+  },
+  {
+    // Disco entero: suena el tema que da nombre al album
+    spotifyId: "17dXZI066GyqTU0196RcqT",
+    tipo: "album",
+    released: "2026-11-13",
+    title: "Ahaztu baino lehen",
+    artists: ["Maren"],
+    cover: "/images/trabajos/maren-ahaztu-baino-lehen.jpg",
+    preview: "https://p.scdn.co/mp3-preview/689916ad56c37dc61282285da64f8dd88f367f2e",
     plays: 0,
     destacado: true,
   },
