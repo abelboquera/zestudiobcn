@@ -1,7 +1,7 @@
 import { 
   Mic, Sliders, Guitar,
   Speaker, Headphones, Disc,
-  Mail, MapPin, MessageCircle, Instagram, Music
+  Mail, MapPin, Instagram, Music
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import ContactForm from "@/components/ContactForm";
@@ -289,16 +289,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              {/* El numero no se muestra: al pulsar se abre WhatsApp con el mensaje ya escrito */}
-              <a href={`https://wa.me/34687281762?text=${encodeURIComponent(dict.contacto.whatsappMsg)}`} target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
-                <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
-                  <MessageCircle className="h-6 w-6 text-amber-500" />
-                </div>
-                <div className="ml-4">
-                  <p className="text-sm text-neutral-400">{dict.contacto.whatsapp}</p>
-                  <p className="text-lg font-medium text-white">{dict.contacto.whatsappCta}</p>
-                </div>
-              </a>
               <a href="mailto:hola@zestudiobcn.com" className="flex items-center p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500 transition-colors group">
                 <div className="bg-amber-500/10 p-3 rounded-lg group-hover:bg-amber-500/20 transition-colors">
                   <Mail className="h-6 w-6 text-amber-500" />
