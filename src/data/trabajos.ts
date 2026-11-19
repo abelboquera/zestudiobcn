@@ -246,6 +246,15 @@ const catalogo: Trabajo[] = [
     plays: 1548,
   },
   {
+    spotifyId: "14ACcOoge71D53rNxTjSGc",
+    released: "2026-10-29",
+    title: "Senyora Bosch",
+    artists: ["PLA MOGUDA"],
+    cover: "/images/trabajos/pla-moguda-senyora-bosch.jpg",
+    preview: "https://p.scdn.co/mp3-preview/f90c3ec83bd7b4cb5d27cb10c93d54cf97410133",
+    plays: 2675,
+  },
+  {
     spotifyId: "1pDRWj7Mzw5rgXO5TS39Yv",
     released: "2026-11-13",
     title: "Tu Laberinto",
