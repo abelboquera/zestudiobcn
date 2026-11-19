@@ -104,7 +104,8 @@ export const dictionaries = {
       videosTitle: "Publicidad",
       showMore: "Ver más trabajos",
       showMoreShort: "Ver más",
-      showLess: "Ver menos"
+      showLess: "Ver menos",
+      showAll: "Ver todo en Spotify"
     },
     nosotros: {
       title: "Sobre Nosotros",
@@ -257,7 +258,8 @@ export const dictionaries = {
       videosTitle: "Advertising",
       showMore: "Show more work",
       showMoreShort: "Show more",
-      showLess: "Show less"
+      showLess: "Show less",
+      showAll: "See everything on Spotify"
     },
     nosotros: {
       title: "About Us",
@@ -410,7 +412,8 @@ export const dictionaries = {
       videosTitle: "Publicitat",
       showMore: "Veure més treballs",
       showMoreShort: "Veure més",
-      showLess: "Veure menys"
+      showLess: "Veure menys",
+      showAll: "Veure-ho tot a Spotify"
     },
     nosotros: {
       title: "Sobre Nosaltres",

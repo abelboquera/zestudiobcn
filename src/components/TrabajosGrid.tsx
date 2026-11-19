@@ -15,7 +15,7 @@ export type Ficha = {
 };
 import { pausarRadio } from "./RadioPlayer";
 
-type Dict = { showMore: string; showLess: string };
+type Dict = { showMore: string; showLess: string; showAll?: string };
 type Ui = { play: string; pause: string; cover: string; onSpotify: string };
 
 export default function TrabajosGrid({
@@ -26,6 +26,8 @@ export default function TrabajosGrid({
   visiblesMovil: VISIBLES_MOVIL = 10,
   spotifyPath = "track",
   columnas = 3,
+  maximo,
+  verTodo,
 }: {
   trabajos: Ficha[];
   dict: Dict;
@@ -37,6 +39,10 @@ export default function TrabajosGrid({
   spotifyPath?: "track" | "episode";
   /** Cuantas fichas por fila en escritorio */
   columnas?: 2 | 3;
+  /** Tope de fichas al desplegar; el resto se ve en Spotify */
+  maximo?: number;
+  /** Enlace del boton final, p. ej. la lista del estudio en Spotify */
+  verTodo?: string;
 }) {
   const [expanded, setExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -83,7 +89,8 @@ export default function TrabajosGrid({
     }
   };
 
-  const mostradas = expanded ? trabajos : trabajos.slice(0, VISIBLES);
+  const tope = maximo ?? trabajos.length;
+  const mostradas = expanded ? trabajos.slice(0, tope) : trabajos.slice(0, VISIBLES);
   const ocultos = trabajos.length - VISIBLES_MOVIL;
 
   return (
@@ -158,7 +165,7 @@ export default function TrabajosGrid({
       </div>
 
       {ocultos > 0 && (
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <button
             type="button"
             onClick={() => setExpanded((v) => !v)}
@@ -168,6 +175,18 @@ export default function TrabajosGrid({
             {expanded ? dict.showLess : dict.showMore}
             {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
           </button>
+
+          {expanded && verTodo && dict.showAll && (
+            <a
+              href={verTodo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-sm font-bold text-neutral-950 transition-colors hover:bg-amber-400"
+            >
+              {dict.showAll}
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
         </div>
       )}
     </>

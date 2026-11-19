@@ -50,8 +50,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <TrabajosGrid
             trabajos={trabajos}
-            dict={{ showMore: dict.trabajos.showMoreShort, showLess: dict.trabajos.showLess }}
+            dict={{
+              showMore: dict.trabajos.showMoreShort,
+              showLess: dict.trabajos.showLess,
+              showAll: dict.trabajos.showAll,
+            }}
             ui={dict.ui}
+            maximo={24}
+            verTodo="https://open.spotify.com/playlist/4UucilDQDAREDjJFtlHo7Q"
           />
 
           {/* Publicidad: el ancla se llama "spots" porque los bloqueadores de
