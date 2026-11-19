@@ -1,4 +1,4 @@
-import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import DynamicLogo from "./DynamicLogo";
 
@@ -28,10 +28,6 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
               <li className="flex items-start text-neutral-400 text-sm">
                 <MapPin className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
                 <span>08024 Barcelona</span>
-              </li>
-              <li className="flex items-center text-neutral-400 text-sm">
-                <Phone className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
-                <span>+34 687 281 762</span>
               </li>
               <li className="flex items-center text-neutral-400 text-sm">
                 <Mail className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
